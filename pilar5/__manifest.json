@@ -1,0 +1,22 @@
+{
+  "name": "APP",
+  "lang": "es",
+  "description": "Plataforma CON+Ciencia",
+  "background_color": "#9249FC",
+  "theme_color": "#9249FC",
+  "display": "standalone",
+  "orientation": "any",
+  "start_url": "/apps",
+  "icons": [
+  {
+    "src": "wroot/img/icon.png",
+    "type": "image/png",
+    "sizes": "128x128"
+  },
+  {
+    "src": "wroot/img/icon.png",
+    "type": "image/png",
+    "sizes": "32x32"
+  }
+ ]
+}
