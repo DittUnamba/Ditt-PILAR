@@ -20,7 +20,7 @@
 	              		<li>Tener una idea o un tema de Investigación </li>
 	              		<li>Buscar Información en la sección <b>Herramientas del Tesista</b></li>
 	              		<li>Identificar la <b>Linea de Investigación </b>a la que pertenece tu tema de Investigación </li>
-	              		<li>Elija su Asesor/Director de proyecto de tesis, Los 3 jurados de tesis serán sorteados por el Coordinador de investigación a travez de la Plataforma PILAR.</li>
+	              		<li>Elija su Asesor de proyecto de tesis, Los 3 jurados de tesis serán sorteados por el Coordinador de investigación a travez de la Plataforma PILAR.</li>
 	              	</ul>
                   <p>
 	              	Para tener una experiencia satisfactoria en <b>PILAR</b> se les recomienda leer el manual del tesista <a href="#"> <b><i>Click Aqui</i></b></a>
