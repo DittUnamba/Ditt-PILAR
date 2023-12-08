@@ -43,10 +43,10 @@ class Apismss {
             $config->setApiKey('Authorization', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhZG1pbiIsImlhdCI6MTUzNzIyMjc0OSwiZXhwIjo0MTAyNDQ0ODAwLCJ1aWQiOjUzMDUwLCJyb2xlcyI6WyJST0xFX1VTRVIiXX0.mzWLDernjz4_ShVAuwYWud7B6TK7twvi7vEa_6Tb-oA');
             $apiClient = new ApiClient($config);
             $messageClient = new MessageApi($apiClient);
-            if($tipo==1)$mensaje="UNA VRI PILAR \nSeñor docente se le hace recuerdo que deberá de ingresar a la plataforma PILAR, se necesita su revisión.\nPuede acceder en http://vriunap.pe/pilar \n\n".date("d-m-Y");
-            if($tipo==2)$mensaje="UNA VRI PILAR \nSeñor docente exsiste PROYECTOS que requieren de su DICTAMEN URGENTE, ingrese a la plataforma PILAR..\nDirección web : http://vriunap.pe/pilar \n".date("d-m-Y");
-            if($tipo==3)$mensaje="UNA VRI PILAR \nSeñor docente CONFIRME su participación en el programa LASPAU en la.\nDirección web : http://vriunap.pe/pilar \n".date("d-m-Y");
-            if($tipo==4)$mensaje="UNA VRI PILAR \nPostulación CONFIRMADA.<br> Bienvenido al programa LASPAU.\nDirección web : http://vriunap.pe/pilar \n".date("d-m-Y");
+            if($tipo==1)$mensaje="UNAMBA VRIN PILAR \nSeñor docente se le hace recuerdo que deberá de ingresar a la plataforma PILAR, se necesita su revisión.\nPuede acceder en https://pilar.unamba.edu.pe/pilar \n\n".date("d-m-Y");
+            if($tipo==2)$mensaje="UNAMBA VRIN PILAR \nSeñor docente exsiste PROYECTOS que requieren de su DICTAMEN URGENTE, ingrese a la plataforma PILAR..\nDirección web : https://pilar.unamba.edu.pe/pilar \n".date("d-m-Y");
+            if($tipo==3)$mensaje="UNAMBA VRIN PILAR \nSeñor docente CONFIRME su participación en el programa LASPAU en la.\nDirección web : https://pilar.unamba.edu.pe/pilar \n".date("d-m-Y");
+            if($tipo==4)$mensaje="UNAMBA VRIN PILAR \nPostulación CONFIRMADA.<br> Bienvenido al programa LASPAU.\nDirección web : https://pilar.unamba.edu.pe/pilar \n".date("d-m-Y");
             $sendMessages = $messageClient->sendMessages([   
                 new SendMessageRequest([
                     'phoneNumber' => "$celu",

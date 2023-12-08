@@ -184,7 +184,7 @@ class GenMailer extends CI_Email
 
         $this->initialize($config);
 
-        $this->from('vri@vriunap.pe', 'Vicerrectorado de Investigación - UNAP');
+        $this->from('vri@vriunap.pe', 'Vicerrectorado de Investigación - UNAMBA');
         $this->to( $mailx );
         $this->cc('opid@unap.edu.pe');
 
@@ -204,7 +204,7 @@ class GenMailer extends CI_Email
 
         $this->initialize($config);
 
-        $this->from('vri@vriunap.pe', 'Vicerrectorado de Investigación - UNAP');
+        $this->from('vri@vriunap.pe', 'Vicerrectorado de Investigación - UNAMBA');
         $this->to( $mailx );
         $this->cc('vriunap@yahoo.com');
 
@@ -233,7 +233,7 @@ class GenMailer extends CI_Email
         $msgx = '<div style="background: linear-gradient(152deg, rgba(63,94,251,1) 0%, rgba(161,70,252,1) 50%);'
               . 'text-align: center; padding: 15px; border-bottom: 16px solid rgb(200,200,200)"> <img src="https://vriunap.pe/vriadds/epiei/finesi_rotulo.png" width=550> </div><br>'
               . "<p> $msg </p> <br><hr style='border:1px dotted #C0C0C0'> "
-              . "<p style='font-size:10px;font-weight:bold'> Universidad Nacional del Altiplano - Puno <br>"
+              . "<p style='font-size:10px;font-weight:bold'> Universidad Nacional Micaela Bastidas de Apurímac <br>"
               . "<b>Facultad de Ingenieria Estadísitica e Informática</b> </p> </div></div>"
               . "</center> </body>";
 
@@ -265,8 +265,8 @@ class GenMailer extends CI_Email
         // $this->cc('rpedrolm@yahoo.es');
         // $arr = array('jcesarblues@live.com','rpedrolm@yahoo.es');
 
-        if( $who==1 ) $this->from('vri@vriunap.pe', 'Vicerrectorado de Investigación - UNAP');
-        if( $who==2 ) $this->from('pilar@vriunap.pe', 'Plataforma PILAR - UNAP');
+        if( $who==1 ) $this->from('vri@vriunap.pe', 'Vicerrectorado de Investigación - UNAMBA');
+        if( $who==2 ) $this->from('pilar@vriunap.pe', 'Plataforma PILAR - UNAMBA');
         if( $who==3 ) $this->from('fedu@vriunap.pe', 'FEDU - VRI');
 
         $this->subject( $title );
