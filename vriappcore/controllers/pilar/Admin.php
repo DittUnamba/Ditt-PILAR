@@ -1844,13 +1844,13 @@ class Admin extends CI_Controller {
 
 		// envio de correo
 		//
-		$msg = "<h4> Enviado al Director </h4><br>"
-			 . "Su proyecto ha sido enviado a su Director de Proyecto con el "
-			 . "formato revisado, su Director ya puede revisarlo en la <b>Plataforma PILAR</b>."
+		$msg = "<h4> Enviado al Asesor </h4><br>"
+			 . "Su proyecto ha sido enviado a su Asesor de Proyecto con el "
+			 . "formato revisado, su Asesor ya puede revisarlo en la <b>Plataforma PILAR</b>."
 			 ;
 
 		$mail = $this->dbPilar->inCorreo( $tram->IdTesista1 );
-		$this->logCorreo( $tram->Id, $mail, "Enviado al Director", $msg );
+		$this->logCorreo( $tram->Id, $mail, "Enviado al Asesor", $msg );
         //------------------------------------------------------------------------------------------------
         $msg = "<h4> Proyecto para Asesoria </h4><br>"
 			 . "Se le ha remitido el proyecto con código <b>$tram->Codigo</b> "
@@ -1859,9 +1859,9 @@ class Admin extends CI_Controller {
         $mail = $this->dbRepo->inCorreo( $tram->IdJurado4 );
         $this->logCorreo( $tram->Id, $mail, "Proyecto para Asesoria", $msg );
         //------------------------------------------------------------------------------------------------
-		$this->logTramites( 2, $tram->Id, "Enviado al Director", $msg );
+		$this->logTramites( 2, $tram->Id, "Enviado al Asesor", $msg );
 
-		echo $tram->Codigo . " fue Enviado a su Director";
+		echo $tram->Codigo . " fue Enviado a su Asesor";
 	}
 
 	// devolver al tesista proyecto: pero no borrar por historial
@@ -1916,9 +1916,9 @@ class Admin extends CI_Controller {
 		//
 		$mailA = $this->dbPilar->inCorreo( $tram->IdTesista1 );
         $mailB = $this->dbRepo->inCorreo( $tram->IdJurado4 );
-		$this->logCorreo( $tram->Id, $mailA, "Exceso de tiempo Director/Asesor", $msg );
-        $this->logCorreo( $tram->Id, $mailB, "Exceso de tiempo Director/Asesor", $msg );
-        $this->logTramites( 2, $tram->Id, "Exceso de tiempo Director/Asesor", $msg );
+		$this->logCorreo( $tram->Id, $mailA, "Exceso de tiempo Asesor", $msg );
+        $this->logCorreo( $tram->Id, $mailB, "Exceso de tiempo Asesor", $msg );
+        $this->logTramites( 2, $tram->Id, "Exceso de tiempo Asesor", $msg );
 
 		///echo "<br><br> <b>$tram->Codigo</b> fue Retornado por exceso de tiempo...";
         echo $msg;
