@@ -95,7 +95,7 @@
 
               <!-- select areas -->
               <div class="form-group success">
-                  <label class="col-md-4 control-label"> Elija Director/Asesor </label>
+                  <label class="col-md-4 control-label"> Elija su Asesor </label>
                   <div class="col-md-7">
                       <select id="j4" name="jurado4" class="form-control" required>
                           <option value="" disabled selected> Seleccione </option>
@@ -116,8 +116,8 @@
                   -->
                   <div class="alert alert-success col-md-offset-1 col-md-10">
                       <b>Art 11.</b> El jurado dictaminador de los proyectos de tesis estará conformado
-                      por tres (03) docentes de la UNA Puno, sorteados aleatoriamente a travéz de la Plataforma 
-                      PILAR considerando las sublineas de investigación.
+                      por tres (03) docentes de la UNAMBA, sorteados aleatoriamente a travéz de la Plataforma 
+                      PILAR considerando las lineas de investigación.
                   </div>
               </div>
 

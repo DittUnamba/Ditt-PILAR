@@ -114,7 +114,7 @@
               </div>
               <!-- select areas -->
               <div class="form-group form-group-sm">
-                  <label class="col-md-3 control-label"> Director/Asesor </label>
+                  <label class="col-md-3 control-label"> Asesor </label>
                   <div class="col-md-9">
                       <select id="j4" name="jurado4" class="form-control" required onchange="tesRevIgu()">
                           <option value="" disabled selected> Seleccione </option>

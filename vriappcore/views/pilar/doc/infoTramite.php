@@ -42,7 +42,7 @@
         "Presidente",
         "Primer miembro",
         "Segundo miembro",
-        "Director/Asesor"
+        "Asesor"
     );
 
 
