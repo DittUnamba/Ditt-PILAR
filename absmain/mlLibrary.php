@@ -249,7 +249,7 @@ function CodeQR( $pdf, $xpos, $ypos, $code, $siz=152 )
 function mlQrRotulo( $pdf, $x, $y, $codigo )
 {
     $codigof = toUTF("Código: $codigo");
-    $titulo  = "VRI UNA Puno - ".date("Y");
+    $titulo  = "VRIN UNAMBA - ".date("Y");
     $taman   = 150;
     $rectAnch = 32;
     if( strlen($codigo) > 14 ){
