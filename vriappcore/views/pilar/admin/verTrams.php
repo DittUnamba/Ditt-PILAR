@@ -271,7 +271,7 @@
   </form>
 	<div class="modal-footer">
 		<button class="btn btn-success" id="popOk" onclick="popProcede('admin/popExec',new FormData(fX))"> Procesar en Tiempo Record, OK ! </button>
-		<button class="btn btn-danger" data-dismiss="modal"> Cerrad la Ventana, tio ! </button>
+		<button class="btn btn-danger" data-dismiss="modal"> Cerrar la ventana </button>
 	</div>
   </div>
 </div>
