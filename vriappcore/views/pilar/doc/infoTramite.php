@@ -18,7 +18,7 @@
 
     $procesos = array (
         "proy nuevo",
-        "para Director",
+        "para Asesor",
         "para Sorteo",
         "en Revisión",
         "en Dictámen",
