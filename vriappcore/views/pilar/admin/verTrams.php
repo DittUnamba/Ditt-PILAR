@@ -143,7 +143,7 @@
 			if( $row->Estado == 1 AND $diasp>=0 )
 				///$menus .= "<br> <button onclick='pyRetorna($nro,$row->Id)' class='btn btn-xs btn-danger'> Devolver </button> "
                 $menus .= "<br> <button onclick='popLoad(\"admin/execRechaza/$row->Id\",$nro)' class='btn btn-xs btn-danger'> Rechazar </button> "
-				        . "<button onclick='pyDirect($nro,$row->Id)' class='btn btn-xs btn-warning'> Al Director </button>" ;
+				        . "<button onclick='pyDirect($nro,$row->Id)' class='btn btn-xs btn-warning'> Al Asesor </button>" ;
 
 			if( $row->Estado == 2 )
 				$menus .= " | <button onclick='popLoad(\"admin/execNoDirec/$row->Id\",$nro)' class='btn btn-xs btn-danger'> Rechazar </button>";

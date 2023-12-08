@@ -1409,9 +1409,9 @@ public function listPyDire( $idtram=0 )
 
       // envio de correo
       //
-   $msg = "<h4> Enviado al Director </h4><br>"
-   . "Su proyecto ha sido enviado a su Director de Proyecto con el "
-   . "formato revisado, su Director ya puede revisarlo en la <b>Plataforma PILAR</b>."
+   $msg = "<h4> Enviado al Asesor </h4><br>"
+   . "Su proyecto ha sido enviado a su Asesor de Proyecto con el "
+   . "formato revisado, su Asesor ya puede revisarlo en la <b>Plataforma PILAR</b>."
    ;
 
    $mail = $this->dbPilar->inCorreo( $tram->IdTesista1 );
@@ -1423,14 +1423,14 @@ public function listPyDire( $idtram=0 )
    ;
    $mail = $this->dbRepo->inCorreo( $tram->IdJurado4 );
    $celu = $this->dbRepo->inCelu( $tram->IdJurado4 );
-   $this->logCordinads('S', '6 ', "Envia Proyecto a Director", $msg );
+   $this->logCordinads('S', '6 ', "Envia Proyecto a Asesor", $msg );
    $this->logCorreo( $tram->IdJurado4,0, $mail, "Proyecto para Asesoria", $msg );
    $a=$this->notiCelu($celu,1);
    $msg=$msg.$a;
         //------------------------------------------------------------------------------------------------
-   $this->logTramites( 2, $tram->Id, "Enviado al Director", $msg );
+   $this->logTramites( 2, $tram->Id, "Enviado al Asesor", $msg );
 
-   echo "<b class='text-success'>".$tram->Codigo . " fue Enviado a su Director</b>";
+   echo "<b class='text-success'>".$tram->Codigo . " fue Enviado a su Asesor</b>";
 }
 
 
