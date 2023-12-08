@@ -101,7 +101,7 @@ class Sustentas extends CI_Controller {
         $aniox = (int) substr( $fecha, 0, 4 );
 
         $pdf->SetFont('Arial','B',10);
-        $pdf->Text( 240, 200, toUTF("Puno, $mes de $aniox") );
+        $pdf->Text( 240, 200, toUTF("Tamburco, $mes de $aniox") );
 
         mlQrRotulo( $pdf, 242, 120, $row->Codigo );
 

@@ -76,7 +76,7 @@
 				echo "<br>Presidente      : <b> " .($totCorrs1? "Ok":""). "</b>";
 				echo "<br>Primer Miembro  : <b> " .($totCorrs2? "Ok":""). "</b>";
 				echo "<br>Segundo Miembro : <b> " .($totCorrs3? "Ok":""). "</b>";
-				echo "<br>Director/Asesor : <b> " .($totCorrs4? "Ok":""). "</b>";
+				echo "<br>Asesor : <b> " .($totCorrs4? "Ok":""). "</b>";
 
 				return;
 			}
