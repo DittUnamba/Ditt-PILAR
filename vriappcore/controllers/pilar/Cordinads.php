@@ -601,7 +601,7 @@ public function memosGen( $IdTramite )
          . "de la Escuela Profesional de: $carrera."
          . "\n\nCuyo borrador de tesis deberá de revisar en un plazo máximo de 10 dias apartir del día $fecha y enviar sus observaciones via PILAR, "
          . "el documento PDF se ha enviado a su cuenta en "
-         . "Plataforma ubicando en http://vriunap.pe/pilar \n\n"
+         . "Plataforma ubicando en https://pilar.unamba.edu.pe/pilar \n\n"
          . "Si transcurrido este tiempo, no exixtiera respuesta alguna PILAR considerará el borrador de tesis apto para su defensa."
          . "(Art.6 Reglamento de Presentación dictamen de borradores y defensa de tesis) Resolución Rectoral N°3011-2016-R-UNA\n\n\n"
          . "Atentamente."

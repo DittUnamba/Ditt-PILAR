@@ -122,10 +122,10 @@ class Web extends CI_Controller {
 
         $pdf->Ln(17);
         $pdf->SetFont( "Arial", "B", 16 );
-        $pdf->Cell( 172, 6, toUTF("UNA - PUNO"), 0, 1, "C" );
-        $pdf->Cell( 172, 6, toUTF("2018"), 0, 1, "C" );
+        $pdf->Cell( 172, 6, toUTF("UNAMBA"), 0, 1, "C" );
+        $pdf->Cell( 172, 6, toUTF("2023"), 0, 1, "C" );
 
-        CodeQR( $pdf, 180, 265, "VRI UNA PUNO", 100 );
+        CodeQR( $pdf, 180, 265, "VRIN UNAMBA", 100 );
 
         //-------------------------------------------------------------------------------------
         // Cara 2 : Hoja de Jurados
@@ -177,7 +177,7 @@ class Web extends CI_Controller {
             array( "PRESIDENTE DE JURADO", $this->dbRepo->inDocenteEx($tram->IdJurado1) ),
             array( "PRIMER MIEMBRO"      , $this->dbRepo->inDocenteEx($tram->IdJurado2) ),
             array( "SEGUNDO MIEMBRO"     , $this->dbRepo->inDocenteEx($tram->IdJurado3) ),
-            array( "DIRECTOR/ASESOR"     , $this->dbRepo->inDocenteEx($tram->IdJurado4) )
+            array( "ASESOR"     , $this->dbRepo->inDocenteEx($tram->IdJurado4) )
         );
 
         for( $i=0; $i<4; $i++ ) {
@@ -194,7 +194,7 @@ class Web extends CI_Controller {
         $pdf->Cell( 30, 5, "AREA", 0, 0 ); $pdf->Cell( 50, 5, toUTF(": $area"), 0, 1 );
         $pdf->Cell( 30, 5, "TEMA", 0, 0 ); $pdf->Cell( 50, 5, toUTF(": $tema"), 0, 1 );
 
-        CodeQR( $pdf, 180, 265, "VRI UNA PUNO", 100 );
+        CodeQR( $pdf, 180, 265, "VRIN UNAMBA", 100 );
 
         $pdf->Output();
     }
