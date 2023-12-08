@@ -160,7 +160,7 @@
         &copy; Seminario Internacional: Resistencia a antibióticos: Amenaza global a la salud pública
       </div>
       <div class="credits">
-        <strong>Universidad Nacional del Altiplano Puno 2019</strong>
+        <strong>Universidad Nacional Micaela Bastidas de Apurímac 2023</strong>
       </div>
     </div>
   </footer><!-- #footer -->
