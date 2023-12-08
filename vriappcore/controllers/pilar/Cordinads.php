@@ -580,14 +580,14 @@ public function memosGen( $IdTramite )
          $quienes=array($tram->IdJurado1,$tram->IdJurado2,$tram->IdJurado3);
          $asunto="REVISIÓN DE PROYECTO DE TESIS";
          $str = "Por medio del presente comunicarle que Ud. ha sido sorteado para la revisión "
-         . "del Proyecto de Tesis registrado en Plataforma con el còdigo: $codigop, "
+         . "del Proyecto de Tesis registrado en Plataforma con el código: $codigop, "
          . "presentado y registrado para la Escuela Profesional de: $carrera. "
          . "con fecha $fecha."
-         . "La cual deberá dar tràmite revisando y subiendo sus correcciones "
+         . "La cual deberá dar trámite revisando y subiendo sus correcciones "
          . "haciendo uso de su cuenta en Plataforma.\n\n"
          . "Ud. tiene un plazo máximo de 10 dias para la revisión via OnLine, "
          . "recuerde que el documento PDF se ha enviado a su cuenta en "
-         . "Plataforma ubicando en http://vriunap.pe/pilar"
+         . "Plataforma ubicando en https://pilar.unamba.edu.pe/pilar"
          . "\n\n"
          . "Atentamente."
          ;
@@ -597,7 +597,7 @@ public function memosGen( $IdTramite )
          $asunto="REVISIÓN DE BORRADOR DE TESIS";
 //  Borrador
          $str = "Por medio del presente comunicarle que Ud. ha sido SORTEADO como jurado revisor "
-         . "del Proyecto de Tesis Aprobado con el còdigo: $codigop, "
+         . "del Proyecto de Tesis Aprobado con el código: $codigop, "
          . "de la Escuela Profesional de: $carrera."
          . "\n\nCuyo borrador de tesis deberá de revisar en un plazo máximo de 10 dias apartir del día $fecha y enviar sus observaciones via PILAR, "
          . "el documento PDF se ha enviado a su cuenta en "
