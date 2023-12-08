@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title> Vicerrectorado de Investigación - UNAP 2017 </title>
+    <title> Vicerrectorado de Investigación - UNAMBA 2023 </title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

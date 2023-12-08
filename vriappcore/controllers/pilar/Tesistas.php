@@ -375,7 +375,7 @@ class Tesistas extends CI_Controller {
             echo "<center><img class='img-responsive' style='height:70px;' src='".base_url('vriadds/pilar/imag/pilar-tes.png')."'/> </center>";
             echo "<center><h2 class='text'>¿Presentación de Borrador de Tesis?</h2>";
             echo "<h4> Su proyecto tiene $dias dia(s) de Ejecución de un total de 90 mínimos. </h4> </center>";
-            echo "<p>Antes de continuar con el proceso usted deberá : (a) Completar el tiempo mínimo.(b) Poseer el grado académico de Bachiller. Si cumple con los requisitos (a) y (b) está apto para proseguir con su trámite, de lo contrario deberá esperar hasta cumplir lo estipulado. <br> <div class='alert alert-warning'><b>Nota :</b> La información registrada será responsabilidad del usuario y tienen caracter de <b>Declaración Jurada</b>, de lo contrario estará sujeto a las sanciones que determine la Universidad Nacional Micaela Bastidas de ApurÍmac. </p></div>";
+            echo "<p>Antes de continuar con el proceso usted deberá : (a) Completar el tiempo mínimo.(b) Poseer el grado académico de Bachiller. Si cumple con los requisitos (a) y (b) está apto para proseguir con su trámite, de lo contrario deberá esperar hasta cumplir lo estipulado. <br> <div class='alert alert-warning'><b>Nota :</b> La información registrada será responsabilidad del usuario y tienen caracter de <b>Declaración Jurada</b>, de lo contrario estará sujeto a las sanciones que determine la Universidad Nacional Micaela Bastidas de Apurímac. </p></div>";
 
             $consulta=$this->dbPilar->getOneField('tesTramsBach',"Id","Estado=1 AND IdTesista=$sess->userId");
 

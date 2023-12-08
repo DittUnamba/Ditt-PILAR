@@ -103,7 +103,7 @@ class GenSexPdf extends FPDF {
 
         $this->SetTextColor(0,0,0);
         $this->SetFont('Arial','',7);
-        $this->Cell( $this->width, 5, toUTF("Av. Sesquicentenario Nº 1150 - Teléfono: (051)-365054"), 0, 1,'C',0);
+        $this->Cell( $this->width, 5, toUTF("Av. Av. Inca Garcilazo de la Vega - Teléfono: (083)-321965"), 0, 1,'C',0);
 
         $this->SetDrawColor(70,70,70);
         $this->Line( $this->LeftMargin, 35, $this->RightMargin, 35 );
