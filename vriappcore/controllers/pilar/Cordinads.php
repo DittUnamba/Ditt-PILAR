@@ -1441,12 +1441,12 @@ public function notiCelu($cel,$tip)
  $deviceID = 89014;
  $number   = "0051$cel";
  if($tip==1){
-   $mensaje  = "UNAP VRI PILAR \nSr. Docente le llegó un nuevo proyecto en calidad de ASESOR/DIRECTOR de tesis, puede revisarlo en la plataforma PILAR en http://vriunap.pe/pilar,  \n\n".date("d-m-Y")."\nVicerrectorado de Investigación.";
+   $mensaje  = "UNAMBA VRIN PILAR \nSr. Docente le llegó un nuevo proyecto en calidad de ASESOR de tesis, puede revisarlo en la plataforma PILAR en http://vriunap.pe/pilar,  \n\n".date("d-m-Y")."\nVicerrectorado de Investigación.";
 }
 if($tip==3){
-   $mensaje  = "UNAP VRI PILAR \nSr. Docente usted fué SORTEADO como JURADO de tesis, puede revisarlo en la plataforma PILAR en http://vriunap.pe/pilar,  \n\n".date("d-m-Y")."\nVicerrectorado de Investigación.";
+   $mensaje  = "UNAMBA VRIN PILAR \nSr. Docente usted fué SORTEADO como JURADO de tesis, puede revisarlo en la plataforma PILAR en http://vriunap.pe/pilar,  \n\n".date("d-m-Y")."\nVicerrectorado de Investigación.";
 }else{
-   $mensaje  = "UNAP VRI PILAR \nSr. Docente se le recuerda revisar, la plataforma PILAR en http://vriunap.pe/pilar y verificar los proyectos y borradores pendientes.\n\n".date("d-m-Y")."\nVicerrectorado de Investigación.";
+   $mensaje  = "UNAMBA VRIN PILAR \nSr. Docente se le recuerda revisar, la plataforma PILAR en http://vriunap.pe/pilar y verificar los proyectos y borradores pendientes.\n\n".date("d-m-Y")."\nVicerrectorado de Investigación.";
 }
 $result   = $this->apismss->sendMessageToNumber($number,$mensaje,$deviceID);
 
