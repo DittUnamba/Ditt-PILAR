@@ -82,7 +82,7 @@
     $procesos = array (
         0 => "",
         1 => "proy nuevo",
-        2 => "en Director",
+        2 => "en Asesor",
         3 => "en espera",
         4 => "en Revisión",
         5 => "en Dictámen",     // 05
