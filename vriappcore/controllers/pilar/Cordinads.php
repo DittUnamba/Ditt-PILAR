@@ -633,7 +633,7 @@ public function memosGen( $IdTramite )
       $pdf->AddPage();
       $pdf->SetDrawColor( 170, 170, 170 );
       $pdf->SetFont('Arial','B',13);
-      $textmemo = sprintf( "MEMORANDO CIRCULAR Nro %03d-%04d-PILAR-VRI-UNAP", $nmemo, $anio );        
+      $textmemo = sprintf( "MEMORANDO CIRCULAR Nro %03d-%04d-PILAR-VRIN-UNAMBA", $nmemo, $anio );        
       $pdf->Cell( 170, 2, toUTF($textmemo), 0, 1, 'L' ); 
       $pdf->Cell( 170, 1, "___________________________________________________", 0, 1, 'L' ); 
       $pdf->Ln(5);  
@@ -661,7 +661,7 @@ public function memosGen( $IdTramite )
 
          $pdf->SetDrawColor( 170, 170, 170 );
          $pdf->SetFont('Arial','B',13);
-         $textmemo = sprintf( "MEMORANDO CIRCULAR Nro %03d-%04d-PILAR-VRI-UNAP", $nmemo, $anio );        
+         $textmemo = sprintf( "MEMORANDO CIRCULAR Nro %03d-%04d-PILAR-VRIN-UNAMBA", $nmemo, $anio );        
          $pdf->Cell( 170, 7, toUTF($textmemo), 0, 1, 'L' );
          $pdf->Cell( 170, 1, "___________________________________________________", 0, 1, 'L' ); 
          $pdf->Ln(5);
@@ -1371,7 +1371,7 @@ private function inRechaza( $rowTram , $msg)
       $msg = "<h4>Revisión Electrónica</h4><br>"
           . "Por la presente se le comunica que se le ha enviado a su cuenta de Docente en la "
           . "<b>Plataforma PILAR</b> el borrador de tesis con el siguiente detalle:<br><br>   "
-          . "Memo Circular: <b>$nroMemo-VRI-UNAP</b><br>"
+          . "Memo Circular: <b>$nroMemo-VRIN-UNAMBA</b><br>"
           . "Tesista(s) : <b>" . $this->dbPilar->inTesistas($tram->Id) . "</b><br>"
           . "Título : <b> $det->Titulo </b><br><br>"
           . "Ud. tiene un plazo de 10 dias hábiles para realizar las revisiones mediante la Plataforma."
@@ -1811,7 +1811,7 @@ public function inDoSorteo($idTram){
    $msg = "<h4>Revisión Electrónica</h4><br>"
    . "Por la presente se le comunica que se le ha enviado a su cuenta de Docente en la "
    . "<b>Plataforma PILAR</b> el proyecto de tesis con el siguiente detalle:<br><br>   "
-   . "Memo Circular: <b>$nroMemo-VRI-UNAP</b><br>"
+   . "Memo Circular: <b>$nroMemo-VRIN-UNAMBA</b><br>"
    . "Codigo : <b> $rowTram->Codigo </b><br>"
    . "Título : <b> $det->Titulo </b><br><br>"
    . "Ud. tiene un plazo de 10 dias hábiles para realizar las revisiones mediante la Plataforma."

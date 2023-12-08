@@ -276,9 +276,9 @@ function mlQrRotulo( $pdf, $x, $y, $codigo )
     // texto pie de pagina
     $pdf->SetFont( "Arial", "", 7 );
     $pdf->Text( $x, $y+39, toUTF("Vicerrectorado de Investigación") );
-    $pdf->Text( $x, $y+42, toUTF("Telefono: 051-365054") );
-    $pdf->Text( $x, $y+45, toUTF("e-mail: vriunap@gmail.com") );
-    $pdf->Text( $x, $y+48, toUTF("web: http://vriunap.pe") );
+    $pdf->Text( $x, $y+42, toUTF("Telefono: (083)-321965") );
+    $pdf->Text( $x, $y+45, toUTF("e-mail: vriunamba@gmail.com") );
+    $pdf->Text( $x, $y+48, toUTF("web: https://vrin.unamba.edu.pe") );
 }
 
 ?>
