@@ -3,7 +3,7 @@
 </div>
 <div class="herramamientas">
 	<h3 class="title">Citas Bibliográfias</h3>
-	<p>Aqui algunas herramientas para realizar las citas bibliográficas en tu trabajo de Investigación.</p>
+	<p>Aqui algunas herramientas para realizar las citas bibliográficas en tu trabajo de tesis.</p>
 	<div class="col-md-12 tex-center">
 		<div class="col-md-3 ">
 			<img class="img-responsive"  src="<?php echo base_url("vriadds/pilar/imag/herram/mendeley.jpg");?>">

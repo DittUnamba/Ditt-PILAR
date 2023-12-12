@@ -61,6 +61,7 @@ class GenMailer extends CI_Email
         $config['validation']   = TRUE; // bool whether to validate email or not
 
         $this->config = $config;
+      
     }
 
 

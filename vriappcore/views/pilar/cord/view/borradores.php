@@ -6,9 +6,9 @@
 	}
 	$Opciones="";
 ?>
-<h3>Borradores de Tesis :: <small><?php  echo $Carrera; ?></small></h3>
+<h3>Trabajos de Tesis :: <small><?php  echo $Carrera; ?></small></h3>
 <div class="col-md-12">
-	<h4>Listado de Borradores de Tesis</h4>
+	<h4>Listado de Trabjos de Tesis</h4>
 	<table class="table table-bordered">
 		<thead>
 			<tr>

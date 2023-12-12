@@ -64,7 +64,7 @@
 				 		?>
 				 	</div>
 					<div class="panel-body panel-docente-texto panel-info-2">
-						Borradores de Tesis
+						Trabajos de Investigación
 					</div>
 				</div>
 			</div>

@@ -908,18 +908,18 @@ $varconsulta=array(
 );
 $state=array(
    -1=>"Observado",
-   0=>"Proyecto Rechazado",
-   1=>"Proyecto : Revisión de formato",
-   2=>"Proyecto : En revisión por el Director",
-   3=>"Proyecto : Listo para sorteo",
-   4=>"Proyecto : En Revisión por Jurados",
-   5=>"Proyecto : En Dictaminación",
-   6=>"Proyecto : Proyecto Aprobado",
-   10=>"Borrador : En espera a la carga de borrador",
-   11=>"Borrador : En revisón de formato de borrador",
-   12=>"Borrador : En revisión por Jurados",
-   13=>"Borrador : Para Reunión de Dictamen",
-   14=>"Borrador : Sustentado",
+   0=>"Proyecto de Tesis rechazado",
+   1=>"Proyecto de tesis  : Revisión de formato",
+   2=>"Proyecto de tesis  : En revisión por el Asesor",
+   3=>"Proyecto de tesis  : Listo para sorteo",
+   4=>"Proyecto de tesis  : En Revisión por Jurados",
+   5=>"Proyecto de tesis  : En Dictaminación",
+   6=>"Proyecto de tesis  : Proyecto Aprobado",
+   10=>"Trabajo de tesis  : En espera a la carga del Trabajo de tesis",
+   11=>"Trabajo de tesis  : En revisón de formato del Trabajo de tesis",
+   12=>"Trabajo de tesis  : En revisión por Jurados",
+   13=>"Trabajo de tesis  : Para Reunión de Dictamen",
+   14=>"Trabajo de tesis  : Sustentado",
 );
 
 
@@ -1000,18 +1000,18 @@ $varconsulta=array(
 );
 $state=array(
    -1=>"Observado",
-   0=>"Proyecto Rechazado",
-   1=>"Proyecto : Revisión de formato",
-   2=>"Proyecto : En revisión por el Director",
-   3=>"Proyecto : Listo para sorteo",
-   4=>"Proyecto : En Revisión por Jurados",
-   5=>"Proyecto : En Dictaminación",
-   6=>"Proyecto : Proyecto Aprobado",
-   10=>"Borrador : En espera a la carga de borrador",
-   11=>"Borrador : En revisón de formato de borrador",
-   12=>"Borrador : En revisión por Jurados",
-   13=>"Borrador : Para Reunión de Dictamen",
-   14=>"Borrador : Sustentado",
+   0=>"Proyecto de tesis rechazado",
+   1=>"Proyecto de tesis: Revisión de formato",
+   2=>"Proyecto de tesis: En revisión por el Asesor",
+   3=>"Proyecto de tesis : Listo para sorteo",
+   4=>"Proyecto de tesis : En Revisión por Jurados",
+   5=>"Proyecto de tesis : En Dictaminación",
+   6=>"Proyecto de tesis: Proyecto Aprobado",
+   10=>"Trabajo de tesis : En espera a la carga del Trabajo de tesis",
+   11=>"Trabajo de tesis : En revisón de formato del Trabajo de tesis",
+   12=>"Trabajo de tesis : En revisión por Jurados",
+   13=>"Trabajo de tesis : Para Reunión de Dictamen",
+   14=>"Trabajo de tesis : Sustentado",
 );
 
 
@@ -1056,7 +1056,7 @@ for($i=1;$i<=4;$i++){
 
 $pdf->ln(10);
 $pdf->SetFont('Arial','B',11);
-$pdf->Cell(170,7,toUTF("Proyectos de Investigación (FEDU) - Hasta 2017 "),0,1,'C');
+$pdf->Cell(170,7,toUTF("Proyectos de Tesis (FEDU) - Hasta 2017 "),0,1,'C');
 $pdf->Cell(170,0,"",1,1);$pdf->SetFont('Arial','',9);
 $feducon=$this->dbFedu->getTable("integrantes","codDocente=$codigo");
 
@@ -1076,14 +1076,14 @@ foreach($feducon->result() as $row){
 if($feducon->num_rows()>0){
    $pdf->Cell(170,7,toUTF("El Docente SI Realiza Investigación a Nivel Universitario Registrado en http://vriunap.pe/fedu"));
 }else{
-   $pdf->Cell(170,7,toUTF("El docente no tiene registrado Proyectos de Investigación FEDU en los años 2016  y 2017 ."),1,1,'C');
+   $pdf->Cell(170,7,toUTF("El docente no tiene registrado Proyectos de Tesis FEDU en los años 2016  y 2017 ."),1,1,'C');
 }
 
 // FEDUUUU ANTERIOR
 
 $pdf->ln(10);
 $pdf->SetFont('Arial','B',11);
-$pdf->Cell(170,7,toUTF("Proyectos de Investigación (FEDU) - Del 2018 en Adelante "),0,1,'C');
+$pdf->Cell(170,7,toUTF("Proyectos de Tesis (FEDU) - Del 2018 en Adelante "),0,1,'C');
 $pdf->Cell(170,0,"",1,1);$pdf->SetFont('Arial','',9);
 $feducon2=$this->dbFedu->getTable("docIntegrantes","CodDoc=$codigo");
 

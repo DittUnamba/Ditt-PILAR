@@ -43,7 +43,7 @@
           <li><a href="/siraa#team"> Ponentes </a></li>
           <li><a href="/siraa#clients"> Cronograma </a></li>
           <li><a href="/siraa/web/inscrips"> Inscripciones </a></li>
-          <li><a href="/siraa/web/trabajos"> Trabajos de Investigación </a></li>
+          <li><a href="/siraa/web/trabajos"> Trabajos de Tesis </a></li>
         </ul>
       </nav><!-- .main-nav -->
 

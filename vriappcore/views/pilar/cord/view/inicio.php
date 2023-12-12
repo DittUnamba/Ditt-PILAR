@@ -26,7 +26,7 @@
 			<div class="panel panel-default ">
 			 	<div class="panel-heading text-center"><h1><?php echo $numBorrad; ?></h1></div>
 				<div class="panel-body">
-					Borradores de Tesis
+					Trabajos de Tesis
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,6 @@
 <div id="loadPy">
 <div class="page-header">
-	<h4 class="titulo"> ¿Presentación de Borrador de Tesis? </h4>
+	<h4 class="titulo"> ¿Presentación de trabajo de tesis? </h4>
 </div>
 
 <div class="contenido">
@@ -26,7 +26,7 @@
     ?>
 
 	<p>
-       Le recordamos que el borrador debe de cumplir con el formato establecido y el director de tesis deberá haber revisado previamente el <b>borrador de tesis</b> asi evitar el rechazo del mismo. De lo contrario podría verser perjudicado en el proceso.
+       Le recordamos que el trabajo de tesis debe de cumplir con el formato establecido y el director de tesis deberá haber revisado previamente asi evitar el rechazo del mismo. De lo contrario podría verser perjudicado en el proceso.
     </p>
     <hr>
     	<?php 
@@ -36,7 +36,7 @@
 					<div class="col-md-11 btn-select">
 						<button class="btn btn-default indi_group bg-1" onclick="cargaBorr()">
 				            <span class="glyphicon glyphicon-upload" ></span>
-				            Subir Mi Borrador de Tesis
+				            Subir Mi Trabajo de tesis
 				        </button>
 					</div>
 

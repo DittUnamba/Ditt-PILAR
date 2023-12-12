@@ -130,7 +130,7 @@
 
 			if( $row->Estado == 11 ) {
 				$estado = "<button class='btn btn-xs btn-default'> $estado </button>"; // tipo jurado
-				$menus = "<small><b>Borrador en espera de Carga de Archivo</b></small>";
+				$menus = "<small><b>Trabajo de Tesis en espera de Carga de Archivo</b></small>";
 			}
 
 			if( $row->Estado == 12 ) {

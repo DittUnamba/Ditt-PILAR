@@ -2562,10 +2562,10 @@ public function repoGenpilar()
         $pdf->Cell(180,7,toUTF("BORRADOR DE TESIS EN PILAR:"),0,1,'L');
         $pdf->SetFont('Courier','',10);
         $pdf->Cell(180,7,toUTF("- $estadob1  Proyectos Aprobados que Cumplieron el Tiempo de Ejecucción."),0,1,'L');
-        $pdf->Cell(180,7,toUTF("- $estadob11  Borradores Cargados a PILAR."),0,1,'L');
+        $pdf->Cell(180,7,toUTF("- $estadob11  Trabajos de tesis Cargados a PILAR."),0,1,'L');
         $pdf->Cell(180,7,toUTF("- $estadob2  En revision via Plataforma por Jurados."),0,1,'L');
         $pdf->Cell(180,7,toUTF("- $estadob3  Borrador listo para reuniín de Dictamen."),0,1,'L');
-        $pdf->Cell(180,7,toUTF("- $estadob4  Borradores de Tesis Sustentados."),0,1,'L');
+        $pdf->Cell(180,7,toUTF("- $estadob4  Trabajos de Tesis Sustentados."),0,1,'L');
 
         //
         

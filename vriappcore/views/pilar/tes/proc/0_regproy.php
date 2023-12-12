@@ -20,14 +20,14 @@ el rechazo del mismo.
 </p>
  -->
 <p>
-Le recordamos que el borrador debe de cumplir con el formato establecido y el Asesor de tesis deberá haber revisado previamente el <b>borrador de tesis</b> asi evitar el rechazo del mismo. De lo contrario podría verser perjudicado en el proceso.
+Le recordamos que el trabajo de tesis debe de cumplir con el formato establecido y el Asesor de tesis deberá haber revisado previamente el <b>borrador de tesis</b> asi evitar el rechazo del mismo. De lo contrario podría verser perjudicado en el proceso.
 </p>
 <hr>
 <div class="col-md-6 btn-select">
-<button class="btn btn-default indi_group bg-1" onclick="cargaProy(1)"> Borrador Individual</button>
+<button class="btn btn-default indi_group bg-1" onclick="cargaProy(1)"> Trabajo de Invest. Individual</button>
 </div>
 <div class="col-md-6 btn-select">
-<button class="btn btn-default indi_group bg-2" onclick="cargaProy(2)"> Borrador Grupal</button>
+<button class="btn btn-default indi_group bg-2" onclick="cargaProy(2)"> Trabajo de Invest. Grupal</button>
 </div>
 <div class="col-md-12">
 <hr>
@@ -55,7 +55,7 @@ echo "</div>";
 <div class="modal-content">
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal">&times;</button>
-<h4 class="modal-title">Borrador de Investigación Grupal</h4>
+<h4 class="modal-title">Trabajo de Tesis Grupal</h4>
 </div>
 <div class="modal-body">
 <p>EstimadoTesista, recuerde que una vez iniciado el trámite no podrá realizar cambios de compañero o realizar otros tramites independientes.</p>

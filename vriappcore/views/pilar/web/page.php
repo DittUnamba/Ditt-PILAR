@@ -72,7 +72,7 @@ conducentes a la obtención del título profesional.
 <a id="2doc" onclick="openNav(this.id)" class="btn btn-default btn-user bg-green" role="button"><span class="glyphicon glyphicon-list-alt"></span> <br/>Docente</a>
 </div>
 <div class="col-xs-12 col-md-4 btn-acces-pilar">
-<a id="3coord" onclick="openNav(this.id)" class="btn btn-default btn-user bg-red-ligth" role="button"><span class="glyphicon glyphicon-question-sign"></span> <br/>U. Investigación</a>
+<a id="3coord" onclick="openNav(this.id)" class="btn btn-default btn-user bg-red-ligth" role="button"><span class="glyphicon glyphicon-question-sign"></span> <br/>Unidad de Invest.</a>
 </div>
 </div>
 <br>
@@ -86,16 +86,16 @@ conducentes a la obtención del título profesional.
 <div class="titulo">Reglamentos y Manuales</div>
 <div class="list-group">
 <ul class="nav nav-pills bderecha">
-<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/reglamentoPilar2018.pdf");?>" class="list-group-item blink"><span class="glyphicon glyphicon-book"></span> Reglamento Proyectos <span class="label label-warning"> 2018 </span></a>
-<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/resReglaBorrador.pdf");?>" class="list-group-item blink"><span class="glyphicon glyphicon-book"></span> Reglamento de Borrador</a>
+<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/reglamentoPilar2018.pdf");?>" class="list-group-item blink"><span class="glyphicon glyphicon-book"></span> Reglamento Proyectos de Tesis <span class="label label-warning"> 2018 </span></a>
+<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/resReglaBorrador.pdf");?>" class="list-group-item blink"><span class="glyphicon glyphicon-book"></span> Reglamento de Trabajos de Tesis</a>
 <a target="_blank" href="<?php echo base_url("web/etica");?>" class="list-group-item blink"><span class="glyphicon glyphicon-book"></span> Procedimientos Ética en Investigación <span class="label label-warning"> Nuevo </span></a>
 <hr>
-<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/Formato-Proy-Tesis-2016.docx");?>" class="list-group-item blink"><span class="glyphicon glyphicon-bookmark"></span> Formato de Proyecto</a>
-<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/Formato-Borrador-Tesis-2017.docx");?>" class="list-group-item blink"><span class="glyphicon glyphicon-bookmark"></span> Formato de Borrador</a>
+<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/Formato-Proy-Tesis-2016.docx");?>" class="list-group-item blink"><span class="glyphicon glyphicon-bookmark"></span> Formato de Proyecto de Tesis</a>
+<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/Formato-Borrador-Tesis-2017.docx");?>" class="list-group-item blink"><span class="glyphicon glyphicon-bookmark"></span> Formato de Trabajo de Tesis</a>
 <hr>
 <a href="#" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Docentes</a>
 <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/manual_tesistav31.pdf");?>" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Tesistas </a>
-<a href="#" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Coordinadores</a>
+<a href="#" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Unidades de Invest.</a>
 <a target="_blank" href="<?php echo base_url("/pilar/web/preguntas");?>" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Preguntas frecuentes</a>
 </ul>
 </div>

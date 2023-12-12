@@ -7,7 +7,7 @@
 ?>
 <h3>Sustentaciones de Tesis :: <small><?php  echo $Carrera; ?></small></h3>
 <div class="col-md-12">
-	<h4>Listado de Borradores de Tesis 
+	<h4>Listado de Trabajos de Tesis
 	<button type="button" class="pull-right btn btn-success" data-dismiss="modal" onclick="jsLoadModalCord('','cordinads/vwPubSusten')"> Publicar Sustentación </button></h4>
 	<br>
 	<table class="table table-bordered">

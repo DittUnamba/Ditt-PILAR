@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>COORDINADOR - PILAR | Universidad Nacional Micaela Bastidas de Apurímac</title>
+    <title>UNIDAD INVEST.- PILAR | Universidad Nacional Micaela Bastidas de Apurímac</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -42,7 +42,7 @@
 	            </button>
 	              <a class="navbar-brand" href="#">
 		            <div class="navbar-brand-pilar">
-		                <img class="img-responsive" src="<?php echo base_url("vriadds/pilar/imag/pilar.png");?>"/>COORDINADOR
+		                <img class="img-responsive" src="<?php echo base_url("vriadds/pilar/imag/pilar.png");?>"/>Unidad de Investigación
 		            </div>
 	        	</a>
 	        </div>

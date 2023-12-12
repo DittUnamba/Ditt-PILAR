@@ -21,7 +21,7 @@
 			<!--  -->
 			<br>
 			<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwProyectos')" class="list-group-item"><span class="glyphicon glyphicon-bookmark"></span> Proyectos de Tesis</a>
-			<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwBorradores')" class="list-group-item"><span class="glyphicon glyphicon-bookmark"></span> Borrador de Tesis</a>
+			<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwBorradores')" class="list-group-item"><span class="glyphicon glyphicon-bookmark"></span> Trabajos de Tesis</a>
 			<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwSustentac')"class="list-group-item"><span class="glyphicon glyphicon glyphicon-calendar"></span> Sustentacion Presencial</a>
             <a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwSustentacVir')"class="list-group-item" style='background: #fffb3fe0'><span class="glyphicon glyphicon glyphicon-calendar"></span> Sustentacion Virtual</a>
 			<br>

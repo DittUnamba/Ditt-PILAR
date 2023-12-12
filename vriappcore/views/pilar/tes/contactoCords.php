@@ -5,7 +5,7 @@
 	<h3 class="title">Unidad de Investigación</h3>
 	<p>El contacto de las unidades de investigación es el primer enlace para resolver nuestras inquietudes en los procesos que desarrolla el Vicerrectorado de Investigación, Rogamos utilizar solo en situaciones que lo ameriten, y en el horario de trabajo.</p>
 	<p>
-		La absolución de dudas o consultas de los procedimientos del proyecto y borrador de tesis de la PLATAFORMA PILAR podrán ser absueltas a través de la comunicación la Coordinación de la Unidad de Investigación de su facultad.
+		La absolución de dudas o consultas de los procedimientos del proyecto y trabajos de tesis de la PLATAFORMA PILAR podrán ser absueltas a través de la comunicación la Coordinación de la Unidad de Investigación de su facultad.
 	</p>
 
 	<div class="col-md-12">

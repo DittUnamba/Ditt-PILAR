@@ -17,7 +17,7 @@
                 <li><a href="<?=base_url("pilar")?>">Inicio</a></li>
                 <li><a href="<?=base_url("pilar/docentes")?>">Docentes</a></li>
                 <li><a href="<?=base_url("pilar/tesistas")?>">Tesistas</a></li>
-                <li><a href="<?=base_url("pilar/cordinads")?>">Coordinadores</a></li>
+                <li><a href="<?=base_url("pilar/cordinads")?>">Unidades de Invest.</a></li>
                 <li><a href="<?=base_url("pilar/sustentas")?>">Sustentaciones</a></li>
             </ul>
         </div>

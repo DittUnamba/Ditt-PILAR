@@ -31,7 +31,7 @@
                 echo "</tr>";
 
                 echo "<tr>";
-                echo "<td> Borradores de Tesis </td>";
+                echo "<td> Trabajos de Tesis </td>";
                 echo "<td> $curborr </td>";
                 echo "<td> $totborr </td>";
                 echo "</tr>";

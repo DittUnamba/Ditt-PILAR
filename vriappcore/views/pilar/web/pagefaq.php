@@ -18,7 +18,7 @@ src="<?=base_url("vriadds/pilar/imag/logos-u-v-p.png");?>">
 <li><a href="<?=base_url("pilar")?>">Inicio</a></li>
 <li><a href="<?=base_url("pilar/docentes")?>">Docentes</a></li>
 <li><a href="<?=base_url("pilar/tesistas")?>">Tesistas</a></li>
-<li><a href="<?=base_url("pilar/cordinads")?>">Coordinadores</a></li>
+<li><a href="<?=base_url("pilar/cordinads")?>">Unidades de Invest.</a></li>
 <li><a href="<?=base_url("pilar/sustentas")?>">Sustentaciones</a></li>
 </ul>
 </div>
@@ -66,15 +66,15 @@ foreach ($faqs->result() as $columna)
 <div class="titulo">Reglamentos y Manuales</div>
 <div class="list-group">
 <ul class="nav nav-pills bderecha">
-<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/Reglam-de-ProyTesis-2016.pdf");?>" class="list-group-item blink"><span class="glyphicon glyphicon-book"></span> Reglamento Proyectos</a>
-<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/resReglaBorrador.pdf");?>" class="list-group-item blink"><span class="glyphicon glyphicon-book"></span> Reglamento de Borrador</a>
+<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/Reglam-de-ProyTesis-2016.pdf");?>" class="list-group-item blink"><span class="glyphicon glyphicon-book"></span> Reglamento Proyectos de Invest.</a>
+<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/resReglaBorrador.pdf");?>" class="list-group-item blink"><span class="glyphicon glyphicon-book"></span> Reglamento Trabajos de Invest.</a>
 <hr>
-<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/Formato-Proy-Tesis-2016.docx");?>" class="list-group-item blink"><span class="glyphicon glyphicon-bookmark"></span> Formato de Proyecto</a>
-<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/Formato-Borrador-Tesis-2017.docx");?>" class="list-group-item blink"><span class="glyphicon glyphicon-bookmark"></span> Formato de Borrador <span class="label label-warning"> Nuevo </span> </a>
+<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/Formato-Proy-Tesis-2016.docx");?>" class="list-group-item blink"><span class="glyphicon glyphicon-bookmark"></span> Formato de Proyectos de Invest.</a>
+<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/Formato-Borrador-Tesis-2017.docx");?>" class="list-group-item blink"><span class="glyphicon glyphicon-bookmark"></span> Formato Trabajos de Invest<span class="label label-warning"> Nuevo </span> </a>
 <hr>
 <a href="#" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Docentes</a>
 <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/manual_tesistav3.pdf");?>" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Tesistas <span class="label label-warning"> Nuevo </span></a>
-<a href="#" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Coordinadores</a>
+<a href="#" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Unidades de Invest.</a>
 <a target="_blank" href="<?php echo base_url("/pilar/web/preguntas");?>" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Preguntas frecuentes <span class="label label-warning"> Nuevo </span></a>
 </ul>
 </div>

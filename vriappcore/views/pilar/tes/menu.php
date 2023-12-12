@@ -10,7 +10,7 @@
 			<!-- <a href="javascript:void(0)" onclick="lodPanel('panelTesis','tesistas/tesContacto')"class="list-group-item"><span class="glyphicon glyphicon-eye-open"></span> Contacto <span class="label label-info">Nuevo</span></a> -->
 			<hr>
 			<a href="javascript:void(0)" onclick="lodPanel('panelTesis','tesistas/tesProyecto')" class="list-group-item"><span class="glyphicon glyphicon-book"></span> Proyecto de Tesis </a>
-			<a href="javascript:void(0)" onclick="lodPanel('panelTesis','tesistas/tesBorrador')" class="list-group-item"><span class="glyphicon glyphicon-th-large"></span> Borrador de Tesis</a>
+			<a href="javascript:void(0)" onclick="lodPanel('panelTesis','tesistas/tesBorrador')" class="list-group-item"><span class="glyphicon glyphicon-th-large"></span> Trabajo de Tesis</a>
 			<!-- <a href="javascript:void(0)" style='background: #93cdff' onclick="lodPanel('panelTesis','tesistas/vwSolictaSust')" class="list-group-item" disabled=""><span class="glyphicon glyphicon-th-large"></span> Sustentación No Presencial</a> -->
 			<a href="javascript:void(0)" onclick="lodPanel('panelTesis','tesistas/mails')" class="list-group-item"><span class="glyphicon glyphicon-th-large"></span> Notificaciones <span class="label label-info">Nuevo</span> </a>
 			<!-- <a href="javascript:void(0)" onclick="lodPanel('panelTesis','tesistas/sorry')" class="list-group-item"><span class="glyphicon glyphicon glyphicon-calendar"></span> Sustentaciones</a> -->

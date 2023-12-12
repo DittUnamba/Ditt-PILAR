@@ -39,7 +39,7 @@
 						break;
 					case 2:
 						$opt="";
-						$estado="En revisión por el Director";
+						$estado="En revisión por el Asesor";
 						break;
 					case 3:
 						$opt .= " | <button onclick='jsMdlSorteo(\"cordinads/execSorteo/$row->Id\",$nro)' class='btn btn-xs btn-warning'> Sorteo </button> ";
@@ -52,11 +52,11 @@
 						break;
 					case 5:
 						$opt="";
-						$estado="Dictaminación de Proyecto";
+						$estado="Dictaminación de Proyecto de investigación";
 						break;
 					case 6:
 						$opt="<a href='".base_url("pilar/tesistas/actaProy/$row->Id")."' target=_blank class='btn btn-success btn-xs'>Acta de Aprobación</a>";
-						$estado="Proyecto Aprobado";
+						$estado="Proyecto de investigación Aprobado";
 						break;
 					default:
 						$opt="";
