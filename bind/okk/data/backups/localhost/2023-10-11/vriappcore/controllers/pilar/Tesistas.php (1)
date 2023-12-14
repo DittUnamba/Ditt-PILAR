@@ -568,8 +568,8 @@ class Tesistas extends CI_Controller {
 
         $pdf->Ln( 19 );
         $pdf->SetFont( "Arial", 'B', 14 );
-        //$pdf->Cell( 174, 5, toUTF("ACTA  DE BORRADOR DE TESIS (_DEVELOP_)"), 0, 1, 'C' );
-        $pdf->Cell( 174, 5, toUTF("ACTA DE APROBACIÓN BORRADOR DE TESIS"), 0, 1, 'C' );
+        //$pdf->Cell( 174, 5, toUTF("ACTA  DE TRABAJO DE TESIS (_DEVELOP_)"), 0, 1, 'C' );
+        $pdf->Cell( 174, 5, toUTF("ACTA DE APROBACIÓN TRABAJO DE TESIS"), 0, 1, 'C' );
 
 
         $dia = (int) substr( $dets->Fecha, 8, 2 );
@@ -862,7 +862,7 @@ class Tesistas extends CI_Controller {
 
 
         $msg = "<br>Se ha actualizado el trámite: <b>$tram->Codigo</b><br><br> "
-             . "Título de Borrador de Tesis: <b>$titul</b> <br><br>       "
+             . "Título de Trabajo de Tesis: <b>$titul</b> <br><br>       "
              . "Ud. debe apersonarse a Plataforma para revisar el formato "
              . "y la conformación de su <b>Jurado Evaluador</b> "
              . "de lo contrario no se procede con el envio para "
@@ -1442,7 +1442,7 @@ class Tesistas extends CI_Controller {
                  . "Sr(rta): <b>$data->Nombres $data->Apellis</b>.<br>"
                  . "Ud. ha concluido satisfactoriamente su inscripción en la  "
                  . "Plataforma PILAR para el trámite electrónico de su "
-                 . "proyecto y borrador de tesis, en calidad de estudiante "
+                 . "proyecto y Trabajo de tesis, en calidad de estudiante "
                  . "egresado de la <b>UNAMBA</b>."
                  . "<br><br><b>Datos de su Cuenta:</b><br>"
                  . "  * usuario: $mail<br>"

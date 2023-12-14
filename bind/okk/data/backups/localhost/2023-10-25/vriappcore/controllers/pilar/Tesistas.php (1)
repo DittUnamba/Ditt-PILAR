@@ -888,7 +888,7 @@ class Tesistas extends CI_Controller {
 
 
         $msg = "<br>Se ha actualizado el trámite: <b>$tram->Codigo</b><br><br> "
-             . "Título de Borrador de Tesis: <b>$titul</b> <br><br>       "
+             . "Título de trabajo de Tesis: <b>$titul</b> <br><br>       "
              . "Ud. debe apersonarse a Plataforma para revisar el formato "
              . "y la conformación de su <b>Jurado Evaluador</b> "
              . "de lo contrario no se procede con el envio para "
