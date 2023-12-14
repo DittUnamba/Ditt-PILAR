@@ -45,8 +45,8 @@
 
 	        <div id="navbar" class="collapse navbar-collapse navbar-responsive-collapse">
 	            <ul class="nav navbar-nav navbar-right">
-	                <li><a class="nav-link" href="#"> Trabajos de Invest. <i class="glyphicon glyphicon-envelope"></i><span class="badge badge-mail">0</span></a></li>
-	                <li><a href="#" class="nav-link"> Proyectos de Invest. <i class="glyphicon glyphicon-book"></i> <span class="badge badge-mail">0</span></a></li>
+	                <!-- <li><a class="nav-link" href="#"> Trabajos de Invest. <i class="glyphicon glyphicon-envelope"></i><span class="badge badge-mail">0</span></a></li>
+	                <li><a href="#" class="nav-link"> Proyectos de Invest. <i class="glyphicon glyphicon-book"></i> <span class="badge badge-mail">0</span></a></li> -->
 	                <li><a href="<?= base_url("pilar/docentes/logout");?>"> <span class="glyphicon glyphicon-log-out"></span> Cerrar Sessión (Salir) </a></li>
 	            </ul>
 			</div>

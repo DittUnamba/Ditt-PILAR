@@ -21,7 +21,7 @@
                     $name=$this->dbPilar->inTesista($sess->userId);
                 ?>
                   <center><b>DECLARACIÓN JURADA</b><br></center>
-                  Yo, <?=$name;?>, en amparo de lo dispuesto en el Artículo N° 41 de la Ley N° 27444, a efectos de cumplir con los requisitos y proseguir los trámites para presentar los resultados de mi investigación y defender mi borrador de tesis  <b>DECLARO BAJO JURAMENTO </b>, que los datos que adjunto en el presente formulario son auténticos y me sujeto a la normativa vigente de demostrarse lo contrario.
+                  Yo, <?=$name;?>, en amparo de lo dispuesto en el Artículo N° 41 de la Ley N° 27444, a efectos de cumplir con los requisitos y proseguir los trámites para presentar los resultados de mi investigación y defender mi trabajo de tesis  <b>DECLARO BAJO JURAMENTO </b>, que los datos que adjunto en el presente formulario son auténticos y me sujeto a la normativa vigente de demostrarse lo contrario.
               </div>
               <!-- Info Área-->
               <div class="form-group success">
@@ -44,7 +44,7 @@
               <div class="form-group success">
                   <label class="col-md-4 control-label">Año de Resolución :</label>
                   <div class="col-md-7">
-                      <input name="anio" type="number" min="1900" max="2020" step="1" value="2020" title="Debe poner un año válido."class="form-control" required></input>
+                      <input name="anio" type="number" min="1900" max="2024" step="1" value="2023" title="Debe poner un año válido."class="form-control" required></input>
                   </div>
               </div>
               <!-- date area -->

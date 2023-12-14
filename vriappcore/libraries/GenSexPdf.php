@@ -76,7 +76,7 @@ class GenSexPdf extends FPDF {
             $this->Line( $this->LeftMargin, 287, $this->RightMargin, 287 );
 
         //$this->Cell(0,10, toUTF('Página - ').$this->PageNo(), 0, 0, 'C');
-        $this->Cell(170,10, toUTF('[Oficina de Plataforma de Investigación y Desarrollo ]'), 0, 0, 'C');
+        $this->Cell(170,10, toUTF('[Dirección de Innovación y Transferencia Tecnológica ]'), 0, 0, 'C');
     }
 
     // composed function isn't derived

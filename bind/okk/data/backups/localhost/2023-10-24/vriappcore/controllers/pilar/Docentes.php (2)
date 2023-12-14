@@ -557,7 +557,7 @@ class Docentes extends CI_Controller {
 
 
             $mail = $this->dbPilar->inCorreo($tram->IdTesista1);
-			$msg  = "El Director/Asesor ha rechazado su proyecto de tesis "
+			$msg  = "El Asesor ha rechazado su proyecto de tesis "
 				  . "por lo que deberá cambiarlo o coordinar personalmente.";
 
             $this->logCorreo( $sess->userId, $mail, "Rechazo del Director", $msg );

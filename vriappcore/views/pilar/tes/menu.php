@@ -34,7 +34,7 @@
 			<a href="http://vriunap.pe/vriadds/pilar/doc/formatos/Formato de tesis - Antropologia.docx"
 				class="list-group-item" 
 				style="color:gray;background-color: #109bc2;text-align: center; font-size: 18px;">
-				<span class="glyphicon glyphicon-plus-sign"></span> Descargar Formato: Borrador de Tesis <br></a>
+				<span class="glyphicon glyphicon-plus-sign"></span> Descargar Formato: Trabajo de Tesis <br></a>
             <?php  endif  ?>
 
             <!--

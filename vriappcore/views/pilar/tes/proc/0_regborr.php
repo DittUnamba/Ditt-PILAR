@@ -26,7 +26,7 @@
     ?>
 
 	<p>
-       Le recordamos que el trabajo de tesis debe de cumplir con el formato establecido y el director de tesis deberá haber revisado previamente asi evitar el rechazo del mismo. De lo contrario podría verser perjudicado en el proceso.
+       Le recordamos que el trabajo de tesis debe de cumplir con el formato establecido y el asesor de tesis deberá haber revisado previamente asi evitar el rechazo del mismo. De lo contrario podría verser perjudicado en el proceso.
     </p>
     <hr>
     	<?php 

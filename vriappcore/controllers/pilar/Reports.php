@@ -1519,7 +1519,7 @@ public function histoTrams( $carr=0 )
             $titulo = $this->dbPilar->inTitulo( $proy->Id );
             $autors = $this->dbPilar->inTesistas( $proy->Id );
             $linea  = $this->dbRepo->inLineaInv( $proy->IdLinea );
-            $estado = ($proy->Estado==6)? "Proyecto de Tesis" : "Borrador de Tesis";
+            $estado = ($proy->Estado==6)? "Proyecto de Tesis" : "Trabajo de Tesis";
 
             echo "<tr>";
             echo "<td> $nro </td>";

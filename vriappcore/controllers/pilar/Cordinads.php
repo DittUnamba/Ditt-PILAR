@@ -594,16 +594,16 @@ public function memosGen( $IdTramite )
       }
       if($tram->Estado==12){
          $quienes=array($tram->IdJurado1,$tram->IdJurado2,$tram->IdJurado3,$tram->IdJurado4);
-         $asunto="REVISIÓN DE BORRADOR DE TESIS";
+         $asunto="REVISIÓN DE TRABAJO DE TESIS";
 //  Borrador
          $str = "Por medio del presente comunicarle que Ud. ha sido SORTEADO como jurado revisor "
          . "del Proyecto de Tesis Aprobado con el código: $codigop, "
          . "de la Escuela Profesional de: $carrera."
-         . "\n\nCuyo borrador de tesis deberá de revisar en un plazo máximo de 10 dias apartir del día $fecha y enviar sus observaciones via PILAR, "
+         . "\n\nCuyo trabajo de tesis deberá de revisar en un plazo máximo de 10 dias apartir del día $fecha y enviar sus observaciones via PILAR, "
          . "el documento PDF se ha enviado a su cuenta en "
          . "Plataforma ubicando en https://pilar.unamba.edu.pe/pilar \n\n"
-         . "Si transcurrido este tiempo, no exixtiera respuesta alguna PILAR considerará el borrador de tesis apto para su defensa."
-         . "(Art.6 Reglamento de Presentación dictamen de borradores y defensa de tesis) Resolución Rectoral N°3011-2016-R-UNA\n\n\n"
+         . "Si transcurrido este tiempo, no exixtiera respuesta alguna PILAR considerará el trabajo de tesis apto para su defensa."
+         . "(Art.6 Reglamento de Presentación dictamen de trabajos y defensa de tesis) Resolución Rectoral N°3011-2016-R-UNAMBA\n\n\n"
          . "Atentamente."
          ;
       }
@@ -621,12 +621,12 @@ public function memosGen( $IdTramite )
          $str = "Por medio del presente comunicarle que Ud. ha sido designado como PRESIDENTE del jurado revisor "
          . "del Proyecto de Tesis Aprobado con el còdigo: $codigop, "
          . "de la Escuela Profesional de: $carrera "
-         . "\n\nCuyo borrador de tesis ya fue revisado por los jurados via plataforma para lo cual usted deberá convocar a una reunión en un plazo máximo de 05 dias apartir del día $fecha con todos los miembros de jurado, como sigue a continuación: \n"
+         . "\n\nCuyo trabajo de tesis ya fue revisado por los jurados via plataforma para lo cual usted deberá convocar a una reunión en un plazo máximo de 05 dias apartir del día $fecha con todos los miembros de jurado, como sigue a continuación: \n"
          ." - Primer Miembro : $j2m\n"
          ." - Segundo Miembro :$j3m\n"
          ." - Tercer Miembro/Director :$j4m\n"
-         . "con presencia del bachiller  $tesista , a fin de realizar las observaciones finales  y dictaminar el borrador de tesis. "
-         . "(Art.9 Reglamento de Presentación dictamen de borradores y defensa de tesis) Resolución Rectoral N°3011-2016-R-UNA\n\n\n"
+         . "con presencia del bachiller  $tesista , a fin de realizar las observaciones finales  y dictaminar el trabajo de tesis. "
+         . "(Art.9 Reglamento de Presentación dictamen de trabajos y defensa de tesis) Resolución Rectoral N°3011-2016-R-UNAMBA\n\n\n"
          . "Atentamente."; 
       }
 // Cargo
@@ -650,7 +650,7 @@ public function memosGen( $IdTramite )
       $pdf->SetFont( "Arial", "", 6 );
       $pdf->Cell( 30, 2, toUTF("/ Vicerectorado de Investigación"), 0, 1, 'L' ); 
       $pdf->Cell( 30, 2, toUTF("/ Plataforma PILAR"), 0, 1, 'L' ); 
-      $pdf->Cell( 30, 2, toUTF("/ Cordinación de Investigación $carrera"), 0, 1, 'L' ); 
+      $pdf->Cell( 30, 2, toUTF("/ Unidad de Investigación $carrera"), 0, 1, 'L' ); 
 // Memos;
       for ($i=0; $i < count($quienes); $i++) {   
       $grado=$this->dbRepo->inGrado($quienes[$i]);       
@@ -678,7 +678,7 @@ public function memosGen( $IdTramite )
          $pdf->SetFont( "Arial", "", 6 );
          $pdf->Cell( 30, 2, toUTF("/ Vicerectorado de Investigación"), 0, 1, 'L' ); 
          $pdf->Cell( 30, 2, toUTF("/ Plataforma PILAR"), 0, 1, 'L' ); 
-         $pdf->Cell( 30, 2, toUTF("/ Cordinación de Investigación $carrera"), 0, 1, 'L' ); 
+         $pdf->Cell( 30, 2, toUTF("/ Unidad de Investigación $carrera"), 0, 1, 'L' ); 
       }
       $pdf->Output();
    }else{
@@ -1355,22 +1355,22 @@ private function inRechaza( $rowTram , $msg)
         echo "Memo Circular: <b>$nroMemo</b><br>";
 
 
-      $msg = "<h4>Borrador enviado a Revisión</h4><br>"
-          . "Su Borrador de Tesis: <b>$tram->Codigo</b> ha sido enviado a los cuatro miembros de su Jurado. "
+      $msg = "<h4>Trabajo enviado a Revisión</h4><br>"
+          . "Su Trabajo de Tesis: <b>$tram->Codigo</b> ha sido enviado a los cuatro miembros de su Jurado. "
           . "El mismo que será revisado mediante la <b>Plataforma PILAR</b>."
           ;
 
-      $this->logTramites($sess->userId , $tram->Id, "Borrador Enviado a Revisión", $msg );
+      $this->logTramites($sess->userId , $tram->Id, "Trabajo Enviado a Revisión", $msg );
       
       $mail = $this->dbPilar->inCorreo( $tram->IdTesista1 );
-      $this->logCorreo( $tram->IdTesista1,0, $mail, "Borrador enviado a revisión", $msg );
+      $this->logCorreo( $tram->IdTesista1,0, $mail, "Trabajo enviado a revisión", $msg );
 
       // envio a jurados
       //
       $det = $this->dbPilar->inLastTramDet( $tram->Id );
       $msg = "<h4>Revisión Electrónica</h4><br>"
           . "Por la presente se le comunica que se le ha enviado a su cuenta de Docente en la "
-          . "<b>Plataforma PILAR</b> el borrador de tesis con el siguiente detalle:<br><br>   "
+          . "<b>Plataforma PILAR</b> el trabajo de tesis con el siguiente detalle:<br><br>   "
           . "Memo Circular: <b>$nroMemo-VRIN-UNAMBA</b><br>"
           . "Tesista(s) : <b>" . $this->dbPilar->inTesistas($tram->Id) . "</b><br>"
           . "Título : <b> $det->Titulo </b><br><br>"
@@ -1382,15 +1382,15 @@ private function inRechaza( $rowTram , $msg)
       $corr3 = $this->dbRepo->inCorreo( $tram->IdJurado3 );
       $corr4 = $this->dbRepo->inCorreo( $tram->IdJurado4 );
 
-      $this->logCorreo( 0,$tram->IdJurado1, $corr1, "Revisión de Borrador de Tesis", $msg );
-      $this->logCorreo( 0,$tram->IdJurado2, $corr2, "Revisión de Borrador de Tesis", $msg );
-      $this->logCorreo( 0,$tram->IdJurado3, $corr3, "Revisión de Borrador de Tesis", $msg );
-      $this->logCorreo( 0,$tram->IdJurado4, $corr4, "Revisión de Borrador de Tesis", $msg );
+      $this->logCorreo( 0,$tram->IdJurado1, $corr1, "Revisión de Trabajo de Tesis", $msg );
+      $this->logCorreo( 0,$tram->IdJurado2, $corr2, "Revisión de Trabajo de Tesis", $msg );
+      $this->logCorreo( 0,$tram->IdJurado3, $corr3, "Revisión de Trabajo de Tesis", $msg );
+      $this->logCorreo( 0,$tram->IdJurado4, $corr4, "Revisión de Trabajo de Tesis", $msg );
 
 
       //echo $tram->Codigo . " fue Enviado a su Director";
       echo "Correos enviados correctamente<br>";
-        echo "El Borrador está en Revisión desde Hoy.<br>";
+        echo "El Trabajo está en Revisión desde Hoy.<br>";
    }
 
 public function listPyDire( $idtram=0 )

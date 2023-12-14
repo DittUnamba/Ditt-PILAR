@@ -67,9 +67,9 @@
     <thead>
       <tr>
         <th> Nro </th>
-        <th class="col-md-1"> Codigo </th>
+        <th class="col-md-1"> Código </th>
         <th class="col-md-2"> Tesista </th>
-        <th class="col-md-5"> Titulo </th>
+        <th class="col-md-5"> Título </th>
         <th class="col-md-1"> Fecha </th>
         <th class="col-md-2"> Opciones </th>
       </tr>

@@ -5,7 +5,7 @@
 <div class="contenido">
 	<p>
        Antes de iniciar este procedimiento le recordamos que debe poner en texto de color
-       <b class='text-danger'>rojo</b> con fondo blanco los parrafos o elementos que su jurado le ha indicado corregir, por ello revise bien su <b>Trabajo de tesis</b> asi evitar
+       <b class='text-danger'>rojo</b> con fondo blanco los parrafos o elementos que su jurado le ha indicado corregir, por ello revise bien su <b>Trabajo de Tesis</b> asi evitar
        el rechazo del mismo. Por otro lado deberá coordinar
     </p>
     <p>
@@ -84,7 +84,7 @@
 	?> 
 	<!-- area de subida de correcciones -->
     <div class="panel-heading">
-        <h2 class="panel-title"> Correcciones Finales de Trabajo de tesis </h2>
+        <h2 class="panel-title"> Correcciones Finales de Trabajo de Tesis </h2>
     </div>
     <div class="panel-body" id="plops">
 

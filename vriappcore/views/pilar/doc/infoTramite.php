@@ -2,9 +2,9 @@
     <thead>
       <tr>
         <th> Nro </th>
-        <th class="col-md-1"> Participacion</th>
-        <th class="col-md-1"> Codigo </th>
-        <th class="col-md-6"> Titulo </th>
+        <th class="col-md-1"> Participación</th>
+        <th class="col-md-1"> Código </th>
+        <th class="col-md-6"> Título </th>
         <th class="col-md-1"> Fecha </th>
         <th class="col-md-1"> Tiempo </th>
         <th class="col-md-2"> Opciones </th>
@@ -134,7 +134,7 @@
 			}
 
 			if( $row->Estado == 12 ) {
-				$menus = "<button onclick=\"loadCorrs('docentes/corrBorras',$row->Id)\" class='btn btn-sm btn-info'> Corregir Borrador </button>";
+				$menus = "<button onclick=\"loadCorrs('docentes/corrBorras',$row->Id)\" class='btn btn-sm btn-info'> Corregir Trabajo</button>";
 				$estado = "<button class='btn btn-xs btn-success'> $estado </button>"; // tipo jurado
 			}
 

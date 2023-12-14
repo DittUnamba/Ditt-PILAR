@@ -73,7 +73,7 @@
           <ul class="nav nav-pills bderecha">
           	<a href="<?=base_url("pilar/admin")?>" class="list-group-item"><span class="glyphicon glyphicon-home"></span> Inicio</a>
             <a onclick="lodPanel('admin/panelProys')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-th-list"></span> Proyectos de Tesis</a>
-            <a onclick="lodPanel('admin/panelBorrs')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-book"></span> Borrador de Tesis</a>
+            <a onclick="lodPanel('admin/panelBorrs')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-book"></span> Trabajo de Tesis</a>
             <a onclick="lodPanel('admin/panelSuste')" href="javascript:void(0)" href="#" class="list-group-item"><span class="glyphicon glyphicon glyphicon-calendar"></span> Sustentaciones</a>
 			<a onclick="lodPanel('admin/panelRechz')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-book"></span> Proys/Borr Rechazados </a>
             <a onclick="lodPanel('admin/panelCaduc')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-book"></span> Proys/Borr Caducados </a>

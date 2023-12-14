@@ -21,8 +21,8 @@
       <ul class="nav nav-pills bderecha">
         <a href="<?=base_url("pilar/docentes");?>" class="list-group-item"><span class="glyphicon glyphicon-home"></span> Inicio </a>
         <a onclick="$('#panelView').load('docentes/infoDocente')"  href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-user"></span> Mis Datos y Pérfil </a>
-        <a onclick="lodPanel('panelView','docentes/infoTrams/1')"  href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-th-list"></span> Trabajos de Tesis</a>
-        <a onclick="lodPanel('panelView','docentes/infoTrams/2')"  href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-book"></span> Proyectos de Tesis</a>
+        <a onclick="lodPanel('panelView','docentes/infoTrams/1')"  href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-th-list"></span> Proyecto de Tesis</a>
+        <a onclick="lodPanel('panelView','docentes/infoTrams/2')"  href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-book"></span> Trabajo de Tesis</a>
         
         <a onclick="lodPanel('panelView','docentes/infoTrams/3')" href="javascript:void(0)" class="list-group-item" style="background-color: #93cdff"><span class="glyphicon glyphicon-camera"></span> Sustentaciones</a>
         <hr>

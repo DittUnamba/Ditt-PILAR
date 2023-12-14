@@ -6,7 +6,7 @@
 <div class="col-md-12" 	>
 <center><img class='img-responsive' width="260px" src="http://vriunap.pe/vriadds/vri/web/convocatorias/curso1-3mt.jpg"></center>
 <?php
-	$mensajeNo="<h3 class='text-center text-danger'>UPSS...Lo sentimos! <br>Usted no aplica al concurso.! <br> <small>No tiene proyecto registrado o su director de tesis aun no acepto su proyecto.</small></h3>";
+	$mensajeNo="<h3 class='text-center text-danger'>UPSS...Lo sentimos! <br>Usted no aplica al concurso.! <br> <small>No tiene proyecto registrado o su asesor de tesis aun no acepto su proyecto.</small></h3>";
 // Existe el Trámite?
 	$tram=$this->dbPilar->inTramByTesista($sess->userId);
 	if($tram){

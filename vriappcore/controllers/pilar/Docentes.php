@@ -983,7 +983,7 @@ class Docentes extends CI_Controller {
 
 
         $str = "Se establece en el Art. 149 del Reglamento de Investigación de Grados y Títulos de la UNAMBA que, "
-             . "aprobado y sustentado el mencionado Borrador de Tesis conformado por el jurado:"
+             . "aprobado y sustentado el mencionado Trabajo de Tesis conformado por el jurado:"
              ;
         $pdf->Ln(7);
 
@@ -1095,7 +1095,7 @@ class Docentes extends CI_Controller {
 
 
         $str = "Se establece en el Art. 149 del Reglamento de Investigación de Grados y Títulos de la UNA Puno que, "
-             . "aprobado y sustentado el mencionado Borrador de Tesis conformado por el jurado:"
+             . "aprobado y sustentado el mencionado Trabajo de Tesis conformado por el jurado:"
              ;
         $pdf->Ln(7);
 

@@ -1,6 +1,6 @@
 <div class="panel panel-info">
     <div class="panel-heading">
-        <h2 class="panel-title"> Registro de Borrador de Tesis </h2>
+        <h2 class="panel-title"> Registro de Trabajo de Tesis </h2>
     </div>
     <div class="panel-body" id="plops">
 

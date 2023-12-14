@@ -17,14 +17,14 @@
 					Estimado Docente se está reestrucuturando las Líneas de Investigación de la Universidad, y venimos procesando esta información por lo que se le comunica que las Lineas de Investigación que no tienen tesis, no podrán ser mas seleccionadas.
 					</div>
 				</div>
-				<div class="panel panel-warning ">
+				<!-- <div class="panel panel-warning ">
 					<div class="panel-heading docente-fedu">
 						RECORDATORIO FEDU <B>(NUEVO!!)</B>
 					</div>
 					<div class="panel-body">
 						 Presentación de Informe <B>DE AVANCE DE INVESTIGACIÓN</B>:<h5> Del <b>01 de Junio </b> al <b>15 de Junio de 2020 </b><h5>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<div class="col-md-6">
 				<h4 class="titulo">Vicerrectorado de Investigación</h4>
