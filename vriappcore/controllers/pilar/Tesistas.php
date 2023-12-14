@@ -1482,7 +1482,7 @@ class Tesistas extends CI_Controller {
                  . "Sr(rta): <b>$data->Nombres $data->Apellis</b>.<br>"
                  . "Ud. ha concluido satisfactoriamente su inscripción en la  "
                  . "Plataforma PILAR para el trámite electrónico de su "
-                 . "proyecto y borrador de tesis, en calidad de estudiante "
+                 . "Proyecto y trabajo de tesis, en calidad de estudiante "
                  . "egresado de la <b>UNAMBA</b>."
                  . "<br><br><b>Datos de su Cuenta:</b><br>"
                  . "  * usuario: $mail<br>"
