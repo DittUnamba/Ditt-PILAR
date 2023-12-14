@@ -9,7 +9,7 @@
 // exit;
 ?>
 <div class="page-header">
-<h4 class="titulo"> ¿Presentación de Borrador de Tesis? </h4>
+<h4 class="titulo"> ¿Presentación de Proyecto de Tesis? </h4>
 </div>
 <div class="contenido">
 <!--
@@ -20,7 +20,7 @@ el rechazo del mismo.
 </p>
  -->
 <p>
-Le recordamos que el trabajo de tesis debe de cumplir con el formato establecido y el Asesor de tesis deberá haber revisado previamente el <b>borrador de tesis</b> asi evitar el rechazo del mismo. De lo contrario podría verser perjudicado en el proceso.
+Le recordamos que el <b>proyecto de tesis</b> debe de cumplir con el formato establecido y el Asesor de tesis deberá haberlo revisado previamente, así evitar el rechazo del mismo. De lo contrario podría verser perjudicado en el proceso.
 </p>
 <hr>
 <div class="col-md-6 btn-select">

@@ -1,6 +1,6 @@
 <div id="loadPy">
 <div class="page-header">
-	<h4 class="titulo"> ¿Presentación de trabajo de tesis? </h4>
+	<h4 class="titulo"> ¿Presentación del Proyecto de Tesis? </h4>
 </div>
 
 <div class="contenido">
