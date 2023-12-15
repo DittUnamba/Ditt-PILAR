@@ -10,13 +10,8 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-<<<<<<< HEAD
-	'username' => 'johnel',
-    'password' => '123456',
-=======
 	'username' => 'root',
-    'password' => 'xb88b9b96v6969$',
->>>>>>> 9b727f5 (Archivos)
+        'password' => 'xb88b9b96v6969$',
 	'database' => 'vriunap_absmain',   // referencia nada mas
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
