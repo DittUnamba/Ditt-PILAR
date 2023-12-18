@@ -1,3 +1,4 @@
 pilar--
-#ignorar las configuraciones de la base de datos
-vriappcore/config/database.php
+#ignorar las configuraciones de la base de datos y configuracion
+/vriappcore/config/config.php
+/vriappcore/config/database.php
