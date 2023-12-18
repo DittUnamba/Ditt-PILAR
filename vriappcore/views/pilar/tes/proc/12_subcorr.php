@@ -34,7 +34,7 @@
   			<li class='active'><a data-toggle='tab' href='#tab1'> Presidente </a></li>
   			<li><a data-toggle='tab' href='#tab2'> Primer Miembro </a></li>
   			<li><a data-toggle='tab' href='#tab3'> Segundo Miembro </a></li>
-			<li><a data-toggle='tab' href='#tab4'> Director/Asesor </a></li>
+			<li><a data-toggle='tab' href='#tab4'> Asesor </a></li>
 		</ul>
 		<div class='tab-content'>
 
@@ -98,7 +98,7 @@
 
       <!-- form -->
       <h4><span class='label label-danger'> <span class='glyphicon glyphicon-info-sign' ></span> Solo realiza este procedimiento si es el documento FINAL.</span></h4>
-      <p> Una vez registrado el trabajo de tesis no hay manera de corregir el documento, usted deberá estar seguro de que el jurado ha aprobado el trabajo de tesis, de lo contrario será rechazado e iniciará una nuevo trámite en 60 días reglamentarios.</p>
+      <p> Una vez registrado el trabajo de tesis no hay manera de corregir el documento, usted deberá estar seguro de que el jurado ha aprobado el trabajo de tesis, de lo contrario será  e iniciará una nuevo trámite en 60 días reglamentarios.</p>
       <form class="form-horizontal" id="frmborr" method="POST" onsubmit="grabaCorrBorr(); return false"
             accept-charset="utf-8" enctype="multipart/form-data">
           <fieldset>
