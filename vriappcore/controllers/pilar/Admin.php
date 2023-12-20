@@ -413,22 +413,20 @@ class Admin extends CI_Controller {
         $mail = mlSecurePost("mail");
         $pass = mlSecurePost("pass");
         $idte = mlSecurePost("idte");
-
         if( $idte == 0 ){ echo "No existe el IdTesista"; return; }
         if( !$pass and !$mail and !$ldni ){ echo "Sin cambios."; return; }
 
         $args = null;
-        if( $ldni ) $args = array( 'DNI'    => $ldni );
-        if( $mail ) $args = array( 'Correo' => $mail );
-        if( $pass ) $args = array( 'Clave'  => sqlPassword($pass) );
-
+        if( $ldni )  $args['DNI'] = $ldni;;
+        if( $mail )  $args['correo'] = $mail;;
+        if( $pass )  $args['Clave'] = sqlPassword($pass);
         // enviamos los datos a modificar
         $this->dbPilar->Update("tblTesistas", $args, $idte);
 
         // mensaje de salida
-        if( $ldni ) echo "<b>DNI fue cambiado</b>";
-        if( $mail ) echo "<b>Correo fue cambiado</b>";
-        if( $pass ) echo "<b>Clave fue cambiada</b>";
+        if( $ldni ) echo "<p>El DNI fue cambiado</p>";
+        if( $mail ) echo "<p>El Correo fue cambiado</p>";
+        if( $pass ) echo "<p>La Clave fue cambiada</p>";
     }
 
 
@@ -2001,6 +1999,7 @@ class Admin extends CI_Controller {
         $idtes = 0;
         $datas = 0;
 		if( $cod ) {
+            
 			$trams = $this->dbPilar->inTramByCodigo( $cod );
 			if( $trams ){
 			    $datas = $this->dbPilar->getSnapRow( "vxDatTesistas", "Id=$trams->IdTesista1" );
@@ -2031,6 +2030,7 @@ class Admin extends CI_Controller {
 
         // verificar que exista un trámite
         $idTram = ($trams)? $trams->Id : 0;
+      
 
 		// renderizamos los resultados
 		$this->load->view( "pilar/admin/verResTram", array(
