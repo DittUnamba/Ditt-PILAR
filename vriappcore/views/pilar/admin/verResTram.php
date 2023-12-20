@@ -38,8 +38,9 @@
             */
 
             // Previos : 1240  :: modo dinámico y buferizado
-            if( $media = $this->genapi->getDataPer($tdata->DNI) )
-                echo "<img src='$media->foto'>";
+            //API con la que no se cuenta
+            // if( $media = $this->genapi->getDataPer($tdata->DNI) )
+            //     echo "<img src='$media->foto'>";
 
           ?>
       </div>

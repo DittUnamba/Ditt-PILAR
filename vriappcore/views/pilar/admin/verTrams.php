@@ -6,7 +6,6 @@
 </ol>
 
 <?php
-
     if( $tipo <= 2 ) {
 
         $ini = ($tipo==1)? 1 : 10;
