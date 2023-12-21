@@ -2030,16 +2030,19 @@ class Admin extends CI_Controller {
 
         // verificar que exista un trámite
         $idTram = ($trams)? $trams->Id : 0;
-      
-
+        //añadir la foto del estudiante
+        $foto = $this->dbRepo->GetSnapRow( "unamba_matrics", " FOTO = '$datas->DNI.jpg' " );
+        if($foto) $fotoEst=$foto->FOTO;
+        else $fotoEst= "default.jpg";
 		// renderizamos los resultados
 		$this->load->view( "pilar/admin/verResTram", array(
-                'idtes' => $idtes,
-				'tdata' => $datas,
-				'ttram' => $trams,
-                'proyA' => $this->dbPilar->inTramDetIter($idTram,3),
-                'tamps' => $this->dbPilar->inAmpliacion($idTram),
-				'tdets' => $this->dbPilar->inProyDetail( $trams? $trams->Id : 0 )
+                'idtes'     => $idtes,
+				'tdata'     => $datas,
+				'ttram'     => $trams,
+                'proyA'     => $this->dbPilar->inTramDetIter($idTram,3),
+                'tamps'     => $this->dbPilar->inAmpliacion($idTram),
+				'tdets'     => $this->dbPilar->inProyDetail( $trams? $trams->Id : 0 ),
+                'fotoEst'   => $fotoEst
 			) );
     }
 

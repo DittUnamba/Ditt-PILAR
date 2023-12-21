@@ -40,7 +40,7 @@
             // Previos : 1240  :: modo dinámico y buferizado
             //API con la que no se cuenta
             // if( $media = $this->genapi->getDataPer($tdata->DNI) )
-            //     echo "<img src='$media->foto'>";
+             echo "<img class='img-responsive' src='/vriadds/pilar/tesista/$fotoEst'>";
 
           ?>
       </div>

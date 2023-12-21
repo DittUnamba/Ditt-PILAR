@@ -34,7 +34,7 @@ class GenSexPdf extends FPDF {
 
     public function isOn()
     {
-        echo "custom lib: GenSexPdf loaded.<br>";
+        echo "custom lib: f loaded.<br>";
     }
 
     //-------------------------------------------------------------------------
