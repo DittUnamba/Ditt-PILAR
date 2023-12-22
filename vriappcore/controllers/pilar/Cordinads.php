@@ -1481,7 +1481,7 @@ public function execSorteo( $idtram=0 )
 </div>
 <div class ='modal-body' id='sortis'><h3 class='text-right text-danger' style:'margin-top:0px;'> Intento N°  <i id='cntSor'>$intentos</i></h3> <form name='sorT' id='sorT' method='post'>";
     if($intentos>=6){
-        echo "El proyecto ya cuenta con $intentos intentos, No puede ser Sorteado";
+        echo "El proyecto ya cuenta con $intentos intentos, No puede ser Sorteado comuniquese con el administrador del PILAR: 083-321965";
         exit(0);
     }
     echo "<b>Codigo :</b> $tram->Codigo ";
