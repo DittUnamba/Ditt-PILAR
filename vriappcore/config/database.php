@@ -9,9 +9,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'pilar.unamba.edu.pe',
+	'hostname' => 'localhost',
 	'username' => 'root',
-        'password' => 'xb88b9b9v66969$',
+        'password' => 'xb88b9b96v6969$',
 	'database' => 'vriunap_absmain',   // referencia nada mas
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
