@@ -16,8 +16,8 @@
 
 // Cambiar a su dominio
 
-$config['base_url']     = 'http://localhost/';
-//$config['base_url']     = 'https://pilar.unamba.edu.pe/';
+//$config['base_url']     = 'http://localhost/';
+$config['base_url']     = 'https://pilar.unamba.edu.pe/';
 $config['index_page']   = '';
 $config['uri_protocol']	= 'AUTO';
 
