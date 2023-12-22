@@ -818,7 +818,7 @@ class Tesistas extends CI_Controller {
 
         $pdf->Ln(8);
         $pdf->SetFont( "Arial", "B", 11 );
-        $pdf->MultiCell( 174, 5.5, toUTF("Tamburco,$dia de $mes de $ano"), 0, 'R' );
+        $pdf->MultiCell( 174, 5.5, toUTF("Tamburco, $dia de $mes de $ano"), 0, 'R' );
 
         //$pdf->Image( '/vriadds/pilar/imag/aprofirma.jpg', 75, 230, 80 );
 

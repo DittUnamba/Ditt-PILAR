@@ -85,8 +85,8 @@ class GenSexPdf extends FPDF {
         $this->Ln(1);
         $this->SetFont('Arial','B',9);
 
-        $this->Image('absmain/imgs/unap.png', $this->LeftMargin,  10, 20);
-        $this->Image('absmain/imgs/vri.png' , $this->RightMargin-19, 10, 18);
+        $this->Image('absmain/imgs/unamba.png', $this->LeftMargin,  10, 20);
+        $this->Image('absmain/imgs/vrin.png' , $this->RightMargin-19, 8, 22);
 
         //$this->Ln(1);
         $this->SetFont('Arial','B',10);
