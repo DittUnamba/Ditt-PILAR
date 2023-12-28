@@ -1253,7 +1253,7 @@ public function execRechaza( $idtram=0 ){
    $tram=$this->dbPilar->getSnapRow("tesTramites","Id=$idtram");
    $msg = "<b>Saludos</b><br><br>\nSu trámite ha sido rechazado, contiene los siguientes errores:\n"
    . "<br><br><ul>\n<li> EL documento no cumple con el formato de la Escuela profesional.\n</ul><br>\nDeberá corregir y subir su proyecto a la brevedad posible.\n"
-   . "<br><b>Nota</b>: Revise el <a href='http://vriunap.pe/vriadds/pilar/doc/manual_tesistav3.pdf'>manual de tesista aquí.</a>";
+   . "<br><b>Nota</b>: Revise el <a href='https://pilar.unamba.edu.pe/vriadds/pilar/doc/manual_tesistav3.pdf'>manual de tesista aquí.</a>";
 
    echo "  
    <div class='modal-content'>
