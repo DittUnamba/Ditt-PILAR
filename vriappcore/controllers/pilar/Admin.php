@@ -871,7 +871,7 @@ class Admin extends CI_Controller {
         // mensaje editable
         $msg = "<b>Saludos</b><br><br>\nSu proyecto ha sido rechazado, contiene los siguientes errores:\n"
              . "<br><br><ul>\n<li> La redacción tiene que ser mejorada.\n</ul><br>\nDeberá corregir y subir su proyecto a la brevedad posible.\n"
-             . "<br><b>Nota</b>: Revise el <a href='http://vriunap.pe/vriadds/pilar/doc/manual_tesistav3.pdf'>manual de tesista aquí.</a>";
+             . "<br><b>Nota</b>: Revise el <a href='https://pilar.unamba.edu.pe/vriadds/pilar/doc/manual_tesistav3.pdf'>manual de tesista aquí.</a>";
 
 
         // detallaremos evento interno Ev31
