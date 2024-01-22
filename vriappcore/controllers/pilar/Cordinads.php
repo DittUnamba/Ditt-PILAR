@@ -1732,13 +1732,13 @@ public function execSorteo( $idtram=0 )
     echo "<label class='form-check-label'>El proyecto corresponde a la <b class='text-warning'>Linea de Investigación</b>? </label>";
 
     echo "<br><input type='checkbox' class='form-check-input' id='directC' onclick='enableSave()'>";
-     echo "<label class='form-check-label'>El Director es idoneo para el proyecto de tesis ? </label>";
+     echo "<label class='form-check-label'>El Asesor es idoneo para el proyecto de tesis ? </label>";
 
      echo "<br><input type='checkbox' class='form-check-input' id='cumpleC' onclick='enableSave()'>";
      echo " <label class='form-check-label'>El proyecto de tesis cumple con lo establecido por la Escuela Profesional ?</label>";
 
      echo "<br><input type='checkbox' class='form-check-input' id='aceptoC'  onclick='enableSave()'>";
-     echo " <label class='form-check-label'>Estoy deacuerdo con el proyecto de tesis para su calificación por los jurados.</label>";
+     echo " <label class='form-check-label'>Estoy de acuerdo con el proyecto de tesis para su calificación por los jurados.</label>";
 
      echo "<button type='button'class='btn btn-success' disabled='' id='modal-btn-si' onclick='popSaveSort(\"$idtram\")'>GUARDAR</button>";
       //echo "<BR>Varianza =".$var;
