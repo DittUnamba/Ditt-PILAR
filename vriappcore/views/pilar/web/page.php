@@ -190,7 +190,7 @@ Dirección General de Investigación<br>
 <h4 class="login-title-cord">Unidades de investigación</h4>
 <div id="cmsg" class="alert alert-danger"><span class="glyphicon glyphicon-exclamation-sign"></span> </div>
 <form class="register-form">
-<input type="email" placeholder="correo@unap.edu.pe" required=""/>
+<input type="email" placeholder="correo@unamba.edu.pe" required=""/>
 <input type="password" placeholder="contraseña" required="" />
 <input type="text" placeholder="email address" required="" />
 <button class="login-btn-coord">Crear</button>
