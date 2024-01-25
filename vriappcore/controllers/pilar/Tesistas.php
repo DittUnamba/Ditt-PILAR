@@ -1286,7 +1286,7 @@ class Tesistas extends CI_Controller {
         ));
 
 
-        $msg = "<br>El tesista ha subido el Borrador Final en el trámite:<br><br>"
+        $msg = "<br>El tesista ha subido el Trabajo de Tesis Final en el trámite:<br><br>"
              . "Codigo: <b>$tram->Codigo</b><br> "
              . "Título de Proyecto : <b>$titul</b> <br><br>  "
              . "Se realizará la verificación de este proceso con el <b>Jurado Evaluador</b> y el <b>Repositorio Institucional</b>. "
