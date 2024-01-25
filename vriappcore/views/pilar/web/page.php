@@ -161,7 +161,7 @@ Dirección General de Investigación<br>
 <input type="text" placeholder="Fecha Nacimiento" required=""/>
 <input type="text" placeholder="Direccion" required=""/>
 <input type="password" placeholder="contraseña" required=""/>
-<input type="password" placeholder="" required=""/>
+<input type="password" placeholder="repite la contraseña" required=""/>
 <button class="login-btn-tesista">Crear</button>
 -->
 <p class="message"> El Registro se realiza en Plataforma con una copia de su resolución de contrato. <a href=""> Cerrar </a></p>
