@@ -565,7 +565,7 @@ public function ProyectosdeTesis(){
         $tes=$this->dbPilar->getSnapView("tesTramites","Tipo > 0 AND IdCarrera=$carre->Id ORDER BY IdCarrera ASC");
         foreach ($tes->result() as $row) {
             // if($row->Tipo==1)$estati="PROYECTO DE TESIS";
-            // if($row->Tipo==2)$estati="BORRADOR DE TESIS";
+            // if($row->Tipo==2)$estati="";
             if($row->Tipo==3){
 
             $pdf->Row(
