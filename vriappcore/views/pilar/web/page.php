@@ -200,7 +200,7 @@ Dirección General de Investigación<br>
 <input name="user" type="text" placeholder="usuario(a)" required=""/>
 <input name="pass" type="password" placeholder="contraseña" required=""/>
 <button class="login-btn-coord">Ingresar</button>
-<p class="message "><i>Coordinadoor Nuevo?</i> <a rel="nofollow" onclick="register()" href="#">Crear una Cuenta Nueva </a></p>
+<p class="message "><i>Unidad de Investigación Nuevo?</i> <a rel="nofollow" onclick="register()" href="#">Crear una Cuenta Nueva </a></p>
 </form>
 <a class="text-center" onclick="closeNav()"><span class="glyphicon glyphicon-remove-circle gi-1x"></span></a>
 </div>
