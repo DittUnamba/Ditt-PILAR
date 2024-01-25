@@ -20,7 +20,7 @@
 
         echo "</ul>";
         echo "<div class='alert alert-warning'>";
-        echo "<span class='glyphicon glyphicon-exclamation-sign'></span> <b>Aviso</b> : Antes de subir tu <b>Borrador de Tesis</b> verifica que en la conformación de Jurado todos estén <b class='text-success'>habilitados</b>. De lo contrario solicita el <b class='text-danger'>cambio</b> para completar el proceso.";
+        echo "<span class='glyphicon glyphicon-exclamation-sign'></span> <b>Aviso</b> : Antes de subir tu <b>Trabajo de Tesis</b> verifica que en la conformación de Jurado todos estén <b class='text-success'>habilitados</b>. De lo contrario solicita el <b class='text-danger'>cambio</b> para completar el proceso.";
         echo "</div>";
         // exit;
     ?>
