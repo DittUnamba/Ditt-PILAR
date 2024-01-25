@@ -215,7 +215,7 @@ public function recepEjemplares($id){
    $sess = $this->gensession->GetSessionData(PILAR_CORDIS);       
    $row=$this->dbPilar->getSnapRow("tesTramites","Id=$id");
    if($row){
-      $this->logCordinads("C","2","Recepcionó Ejemplares de Borrador","($id) La coordinación recepcionó los ejemplares del borrador de tesis");
+      $this->logCordinads("C","2","Recepcionó Ejemplares de Trabajo de tesis","($id) La coordinación recepcionó los ejemplares del trabajo de tesis");
 // Cambiamos el Estado de Docente
       $this->dbPilar->Update('tesTramites',array('Estado'=>13,'FechModif'=>mlCurrentDate()),$id);
 // Insertar memos faltaa tiooo
@@ -223,18 +223,18 @@ public function recepEjemplares($id){
 
       $tesist=$this->dbPilar->inCorreo($row->IdTesista1);
       $presid=$this->dbRepo->inCorreo($row->IdJurado1);
-      $titulo="Presentación de Ejemplares de Borrador";
-      $mensaje="<p align='justify' >Estimado(s) Tesista(s) <b>".$this->dbPilar->inTesistas($id).",</b> <br><br> La Coordinación de Investigación de la Escuela Profesional de <b>".$this->dbRepo->inCarrera($row->IdCarrera)."</b> ha recepcionado 4 ejemplares del borrador de tesis el cual usted realizó las correcciones registradas en PILAR .</p>";
+      $titulo="Presentación de Ejemplares de Trabajo de tesis";
+      $mensaje="<p align='justify' >Estimado(s) Tesista(s) <b>".$this->dbPilar->inTesistas($id).",</b> <br><br> La Coordinación de Investigación de la Escuela Profesional de <b>".$this->dbRepo->inCarrera($row->IdCarrera)."</b> ha recepcionado 4 ejemplares del trabajo de tesis el cual usted realizó las correcciones registradas en PILAR .</p>";
 
-      $titulo1="Dictamen de Borrador de Tesis";
+      $titulo1="Dictamen de Trabajo de Tesis";
       $mensaje1="<b>$titulo1</b><br><br><p align='justify'>Estimado ".$this->dbRepo->inDocenteEx($row->IdJurado1).", <br><br> Se le 
-      comunica que el Bach. ".$this->dbPilar->inTesistas($id)." ha realizado las correcciones del borrador de tesis titulado "
+      comunica que el Bach. ".$this->dbPilar->inTesistas($id)." ha realizado las correcciones del trabajo de tesis titulado "
       .$this->dbPilar->inTitulo($id)." y a su vez presentó 4 ejemplares anillados del mismo en la coordinación de 
       investigación de la Escuela Profesional de ".$this->dbRepo->inCarrera($row->IdCarrera).", en cumplimiento del 
       Art. N° 8 del reglamento de presentación de borradores de tesis.<br>
       <br>Por lo que se le informa que usted deberá convocar a una reunión del jurado con presencia del bachiller en 
       un <b>plazo máximo de cinco (05) días hábiles</b> luego de recibida esta notificación a fin de
-      realizar las observaciones finales y dictaminar el borrador de tesis.<br> <br> La fecha de
+      realizar las observaciones finales y dictaminar el trabajo de tesis.<br> <br> La fecha de
       reunión será informada a la Coordinación de Investigación respectiva, quien a su vez
       citará a los miembros del Jurado e informará a la plataforma PILAR de la misma.La reunión de
       dictamen se llevará a cabo en la Sala de Profesores de la Facultad a la que
@@ -246,7 +246,7 @@ public function recepEjemplares($id){
 
 
       $this->logCorreo(0,$row->IdJurado1,$presid,$titulo1,$mensaje1);
-      echo "<b>NOTIFICACIÓN DE RECEPCIÓN POR EMAIL</b><br><br> Se ha notificado a ".$this->dbRepo->inDocenteEx($row->IdJurado1)." Presidente del borrador de tesis para la citación a reunión de dictamen, de acuerdo al (Artículo N° 8) del reglamento. Así como tambien al tesista ".$this->dbPilar->inTesistas($id)." para la verificación del Trámite. <br> <br> $titulo1 <br> $mensaje1";
+      echo "<b>NOTIFICACIÓN DE RECEPCIÓN POR EMAIL</b><br><br> Se ha notificado a ".$this->dbRepo->inDocenteEx($row->IdJurado1)." Presidente del trabajo de tesis para la citación a reunión de dictamen, de acuerdo al (Artículo N° 8) del reglamento. Así como tambien al tesista ".$this->dbPilar->inTesistas($id)." para la verificación del Trámite. <br> <br> $titulo1 <br> $mensaje1";
    }else{
       echo "<span class='text-danger'> OCURRIÓ ALGUN ERROR, COMUNIQUESE CON EL ADMINISTRADOR.</span>";
    }
