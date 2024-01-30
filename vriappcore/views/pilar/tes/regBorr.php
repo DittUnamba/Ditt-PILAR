@@ -69,7 +69,7 @@
 
               <!-- Text area -->
               <div class="form-group success">
-                  <label class="col-md-4 control-label"> Titulo de Borrador </label>
+                  <label class="col-md-4 control-label"> Titulo de Trabajo de tesis </label>
                   <div class="col-md-7">
                       <textarea name="nomproy" type="text" class="form-control" rows="3" style="text-transform: uppercase" required><?=$titulo?></textarea>
                   </div>

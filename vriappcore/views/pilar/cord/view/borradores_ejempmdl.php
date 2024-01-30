@@ -7,7 +7,7 @@
 <div class="modal-content">
 	<div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal">&times;</button>
-		<center><h4 class="modal-title">Borrador de Tesis <br> <small> <?php echo $det->Titulo; ?></small></h4></center>
+		<center><h4 class="modal-title">Trabajo de Tesis <br> <small> <?php echo $det->Titulo; ?></small></h4></center>
 	</div>
 	<div class="modal-body">
 		<div class="container-fluid">

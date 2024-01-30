@@ -35,7 +35,7 @@
 				switch ($row->Estado) {
 					case 1:
 						// $opt="<a href='$archi' class='btn btn-xs btn-info no-print' target=_blank> ver PDF </a> | ";
-						$opt .= " |  <button onclick=\"pyDirect($nro,$row->Id)\" class='btn btn-xs btn-warning'> Enviar al Director</button> ";
+						$opt .= " |  <button onclick=\"pyDirect($nro,$row->Id)\" class='btn btn-xs btn-warning'> Enviar al Asesor</button> ";
 						$opt.="<a href='javascript:void(0)' onclick=\"jsLoadModalCord($row->Id,'cordinads/execRechaza/')\" class='btn btn-danger btn-xs'>Rechazar</a>";	
 						$estado="Revisión de Formato";
 						break;
