@@ -944,8 +944,7 @@ class Tesistas extends CI_Controller {
 
         $args = array(
             // 'tlineas' => $this->dbPilar->getSnapView( 'vxLineas', "IdCarrera=$carre" ),
-                //'tlineas' => $this->dbRepo->getTable("tblLineas","IdCarrera='$carre' AND Estado = '1'"),
-                'tlineas' => $this->dbRepo->getTable("tblLineas","Estado >= '1'"),
+                'tlineas' => $this->dbRepo->getTable("tblLineas","IdCarrera='$carre' AND Estado = '1'"),
                 'tbltes' => (!$tes2)?array($tes1):array($tes1,$tes2),
                 'errmsg' => $errorMsg,
             );

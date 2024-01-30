@@ -21,7 +21,7 @@ $oppcion=" ";
 					<thead>
 						<tr>
 							<th>N°</th>
-							<th><?php echo $nom." |<small> ". $row->Nombre ."</small>" ;  ?></th>
+							<th><?php echo " <small> ". $row->Nombre ."</small>" ;  ?></th>
 							<th>OPCIONES</th>
 						</tr>
 					</thead>

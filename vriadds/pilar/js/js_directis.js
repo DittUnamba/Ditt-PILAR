@@ -12,7 +12,7 @@ function jsMdlSorteo(url,num){
 
 function popSaveSort(id){
     dita = new FormData(sorT);
-    
+   
     jVRI.ajax({
         url  : "cordinads/inDoSorteo/"+id,
         data :  dita,

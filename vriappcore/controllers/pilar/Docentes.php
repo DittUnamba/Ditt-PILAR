@@ -719,6 +719,7 @@ class Docentes extends CI_Controller {
 	//------------------------------------------------------------------------
 	public function saveLin( $nlin=0 )
 	{
+        
 		if( ! $nlin ) return;
 
 		$this->gensession->IsLoggedAccess();
