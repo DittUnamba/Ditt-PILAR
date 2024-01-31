@@ -63,7 +63,7 @@
                                 $count=$this->dbPilar->getSnapView("docLineas","IdLinea=$row->Id")->num_rows();
                                 // // if( $row->TotDoceRegs >= 7 )
                                 // //     echo "<option value=$row->Id> $row->Nombre - ( $row->TotDoceRegs ) </option>";
-                                if( $count>=4)
+                                if( $count>=1)
                                     echo "<option value=$row->Id> $row->Nombre - ( $count ) </option>";
                             }
                           ?>

@@ -41,7 +41,7 @@ function popLoad( urlink, itm )
 //-------------------------------------------------------------------------------
 function borDirect( itm, tram )
 {
-    if( confirm('Este Borrador sera enviado a Revisión, desea continuar?') ) {
+    if( confirm('Este Trabajo de tesis sera enviado a Revisión, desea continuar?') ) {
         jVRI("#ixp").load( "admin/listBrDire/"+tram );
         $("#nr"+itm ).fadeOut(); //hide();
     }

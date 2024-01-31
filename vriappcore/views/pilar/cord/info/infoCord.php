@@ -3,7 +3,7 @@
  				 <button class='btn btn-warning btn-xs' data-toggle='modal' data-target='#mdlCarga'>Cargar</button>"
  ?>
  <br><br><br>
- <h3>Información del Coordinador</h3>
+ <h3>Información de la Unidad de Investigación</h3>
 <div class="col-md-12 panel-info-docente">
 	<div class="col-md-3 info-sidebar pull-right">
 		 <div class="list-group">
