@@ -57,7 +57,7 @@
                   <label class="col-md-4 control-label"> Seleccione Archivo </label>
                   <div class="col-md-7">
                       <input name="nomarch" id="nomarch" type="file" class="file form-control input-md" required>
-                      <span id="filemsg" class="help-block"> <center>Puede subir un PDF con un máximo de 5MB</center> </small></span>
+                      <span id="filemsg" class="help-block"> <center>Puede subir un PDF con un máximo de 10MB</center> </small></span>
                   </div>
                   <!--
                   <input id="nomarch" name="nomarch" type="text" class="form-control input-md" required readonly>

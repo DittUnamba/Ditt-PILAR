@@ -87,7 +87,7 @@ function callSave()
     if( pass1.value != pass2.value ){
         jVRI("#pmsg").html( "Las claves no coinciden" );
         return false;
-    }
+    } 
 
     jVRI("#pmsg").html( "Grabando..." );
     jVRI.ajax({
