@@ -577,7 +577,7 @@ public function memosGen( $IdTramite )
    $fecha=$memo->Fecha;
    if($tram->Estado==4 OR $tram->Estado==12 or $tram->Estado==13){
       if($tram->Estado==4){
-         $quienes=array($tram->IdJurado1,$tram->IdJurado2,$tram->IdJurado3);
+         $quienes=array($tram->IdJurado1,$tram->IdJurado2,$tram->IdJurado3,$tram->IdJurado5);
          $asunto="REVISIÓN DE PROYECTO DE TESIS";
          $str = "Por medio del presente comunicarle que Ud. ha sido sorteado para la revisión "
          . "del Proyecto de Tesis registrado en Plataforma con el código: $codigop, "
@@ -593,7 +593,7 @@ public function memosGen( $IdTramite )
          ;
       }
       if($tram->Estado==12){
-         $quienes=array($tram->IdJurado1,$tram->IdJurado2,$tram->IdJurado3,$tram->IdJurado4);
+         $quienes=array($tram->IdJurado1,$tram->IdJurado2,$tram->IdJurado3,$tram->IdJurado4,$tram->IdJurado5);
          $asunto="REVISIÓN DE TRABAJO DE TESIS";
 //  Borrador
          $str = "Por medio del presente comunicarle que Ud. ha sido SORTEADO como jurado revisor "
@@ -1481,10 +1481,10 @@ public function execSorteo( $idtram=0 )
    </div>
    <div class ='modal-body' id='sortis'><h3 class='text-right text-danger' style:'margin-top:0px;'> Intento N°  <i id='cntSor'>$intentos</i></h3> <form name='sorT' id='sorT' method='post'>";
       
-      // if($intentos>=6){
-      //    echo "El proyecto ya cuenta con $intentos intentos, No puede ser Sorteado comuniquese con el administrador del PILAR: 083-321965";
-      //    exit(0);
-      // }
+      if($intentos>=6){
+         echo "El proyecto ya cuenta con $intentos intentos, No puede ser Sorteado comuniquese con el administrador del PILAR: 083-321965";
+         exit(0);
+      }
       echo "<b>Codigo :</b> $tram->Codigo ";
       echo "<br><b>Linea ($tram->IdLinea) :</b> " . $this->dbRepo->inLineaInv($tram->IdLinea);
       // echo "<br><b>Tesista(s) :</b> "             . $this->dbPilar->inTesistas($tram->Id);
@@ -1918,7 +1918,7 @@ public function inDoSorteo($idTram){
             'IdJurado2' => $rowTram->IdJurado2,
             'IdJurado3' => $rowTram->IdJurado3,
             'IdJurado4' => $rowTram->IdJurado4,
-            'IdJurado4' => $rowTram->IdJurado5,
+            'IdJurado5' => $rowTram->IdJurado5,
             'Motivo'    => "Sorteo",
             'Fecha'     => mlCurrentDate()
          ) );
