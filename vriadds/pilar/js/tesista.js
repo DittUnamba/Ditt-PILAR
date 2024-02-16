@@ -92,14 +92,14 @@ function cargaBorr()
             {
                 var grup = e.target.files;
                 var file = grup[0];
-                if( file.type!="application/pdf" || file.size>(5144600) ){
+                if( file.type!="application/pdf" || file.size>(10475274) ){ //5MB =5144600 | 10MB=10475274 
                     jVRI("#nomarch").val("");
-                    jVRI("#filemsg").html( "No cumple con ser (PDF) de menos de 5MB");
+                    jVRI("#filemsg").html( "No cumple con ser (PDF) de menos de 10MB");
 
                     $("#nomarch").addClass("btn-danger");
                     $("#nomarch").removeClass("btn-success");
                 } else {
-                    $("#filemsg").html( "Archivo correcto (PDF) de menos de 5MB");
+                    $("#filemsg").html( "Archivo correcto (PDF) de menos de 10MB");
                     $("#nomarch").addClass("btn-success");
                     $("#nomarch").removeClass("btn-danger");
                 }

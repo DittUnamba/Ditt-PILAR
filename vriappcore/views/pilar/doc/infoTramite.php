@@ -193,8 +193,8 @@
 
             $c1 = $this->dbPilar->inNCorrecs($row->Id,$sess->userId,1);
             $c4 = $this->dbPilar->inNCorrecs($row->Id,$sess->userId,4);
-
-            $diasRes = 12 - mlDiasTranscHoy($row->FechModif);
+             //modificar el tiempo de revision de tesis de 12 a 10
+            $diasRes = 10 - mlDiasTranscHoy($row->FechModif);
             //$dias = ($diasRes<0)?"<p class='text-danger'> Fuera de Plazo</p>":"<p class='text-success'> $diasRes Días Restantes</p>";
             $dias = ($diasRes<0)? "":"<p class='text-success'> $diasRes Días Restantes</p>";
 
