@@ -42,9 +42,10 @@
         "Presidente",
         "Primer miembro",
         "Segundo miembro",
-        "Asesor"
-    );
+        "Asesor",
+        "Accesitario"
 
+    );
 
 
     foreach( $tproys->result() as $row ) {
@@ -59,9 +60,11 @@
 
 
         // popUp con Id Tipo
-        $archivo= "<a href='http://vriunap.pe/repositor/docs/$det->Archivo' target='_blank' class='btn btn-xs btn-info'> Archivo</a>";
+        $archivo= "<a href='$link/$det->Archivo' target='_blank' class='btn btn-xs btn-info'> Archivo</a>";
         $menus = "";
         $estado = "";
+        
+
 		//-----------------------------------------------------------------------------------------------------
         if( $row->Estado >= 1 && $row->Estado <= 6 ) {
             $btnclr = $proceclr[ $row->Estado-1 ];
@@ -108,6 +111,8 @@
 			if( $row->Estado >= 6 ) {
 				$menus .= "<a target=_blank href='../pilar/tesistas/actaProy/$row->Id' class='btn btn-sm btn-default'><span class='glyphicon glyphicon-list-alt'></span>Acta</a>";
 			}
+
+            
 		}
 
 
@@ -204,6 +209,11 @@
             $dias .= (($det->vb1 + $det->vb2 + $det->vb3)==3)? "<small>Completado" : "";
         }
         // Para tener mejor vizualización y Control del Docente
+
+        //------ accesitario--------------
+        if($pos == 5)
+        $menus = "<button class='btn btn-sm btn-default'>En revisión por los jurados</button>";
+
         $escuela = $this->dbRepo->inCarrera("$row->IdCarrera");
 
         echo "<td> $nro </td>";

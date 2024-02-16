@@ -183,6 +183,7 @@ class DbPilar extends PedrixAdo
         if( $rowTram->IdJurado2 == $idJur ) return 2;
         if( $rowTram->IdJurado3 == $idJur ) return 3;
         if( $rowTram->IdJurado4 == $idJur ) return 4;
+        if( $rowTram->IdJurado5 == $idJur ) return 5;
 
         return 0;
     }

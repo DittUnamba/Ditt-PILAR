@@ -274,13 +274,16 @@ class Docentes extends CI_Controller {
             "IdJurado1='$sess->userId'  OR  " .
             "IdJurado2='$sess->userId'  OR  " .
             "IdJurado3='$sess->userId'  OR  " .
-            "IdJurado4='$sess->userId'  )  ORDER BY FechModif DESC" );
-
+            "IdJurado4='$sess->userId'  OR  " .
+            "IdJurado5='$sess->userId'  )  ORDER BY FechModif DESC" );
+        
+        $link = base_url( "repositor/docs" );
 
         $this->load->view( "pilar/doc/infoTramite", array(
                 'tproys' => $tproys,
                 'sess'   => $sess,
-                'tipo'  => $tipoName[$tipo]
+                'tipo'   => $tipoName[$tipo],
+                'link'   => $link
             ) );
     }
 
