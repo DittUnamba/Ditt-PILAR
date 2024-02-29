@@ -3595,7 +3595,7 @@ public function ReporteLaspauALL(){
         
 
 
-        $str = "El jurado revisor ha calificado el trabajo de tesis titulado:";
+        $str = "El jurado revisor ha calificado el Informe de tesis titulado:";
 
         $pdf->Ln( 7 );
         $pdf->SetFont( "Arial", '', 10 );

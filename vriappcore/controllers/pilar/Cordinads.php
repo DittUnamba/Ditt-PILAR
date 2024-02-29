@@ -248,7 +248,7 @@ public function recepEjemplares($id){
 
 
       $this->logCorreo(0,$row->IdJurado1,$presid,$titulo1,$mensaje1);
-      echo "<b>NOTIFICACIÓN DE RECEPCIÓN POR EMAIL</b><br><br> Se ha notificado a ".$this->dbRepo->inDocenteEx($row->IdJurado1)." Presidente del trabajo de tesis para la citación a reunión de dictamen, de acuerdo al (Artículo N° 8) del reglamento. Así como tambien al tesista ".$this->dbPilar->inTesistas($id)." para la verificación del Trámite. <br> <br> $titulo1 <br> $mensaje1";
+      echo "<b>NOTIFICACIÓN DE RECEPCIÓN POR EMAIL</b><br><br> Se ha notificado a ".$this->dbRepo->inDocenteEx($row->IdJurado1)." Presidente del Informe de tesis para la citación a reunión de dictamen, de acuerdo al (Artículo N° 8) del reglamento. Así como tambien al tesista ".$this->dbPilar->inTesistas($id)." para la verificación del Trámite. <br> <br> $titulo1 <br> $mensaje1";
    }else{
       echo "<span class='text-danger'> OCURRIÓ ALGUN ERROR, COMUNIQUESE CON EL ADMINISTRADOR.</span>";
    }
