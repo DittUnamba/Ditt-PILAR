@@ -12,7 +12,7 @@
 <div class="modal-content">
 	<div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal">&times;</button>
-		<h4 class="modal-title">Trabajo de Tesis <?php echo $tram->Codigo; ?></h4>
+		<h4 class="modal-title">Informe de Tesis <?php echo $tram->Codigo; ?></h4>
 	</div>
 	<div class="modal-body">
 		<h5> Miembros de Jurado | Documento de Referencia : <?php echo $docu;?></h5>

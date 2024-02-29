@@ -1519,7 +1519,7 @@ public function histoTrams( $carr=0 )
             $titulo = $this->dbPilar->inTitulo( $proy->Id );
             $autors = $this->dbPilar->inTesistas( $proy->Id );
             $linea  = $this->dbRepo->inLineaInv( $proy->IdLinea );
-            $estado = ($proy->Estado==6)? "Proyecto de Tesis" : "Trabajo de Tesis";
+            $estado = ($proy->Estado==6)? "Proyecto de Tesis" : "Informe de Tesis";
 
             echo "<tr>";
             echo "<td> $nro </td>";
@@ -3399,7 +3399,7 @@ public function ReporteLaspauALL(){
         
 
 
-        $str = "El jurado revisor ha calificado el trabajo de tesis titulado:";
+        $str = "El jurado revisor ha calificado el Informe de tesis titulado:";
 
         $pdf->Ln( 7 );
         $pdf->SetFont( "Arial", '', 10 );

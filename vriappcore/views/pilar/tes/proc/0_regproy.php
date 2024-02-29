@@ -55,7 +55,7 @@ echo "</div>";
 <div class="modal-content">
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal">&times;</button>
-<h4 class="modal-title">Trabajo de Tesis Grupal</h4>
+<h4 class="modal-title">Informe de Tesis Grupal</h4>
 </div>
 <div class="modal-body">
 <p>EstimadoTesista, recuerde que una vez iniciado el trámite no podrá realizar cambios de compañero o realizar otros tramites independientes.</p>

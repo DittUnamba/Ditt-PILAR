@@ -217,7 +217,7 @@ public function recepEjemplares($id){
    $sess = $this->gensession->GetSessionData(PILAR_CORDIS);       
    $row=$this->dbPilar->getSnapRow("tesTramites","Id=$id");
    if($row){
-      $this->logCordinads("C","2","Recepcionó Ejemplares de Trabajo de tesis","($id) La coordinación recepcionó los ejemplares del trabajo de tesis");
+      $this->logCordinads("C","2","Recepcionó Ejemplares de Informe de tesis","($id) La coordinación recepcionó los ejemplares del Informe de tesis");
 // Cambiamos el Estado de Docente
       $this->dbPilar->Update('tesTramites',array('Estado'=>13,'FechModif'=>mlCurrentDate()),$id);
 // Insertar memos faltaa tiooo
@@ -225,18 +225,18 @@ public function recepEjemplares($id){
 
       $tesist=$this->dbPilar->inCorreo($row->IdTesista1);
       $presid=$this->dbRepo->inCorreo($row->IdJurado1);
-      $titulo="Presentación de Ejemplares de Trabajo de tesis";
-      $mensaje="<p align='justify' >Estimado(s) Tesista(s) <b>".$this->dbPilar->inTesistas($id).",</b> <br><br> La Coordinación de Investigación de la Escuela Profesional de <b>".$this->dbRepo->inCarrera($row->IdCarrera)."</b> ha recepcionado 4 ejemplares del trabajo de tesis el cual usted realizó las correcciones registradas en PILAR .</p>";
+      $titulo="Presentación de Ejemplares de Informe de tesis";
+      $mensaje="<p align='justify' >Estimado(s) Tesista(s) <b>".$this->dbPilar->inTesistas($id).",</b> <br><br> La Coordinación de Investigación de la Escuela Profesional de <b>".$this->dbRepo->inCarrera($row->IdCarrera)."</b> ha recepcionado 4 ejemplares del Informe de tesis el cual usted realizó las correcciones registradas en PILAR .</p>";
 
-      $titulo1="Dictamen de Trabajo de Tesis";
+      $titulo1="Dictamen de Informe de Tesis";
       $mensaje1="<b>$titulo1</b><br><br><p align='justify'>Estimado ".$this->dbRepo->inDocenteEx($row->IdJurado1).", <br><br> Se le 
-      comunica que el Bach. ".$this->dbPilar->inTesistas($id)." ha realizado las correcciones del trabajo de tesis titulado "
+      comunica que el Bach. ".$this->dbPilar->inTesistas($id)." ha realizado las correcciones del  titulado "
       .$this->dbPilar->inTitulo($id)." y a su vez presentó 4 ejemplares anillados del mismo en la coordinación de 
       investigación de la Escuela Profesional de ".$this->dbRepo->inCarrera($row->IdCarrera).", en cumplimiento del 
       Art. N° 8 del reglamento de presentación de borradores de tesis.<br>
       <br>Por lo que se le informa que usted deberá convocar a una reunión del jurado con presencia del bachiller en 
       un <b>plazo máximo de cinco (05) días hábiles</b> luego de recibida esta notificación a fin de
-      realizar las observaciones finales y dictaminar el trabajo de tesis.<br> <br> La fecha de
+      realizar las observaciones finales y dictaminar el Informe de tesis.<br> <br> La fecha de
       reunión será informada a la Coordinación de Investigación respectiva, quien a su vez
       citará a los miembros del Jurado e informará a la plataforma PILAR de la misma.La reunión de
       dictamen se llevará a cabo en la Sala de Profesores de la Facultad a la que
@@ -616,15 +616,15 @@ public function memosGen( $IdTramite )
       }
       if($tram->Estado==12){
          $quienes=array($tram->IdJurado1,$tram->IdJurado2,$tram->IdJurado3,$tram->IdJurado4,$tram->IdJurado5);
-         $asunto="REVISIÓN DE TRABAJO DE TESIS";
+         $asunto="REVISIÓN DE INFORME DE TESIS";
       //  Borrador
          $str = "Por medio del presente comunicarle que Ud. ha sido SORTEADO como jurado revisor "
          . "del Proyecto de Tesis Aprobado con el código: $codigop, "
          . "de la Escuela Profesional de: $carrera."
-         . "\n\nCuyo trabajo de tesis deberá de revisar en un plazo máximo de 10 dias apartir del día $fecha y enviar sus observaciones via PILAR, "
+         . "\n\nCuyo Informe de tesis deberá de revisar en un plazo máximo de 10 dias apartir del día $fecha y enviar sus observaciones via PILAR, "
          . "el documento PDF se ha enviado a su cuenta en "
          . "Plataforma ubicando en https://pilar.unamba.edu.pe/pilar \n\n"
-         . "Si transcurrido este tiempo, no exixtiera respuesta alguna PILAR considerará el trabajo de tesis apto para su defensa."
+         . "Si transcurrido este tiempo, no exixtiera respuesta alguna PILAR considerará el Informe de tesis apto para su defensa."
          . "(Art.6 Reglamento de Presentación dictamen de trabajos y defensa de tesis) Resolución Rectoral N°3011-2016-R-UNAMBA\n\n\n"
          . "Atentamente."
          ;
@@ -643,11 +643,11 @@ public function memosGen( $IdTramite )
          $str = "Por medio del presente comunicarle que Ud. ha sido designado como PRESIDENTE del jurado revisor "
          . "del Proyecto de Tesis Aprobado con el còdigo: $codigop, "
          . "de la Escuela Profesional de: $carrera "
-         . "\n\nCuyo trabajo de tesis ya fue revisado por los jurados via plataforma para lo cual usted deberá convocar a una reunión en un plazo máximo de 05 dias apartir del día $fecha con todos los miembros de jurado, como sigue a continuación: \n"
+         . "\n\nCuyo Informe de tesis ya fue revisado por los jurados via plataforma para lo cual usted deberá convocar a una reunión en un plazo máximo de 05 dias apartir del día $fecha con todos los miembros de jurado, como sigue a continuación: \n"
          ." - Primer Miembro : $j2m\n"
          ." - Segundo Miembro :$j3m\n"
          ." - Tercer Miembro/Director :$j4m\n"
-         . "con presencia del bachiller  $tesista , a fin de realizar las observaciones finales  y dictaminar el trabajo de tesis. "
+         . "con presencia del bachiller  $tesista , a fin de realizar las observaciones finales  y dictaminar el Informe de tesis. "
          . "(Art.9 Reglamento de Presentación dictamen de trabajos y defensa de tesis) Resolución Rectoral N°3011-2016-R-UNAMBA\n\n\n"
          . "Atentamente."; 
       }
@@ -937,11 +937,11 @@ $state=array(
    4=>"Proyecto de tesis  : En Revisión por Jurados",
    5=>"Proyecto de tesis  : En Dictaminación",
    6=>"Proyecto de tesis  : Proyecto Aprobado",
-   10=>"Trabajo de tesis  : En espera a la carga del Trabajo de tesis",
-   11=>"Trabajo de tesis  : En revisón de formato del Trabajo de tesis",
-   12=>"Trabajo de tesis  : En revisión por Jurados",
-   13=>"Trabajo de tesis  : Para Reunión de Dictamen",
-   14=>"Trabajo de tesis  : Sustentado",
+   10=>"Informe de tesis  : En espera a la carga del Informe de tesis",
+   11=>"Informe de tesis  : En revisón de formato del Informe de tesis",
+   12=>"Informe de tesis  : En revisión por Jurados",
+   13=>"Informe de tesis  : Para Reunión de Dictamen",
+   14=>"Informe de tesis  : Sustentado",
 );
 
 
@@ -1029,11 +1029,11 @@ $state=array(
    4=>"Proyecto de tesis : En Revisión por Jurados",
    5=>"Proyecto de tesis : En Dictaminación",
    6=>"Proyecto de tesis: Proyecto Aprobado",
-   10=>"Trabajo de tesis : En espera a la carga del Trabajo de tesis",
-   11=>"Trabajo de tesis : En revisón de formato del Trabajo de tesis",
-   12=>"Trabajo de tesis : En revisión por Jurados",
-   13=>"Trabajo de tesis : Para Reunión de Dictamen",
-   14=>"Trabajo de tesis : Sustentado",
+   10=>"Informe de tesis : En espera a la carga del Informe de tesis",
+   11=>"Informe de tesis : En revisón de formato del Informe de tesis",
+   12=>"Informe de tesis : En revisión por Jurados",
+   13=>"Informe de tesis : Para Reunión de Dictamen",
+   14=>"Informe de tesis : Sustentado",
 );
 
 
@@ -1377,22 +1377,22 @@ private function inRechaza( $rowTram , $msg)
         echo "Memo Circular: <b>$nroMemo</b><br>";
 
 
-      $msg = "<h4>Trabajo enviado a Revisión</h4><br>"
-          . "Su Trabajo de Tesis: <b>$tram->Codigo</b> ha sido enviado a los cuatro miembros de su Jurado. "
+      $msg = "<h4>Informe enviado a Revisión</h4><br>"
+          . "Su Informe de Tesis: <b>$tram->Codigo</b> ha sido enviado a los cuatro miembros de su Jurado. "
           . "El mismo que será revisado mediante la <b>Plataforma PILAR</b>."
           ;
 
-      $this->logTramites($sess->userId , $tram->Id, "Trabajo Enviado a Revisión", $msg );
+      $this->logTramites($sess->userId , $tram->Id, "Informe Enviado a Revisión", $msg );
       
       $mail = $this->dbPilar->inCorreo( $tram->IdTesista1 );
-      $this->logCorreo( $tram->IdTesista1,0, $mail, "Trabajo enviado a revisión", $msg );
+      $this->logCorreo( $tram->IdTesista1,0, $mail, "Informe enviado a revisión", $msg );
 
       // envio a jurados
       //
       $det = $this->dbPilar->inLastTramDet( $tram->Id );
       $msg = "<h4>Revisión Electrónica</h4><br>"
           . "Por la presente se le comunica que se le ha enviado a su cuenta de Docente en la "
-          . "<b>Plataforma PILAR</b> el trabajo de tesis con el siguiente detalle:<br><br>   "
+          . "<b>Plataforma PILAR</b> el Informe de tesis con el siguiente detalle:<br><br>   "
           . "Memo Circular: <b>$nroMemo-PILAR-DITT-VRIN-UNAMBA</b><br>"
           . "Tesista(s) : <b>" . $this->dbPilar->inTesistas($tram->Id) . "</b><br>"
           . "Título : <b> $det->Titulo </b><br><br>"
@@ -1404,15 +1404,15 @@ private function inRechaza( $rowTram , $msg)
       $corr3 = $this->dbRepo->inCorreo( $tram->IdJurado3 );
       $corr4 = $this->dbRepo->inCorreo( $tram->IdJurado4 );
 
-      $this->logCorreo( 0,$tram->IdJurado1, $corr1, "Revisión de Trabajo de Tesis", $msg );
-      $this->logCorreo( 0,$tram->IdJurado2, $corr2, "Revisión de Trabajo de Tesis", $msg );
-      $this->logCorreo( 0,$tram->IdJurado3, $corr3, "Revisión de Trabajo de Tesis", $msg );
-      $this->logCorreo( 0,$tram->IdJurado4, $corr4, "Revisión de Trabajo de Tesis", $msg );
+      $this->logCorreo( 0,$tram->IdJurado1, $corr1, "Revisión de Informe de Tesis", $msg );
+      $this->logCorreo( 0,$tram->IdJurado2, $corr2, "Revisión de Informe de Tesis", $msg );
+      $this->logCorreo( 0,$tram->IdJurado3, $corr3, "Revisión de Informe de Tesis", $msg );
+      $this->logCorreo( 0,$tram->IdJurado4, $corr4, "Revisión de Informe de Tesis", $msg );
 
 
       //echo $tram->Codigo . " fue Enviado a su Director";
       echo "Correos enviados correctamente<br>";
-        echo "El Trabajo está en Revisión desde Hoy.<br>";
+        echo "El Informe está en Revisión desde Hoy.<br>";
    }
 
 public function listPyDire( $idtram=0 )

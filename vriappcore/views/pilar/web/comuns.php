@@ -41,7 +41,7 @@
                       <th> Nro </th>
                       <th class="col-md-2"> Trámite </th>
                       <th class="col-md-2"> Fecha </th>
-                      <th class="col-md-5 hidden-xs"> Título del Trabajo de Tesis </th>
+                      <th class="col-md-5 hidden-xs"> Título del Informe de Tesis </th>
                       <th class="col-md-2"> E.P. </th>
                       <th class="col-md-2"> Info </th>
                   </tr>

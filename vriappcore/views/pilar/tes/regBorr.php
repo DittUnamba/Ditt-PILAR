@@ -1,12 +1,12 @@
 <div class="panel panel-info">
     <div class="panel-heading">
-        <h2 class="panel-title"> Registro de Trabajo de Tesis </h2>
+        <h2 class="panel-title"> Registro de Informe de Tesis </h2>
     </div>
     <div class="panel-body" id="plops">
 
       <div id="plock" style="display: none; z-index: 1000; position: fixed; left: 0; top: 0; width:100%; height:100%; padding: 300px; background: rgba(0,0,0,0.5)">
           <div style="margin: 0 auto; width: 320px; height: 80px; background: white; padding: 15px">
-            <center> <b> Enviando datos y trabajo de tesis, espere ... </b> </center>
+            <center> <b> Enviando datos y Informe de tesis, espere ... </b> </center>
             <div class="progress progress-striped active" style="margin-bottom:0;">
             <div class="progress-bar" style="width: 100%"></div></div>
           </div>
@@ -69,7 +69,7 @@
 
               <!-- Text area -->
               <div class="form-group success">
-                  <label class="col-md-4 control-label"> Titulo de Trabajo de tesis </label>
+                  <label class="col-md-4 control-label"> Titulo de Informe de tesis </label>
                   <div class="col-md-7">
                       <textarea name="nomproy" type="text" class="form-control" rows="3" style="text-transform: uppercase" required><?=$titulo?></textarea>
                   </div>

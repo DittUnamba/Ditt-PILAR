@@ -95,7 +95,7 @@
 
       <div id="plock" style="display: none; z-index: 1000; position: fixed; left: 0; top: 0; width:100%; height:100%; padding: 300px; background: rgba(0,0,0,0.5)">
           <div style="margin: 0 auto; width: 320px; height: 80px; background: white; padding: 15px">
-            <center> <b> Enviando datos y Trabajo de tesis, espere ... </b> </center>
+            <center> <b> Enviando datos y Informe de tesis, espere ... </b> </center>
             <div class="progress progress-striped active" style="margin-bottom:0;">
             <div class="progress-bar" style="width: 100%"></div></div>
           </div>
