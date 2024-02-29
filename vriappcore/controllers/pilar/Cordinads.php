@@ -18,7 +18,7 @@ include( "absmain/mlLibrary.php" );
 
 
 define( "PILAR_CORDIS", "AdmCoords" );
-define( "ANIO_PILAR", "2023" );
+define( "ANIO_PILAR", "2024" );
 
 
 class Cordinads extends CI_Controller { 
@@ -332,6 +332,7 @@ public function publicaSusten(){
 public function evaluaSusten(){
    $cod=mlSecurePost('cod');
    $tesis=$this->dbPilar->getSnapRow("tesTramites","Codigo='$cod'");
+   
    if(!$tesis){
       echo "$cod :: No corresponde";
       return;
@@ -340,7 +341,8 @@ public function evaluaSusten(){
       echo "Este codigo no corresponde ::$cod"; 
       return;
    } 
-   if($this->dbPilar->getSnapRow("tesSustens","Codigo=$cod")){
+
+   if($this->dbPilar->getSnapRow("tesSustens","Codigo='$cod'")){
       echo "La sustentación ya fue publicada";
       return;
    }
@@ -576,11 +578,13 @@ public function memosGen( $IdTramite )
    $proyecto=$this->dbPilar->getOneField("tesTramsDet","Titulo","IdTramite='$memo->IdTramite' ORDER BY Iteracion DESC");
    // memos para accesitario
    $accesitario = $this->dbPilar->getSnapRow("tesJuCambios","IdTramite='$IdTramite' AND IteracionAccesitario>0"); 
+   
    $nmemo=$memo->Ordinal;
    $anio=$memo->Anio;
    $fecha=$memo->Fecha;
    
-   if($tram->Estado==4 OR $tram->Estado==12 or $tram->Estado==13 or $accesitario){
+   if($tram->Estado==4 OR $tram->Estado==12 OR $tram->Estado==13 OR $accesitario){
+
       if($accesitario){
          $quienes=array($tram->IdJurado1,$tram->IdJurado2,$tram->IdJurado3);
          $asunto="RECOMPOSICIÓN DE JURADOS";
@@ -598,7 +602,7 @@ public function memosGen( $IdTramite )
          . "Atentamente."
          ;
       }
-      if($tram->Estado==4){
+      elseif($tram->Estado==4){
          $quienes=array($tram->IdJurado1,$tram->IdJurado2,$tram->IdJurado3,$tram->IdJurado5);
          $asunto="REVISIÓN DE PROYECTO DE TESIS";
          $str = "Por medio del presente comunicarle que Ud. ha sido sorteado para la revisión "
@@ -614,7 +618,7 @@ public function memosGen( $IdTramite )
          . "Atentamente."
          ;
       }
-      if($tram->Estado==12){
+      elseif($tram->Estado==12){
          $quienes=array($tram->IdJurado1,$tram->IdJurado2,$tram->IdJurado3,$tram->IdJurado4,$tram->IdJurado5);
          $asunto="REVISIÓN DE TRABAJO DE TESIS";
       //  Borrador
@@ -629,7 +633,7 @@ public function memosGen( $IdTramite )
          . "Atentamente."
          ;
       }
-      if($tram->Estado==13){ 
+      elseif($tram->Estado==13){ 
          $quienes=array($tram->IdJurado1);
          $tesista=$this->dbPilar->InTesista($tram->IdTesista1);
          if($tram->IdTesista2){

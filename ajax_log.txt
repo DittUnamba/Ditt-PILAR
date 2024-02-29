@@ -1,6 +1,6 @@
 Array
 (
-    [tipo] => 2
-    [idDocente] => 2
-    [motivo] => tuvo accesidente y no puede participar en el dictamen
+    [tipo] => 1
+    [idDocente] => 3
+    [motivo] => Tuvo una cceidente y no podrà participar esta en descanso mèdico
 )

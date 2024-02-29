@@ -76,20 +76,12 @@
               </div>
               <!-- Text area -->
               <div class="form-group success">
-                  <label class="col-md-4 control-label"> Resumen (Abstract) </label>
+                  <label class="col-md-4 control-label"> Resumen </label>
                   <div class="col-md-7">
                       <textarea name="resumen" type="text" class="form-control" rows="3" placeholder="acepta varias lineas" required></textarea>
                   </div>
               </div>
-              <!-- Text area -->
-              <div class="form-group success">
-                  <label class="col-md-4 control-label"> Palabras clave (keywords) </label>
-                  <div class="col-md-7">
-                      <input name="pclaves" type="text" class="form-control input-md" placeholder="separadas por coma y acaba en punto" required>
-                      <!-- <span class="help-block">  </span> -->
-                  </div>
-              </div>
-              <!-- Text area -->
+
               <div class="form-group success">
                   <label class="col-md-4 control-label"> Conclusiones </label>
                   <div class="col-md-7">

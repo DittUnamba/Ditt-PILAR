@@ -1,4 +1,4 @@
-<div class="page-header">
+><div class="page-header">
 	<h4 class="titulo"> ¿Subida de Correcciones de Proyectos? </h4>
 </div>
 
@@ -151,24 +151,32 @@
               <div class="form-group success">
                   <label class="col-md-4 control-label"> Titulo de Proyecto </label>
                   <div class="col-md-7">
-                      <textarea name="nomproy" type="text" class="form-control" rows="3" style="text-transform: uppercase" required><?=$titulo?></textarea>
+                      <textarea name="nomproy" type="text" class="form-control" rows="3" style="text-transform: uppercase" required></textarea>
                   </div>
               </div>
               <!-- Text area -->
               <div class="form-group success">
-                  <label class="col-md-4 control-label"> Resumen (Abstract) </label>
+                  <label class="col-md-4 control-label"> Enunciado del problema </label>
                   <div class="col-md-7">
-                      <textarea name="resumen" type="text" class="form-control" rows="3" placeholder="acepta varias lineas" required></textarea>
+                      <textarea name="problema" type="text" class="form-control" rows="3" required></textarea>
+                  </div>
+              </div>
+
+              <!-- Text area -->
+              <div class="form-group success">
+                  <label class="col-md-4 control-label"> Objetivos </label>
+                  <div class="col-md-7">
+                      <textarea name="objetivos" type="text" class="form-control" rows="3" required></textarea>
                   </div>
               </div>
               <!-- Text area -->
               <div class="form-group success">
-                  <label class="col-md-4 control-label"> Palabras clave (keywords) </label>
+                  <label class="col-md-4 control-label"> Hipótesis </label>
                   <div class="col-md-7">
-                      <input name="pclaves" type="text" class="form-control input-md" placeholder="separadas por coma y acaba en punto" required>
-                      <!-- <span class="help-block">  </span> -->
+                      <textarea name="hipotesis" type="text" class="form-control" rows="3" required></textarea>
                   </div>
               </div>
+              <!-- Text area -->
 
               <!-- Button (Double) -->
               <div class="form-group">

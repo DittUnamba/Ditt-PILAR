@@ -19,7 +19,7 @@ include( "absmain/mlotiapi.php" );
 
 
 define( "REPO_ADMIN", "AdmRepos" );
-define( "ANIO_PILAR", "2023" );
+define( "ANIO_PILAR", "2024" );
 
 $arrMod = array(
             array( 'Id' => 1, 'Nombre' => "Tesis de pregrado"),

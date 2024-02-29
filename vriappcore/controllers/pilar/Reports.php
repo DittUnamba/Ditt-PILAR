@@ -19,7 +19,7 @@ include( "absmain/mlotiapi.php" );
 
 
 define( "PILAR_CORDIS", "AdmCoords" );
-define( "ANIO_PILAR", "2019" );
+define( "ANIO_PILAR", "2024" );
 
 
 class Reports extends CI_Controller {

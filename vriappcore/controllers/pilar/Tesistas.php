@@ -20,7 +20,7 @@ include( "absmain/mlotiapi.php" );
 
 // tesBorrador
 // Edicion 2018.a
-define( "ANIO_PILAR", "2023" );
+define( "ANIO_PILAR", "2024" );
 
 
 class Tesistas extends CI_Controller {
@@ -840,7 +840,6 @@ class Tesistas extends CI_Controller {
 
         //$archi = mlSecurePost( "nomarch" );  
         $resum = mlSecurePost( "resumen" );
-        $clave = mlSecurePost( "pclaves" );
         $concl = mlSecurePost( "conclus" );
         $titul = mb_strtoupper( mlSecurePost( "nomproy" ) );
 
@@ -883,8 +882,7 @@ class Tesistas extends CI_Controller {
             'IdTramite' => $tram->Id,
             'Title'     => $titul,
             'Abstract'  => $resum,
-            'Conclus'   => $concl,
-            'Keywords'  => $clave
+            'Conclusions'   => $concl
         ));
 
 
@@ -1038,6 +1036,7 @@ class Tesistas extends CI_Controller {
 
         // buscamos ultimo registro de tramite del año y procedemos
         $orden = $this->dbPilar->getOneField( "tesTramites", "Orden", "Anio=$anio ORDER BY Orden DESC" );
+        
         $codigo = sprintf("%04d-%03d", $anio, $orden + 1 );
 
         $tesi1 = $users['user1'];
@@ -1048,11 +1047,10 @@ class Tesistas extends CI_Controller {
         $jura4 = mlSecurePost( "jurado4" );
         //$jura3 = mlSecurePost( "jurado3" );
         //$archi = mlSecurePost( "nomarch" );  siempre es NULL arriba lo asignaremos
-        $resum = mlSecurePost( "resumen" );
-        $clave = mlSecurePost( "pclaves" );
         $titul = mb_strtoupper( mlSecurePost( "nomproy" ) );
-
-
+        $problema = mlSecurePost( "problema" );
+        $objetivos = mlSecurePost( "objetivos" );
+        $hipotesis = mlSecurePost( "hipotesis" );
         // 1. verificar previo
         // 2. insertar Tramite
         // 3. insertar detTramite
@@ -1109,9 +1107,9 @@ class Tesistas extends CI_Controller {
             'Tipo'      => 1,
             'IdTramite' => $idTram,
             'Title'     => $titul,
-            'Abstract'  => $resum,
-            'Conclus'   => "",
-            'Keywords'  => $clave
+            'Problem'  => $problema,
+            'Objectives'  => $objetivos,
+            'Hypothesis'  => $hipotesis,
         ));
 
 
@@ -1147,12 +1145,12 @@ class Tesistas extends CI_Controller {
         $archi = $this->subirArchevo( 1 );
         if( ! $archi ) return;
 
-
         //$archi = mlSecurePost( "nomarch" );  siempre es NULL arriba lo asignaremos
-        $resum = mlSecurePost( "resumen" );
-        $clave = mlSecurePost( "pclaves" );
-        //$concl = mlSecurePost( "conclus" );
         $titul = mb_strtoupper( mlSecurePost( "nomproy" ) );
+        $problema = mlSecurePost( "problema" );
+        $objetivos = mlSecurePost( "objetivos" );
+        $hipotesis = mlSecurePost( "hipotesis" );
+        // 1. verificar previo
 
 
 
@@ -1190,9 +1188,9 @@ class Tesistas extends CI_Controller {
             'Tipo'      => 1,
             'IdTramite' => $tram->Id,
             'Title'     => $titul,
-            'Abstract'  => $resum,
-            'Conclus'   => "*",
-            'Keywords'  => $clave
+            'Problem'  => $problema,
+            'Objectives'  => $objetivos,
+            'Hypothesis'  => $hipotesis
         ));
 
 
@@ -1241,7 +1239,6 @@ class Tesistas extends CI_Controller {
 
         //$archi = mlSecurePost( "nomarch" );  siempre es NULL arriba lo asignaremos
         $resum = mlSecurePost( "resumen" );
-        $clave = mlSecurePost( "pclaves" );
         $concl = mlSecurePost( "conclus" );
         $titul = mb_strtoupper( mlSecurePost( "nomproy" ) );
 
@@ -1280,8 +1277,7 @@ class Tesistas extends CI_Controller {
             'IdTramite' => $tram->Id,
             'Title'     => $titul,
             'Abstract'  => $resum,
-            'Conclus'   => $concl,
-            'Keywords'  => $clave
+            'Conclusions'   => $concl
         ));
 
 

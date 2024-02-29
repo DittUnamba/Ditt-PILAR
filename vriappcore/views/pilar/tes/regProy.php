@@ -115,9 +115,9 @@
                   </div>
                   -->
                   <div class="alert alert-success col-md-offset-1 col-md-10">
-                      <b>Art 11.</b> El jurado dictaminador de los proyectos de tesis estará conformado
-                      por tres (03) docentes de la UNAMBA, sorteados aleatoriamente a travéz de la Plataforma 
-                      PILAR considerando las lineas de investigación.
+                      <b>Art 14.</b> El jurado evaluador estará conformado por cuatro docentes de la Facultad correspondiente presidente,
+                       primer miembro, segundo miembro y un accesitario, quienes serán designados por sorteo y
+                       ordenados según precedencia mediante la plataforma PILAR UNAMBA.
                   </div>
               </div>
 
@@ -145,18 +145,28 @@
               </div>
               <!-- Text area -->
               <div class="form-group success">
-                  <label class="col-md-4 control-label"> Resumen (Abstract) </label>
+                  <label class="col-md-4 control-label"> Enunciado del problema </label>
                   <div class="col-md-7">
-                      <textarea name="resumen" type="text" class="form-control" rows="3" required></textarea>
+                      <textarea name="problema" type="text" class="form-control" rows="3" required></textarea>
+                  </div>
+              </div>
+
+              <!-- Text area -->
+              <div class="form-group success">
+                  <label class="col-md-4 control-label"> Objetivos </label>
+                  <div class="col-md-7">
+                      <textarea name="objetivos" type="text" class="form-control" rows="3" required></textarea>
                   </div>
               </div>
               <!-- Text area -->
               <div class="form-group success">
-                  <label class="col-md-4 control-label"> Palabras clave (keywords) </label>
+                  <label class="col-md-4 control-label"> Hipótesis </label>
                   <div class="col-md-7">
-                      <input name="pclaves" type="text" class="form-control input-md" required>
+                      <textarea name="hipotesis" type="text" class="form-control" rows="3" required></textarea>
                   </div>
               </div>
+              <!-- Text area -->
+              
 
               <!-- Button (Double) -->
               <div class="form-group">

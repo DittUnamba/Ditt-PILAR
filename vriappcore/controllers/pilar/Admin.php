@@ -43,7 +43,7 @@ include( "absmain/mlLibrary.php" );
 
 
 define( "PILAR_ADMIN", "AdmPilar-III" );
-define( "ANIO_PILAR", "2023" );
+define( "ANIO_PILAR", "2024" );
 // AJAX
 
 
