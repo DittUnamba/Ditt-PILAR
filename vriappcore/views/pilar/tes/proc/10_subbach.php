@@ -21,7 +21,7 @@
                     $name=$this->dbPilar->inTesista($sess->userId);
                 ?>
                   <center><b>DECLARACIÓN JURADA</b><br></center>
-                  Yo, <?=$name;?>, en amparo de lo dispuesto en el Artículo N° 41 de la Ley N° 27444, a efectos de cumplir con los requisitos y proseguir los trámites para presentar los resultados de mi investigación y defender mi trabajo de tesis  <b>DECLARO BAJO JURAMENTO </b>, que los datos que adjunto en el presente formulario son auténticos y me sujeto a la normativa vigente de demostrarse lo contrario.
+                  Yo, <?=$name;?>, en amparo de lo dispuesto en el Artículo N° 41 de la Ley N° 27444, a efectos de cumplir con los requisitos y proseguir los trámites para presentar los resultados de mi investigación y defender mi Informe de tesis  <b>DECLARO BAJO JURAMENTO </b>, que los datos que adjunto en el presente formulario son auténticos y me sujeto a la normativa vigente de demostrarse lo contrario.
               </div>
               <!-- Info Área-->
               <div class="form-group success">

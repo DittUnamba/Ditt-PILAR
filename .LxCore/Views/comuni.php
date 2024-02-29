@@ -24,7 +24,7 @@ body{
     la finalidad de evitar caidas a futuro, debido a las deficiencias tecnicas con el actual
     proveedor de nuestro VPS (Virtual Private Server), rogamos su comprensión y en los términos
     técnicos posibles levantaremos las diversas plataformas y poder brindar los servicios a nuestros usuarios.
-    Agregar ademas que los plazos de los tramites de proyectos y trabajos de tesis se congelan y se brindara
+    Agregar ademas que los plazos de los tramites de proyectos y Informes de tesis se congelan y se brindara
     las facilidades necesarias excepto los que ya se vencieron antes del 10 de agosto del presente.
     </p>
 

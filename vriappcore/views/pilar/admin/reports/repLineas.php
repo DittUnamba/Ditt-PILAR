@@ -25,7 +25,7 @@
                         <th class="col-md-7"> Nombre </th>
                         <th class="col-md-1"> Total </th>
                         <th class="col-md-1"> Proyectos </th>
-                        <th class="col-md-1"> Borradores </th>
+                        <th class="col-md-1"> Informes </th>
                         <th class="col-md-1"> Sustentados </th>
                     </tr>
                     <?php

@@ -373,7 +373,7 @@ class Tesistas extends CI_Controller {
             $dias  = mlDiasTranscHoy( $det->Fecha );
             // $dias  = mlDiasTranscHoy( $tram->FechModif );
             echo "<center><img class='img-responsive' style='height:70px;' src='".base_url('vriadds/pilar/imag/pilar-tes.png')."'/> </center>";
-            echo "<center><h2 class='text'>¿Presentación de Trabajo de Tesis?</h2>";
+            echo "<center><h2 class='text'>¿Presentación de Informe de Tesis?</h2>";
             echo "<h4> Su proyecto tiene $dias dia(s) de Ejecución de un total de 90 mínimos. </h4> </center>";
             echo "<p>Antes de continuar con el proceso usted deberá : (a) Completar el tiempo mínimo.(b) Poseer el grado académico de Bachiller. Si cumple con los requisitos (a) y (b) está apto para proseguir con su trámite, de lo contrario deberá esperar hasta cumplir lo estipulado. <br> <div class='alert alert-warning'><b>Nota :</b> La información registrada será responsabilidad del usuario y tienen caracter de <b>Declaración Jurada</b>, de lo contrario estará sujeto a las sanciones que determine la Universidad Nacional Micaela Bastidas de Apurímac. </p></div>";
 
@@ -432,7 +432,7 @@ class Tesistas extends CI_Controller {
                 }
                 echo "</ul>";
 
-            echo "Trabajo de Tesis Subido a PILAR, a la espera de la validación de Formato y Composición de Jurados.";
+            echo "Informe de Tesis Subido a PILAR, a la espera de la validación de Formato y Composición de Jurados.";
         }
 
         if( $tram->Estado == 12 ) {
@@ -464,10 +464,10 @@ class Tesistas extends CI_Controller {
             $link2 = base_url( "vriadds/vri/reglamentos/ReglamentoDefensaNP.pdf" );
             echo "<center><img class='img-responsive' style='height:70px;' src='".base_url('vriadds/pilar/imag/pilar-tes.png')."'/> </center>";
             echo "<center><h2 class='text'>Exposición y Defensa de Tesis</h2>";
-            echo "<h4> Usted ha cargado el documento Final del Trabajo de Investigación.</h4></center> ";
+            echo "<h4> Usted ha cargado el documento Final del Informe de Investigación.</h4></center> ";
             echo "<br><p> Si prefiere puede solicitar la Exposición y Defensa <b>NO PRESENCIAL</b> para lo cual deberá seguir los procedimientos descritos en el <i>REGLAMENTO DEL PROCESO DE EXPOSICIÓN Y DEFENSA DE LA TESIS EN FORMA NO PRESENCIAL, COMO UNO DE LOS REQUISITOS A CUMPLIR DURANTE EL PROCESO DE OBTENCIÓN DEL RESPECTIVO TÍTULO PROFESIONAL </i>. Para lo cual deberá preparar sus diapositivas y cargar este documento al Repositorio institucional. </p> ";
             echo "<center>
-                    <a href='$link' target=_blank class='btn btn-success'> Ver el Trabajo de Tesis Final</a> 
+                    <a href='$link' target=_blank class='btn btn-success'> Ver el Informe de Tesis Final</a> 
                     <a href='$link2' target=_blank class='btn btn-info'> Ver el Reglamento</a> 
                   <center>";
 
@@ -596,7 +596,7 @@ class Tesistas extends CI_Controller {
         $pdf->Ln( 19 );
         $pdf->SetFont( "Arial", 'B', 14 );
         //$pdf->Cell( 174, 5, toUTF("ACTA  DE BORRADOR DE TESIS (_DEVELOP_)"), 0, 1, 'C' );
-        $pdf->Cell( 174, 5, toUTF("ACTA DE APROBACIÓN TRABAJO DE TESIS"), 0, 1, 'C' );
+        $pdf->Cell( 174, 5, toUTF("ACTA DE APROBACIÓN INFORME DE TESIS"), 0, 1, 'C' );
 
 
         $dia = (int) substr( $dets->Fecha, 8, 2 );
@@ -613,7 +613,7 @@ class Tesistas extends CI_Controller {
 
 
         $str = "En la Ciudad Universitaria, a los $dia dias del mes $mes del $ano "
-             . "siendo horas $hor. Se presentó el Trabajo de tesis titulado:";
+             . "siendo horas $hor. Se presentó el Informe de tesis titulado:";
 
         $pdf->Ln( 7 );
         $pdf->SetFont( "Arial", '', 10 );
@@ -887,18 +887,18 @@ class Tesistas extends CI_Controller {
 
 
         $msg = "<br>Se ha actualizado el trámite: <b>$tram->Codigo</b><br><br> "
-             . "Título de Trabajo de Tesis: <b>$titul</b> <br><br>       "
+             . "Título de Informe de Tesis: <b>$titul</b> <br><br>       "
              . "Ud. debe apersonarse a Plataforma para revisar el formato "
              . "y la conformación de su <b>Jurado Evaluador</b> "
              . "de lo contrario no se procede con el envio para "
-             . "que el tramite de su trabajo de tesis continue."  ;
+             . "que el tramite de su Informe de tesis continue."  ;
 
 
         // agregar tramite
-        $this->logTramites( $sess->userId, $tram->Id, "Subida de trabajo de tesis", $msg );
+        $this->logTramites( $sess->userId, $tram->Id, "Subida de Informe de tesis", $msg );
 
         // grabar y enviar en LOG de correos.
-        $this->logCorreo( $tram->Id, $sess->userMail, "Subida de trabajo de tesis", $msg );
+        $this->logCorreo( $tram->Id, $sess->userMail, "Subida de Informe de tesis", $msg );
 
         // finalmente
         echo $msg . "<br><b>hecho !</b>";
@@ -1281,7 +1281,7 @@ class Tesistas extends CI_Controller {
         ));
 
 
-        $msg = "<br>El tesista ha subido el Trabajo de Tesis Final en el trámite:<br><br>"
+        $msg = "<br>El tesista ha subido el Informe de Tesis Final en el trámite:<br><br>"
              . "Codigo: <b>$tram->Codigo</b><br> "
              . "Título de Proyecto : <b>$titul</b> <br><br>  "
              . "Se realizará la verificación de este proceso con el <b>Jurado Evaluador</b> y el <b>Repositorio Institucional</b>. "
@@ -1289,10 +1289,10 @@ class Tesistas extends CI_Controller {
 
 
         // agregar tramite
-        $this->logTramites( $sess->userId, $tram->Id, "Subida de Trabajo de Tesis Final", $msg );
+        $this->logTramites( $sess->userId, $tram->Id, "Subida de Informe de Tesis Final", $msg );
 
         // grabar y enviamos mail en LOG correos
-        $this->logCorreo( $tram->Id, $sess->userMail, "Subida de Trabajo de Tesis Final", $msg );
+        $this->logCorreo( $tram->Id, $sess->userMail, "Subida de Informe de Tesis Final", $msg );
 
 
         // enviar correos a profesores OJO
@@ -1302,10 +1302,10 @@ class Tesistas extends CI_Controller {
         $corr3 = $this->dbRepo->inCorreo( $tram->IdJurado3 );
         $corr4 = $this->dbRepo->inCorreo( $tram->IdJurado4 );
 
-        $this->logCorreo( $tram->Id, $corr1, "Trabajo de Tesis Final ", $msg );
-        $this->logCorreo( $tram->Id, $corr2, "Trabajo de Tesis Final", $msg );
-        $this->logCorreo( $tram->Id, $corr3, "Trabajo de Tesis Final", $msg );
-        $this->logCorreo( $tram->Id, $corr4, "Trabajo de Tesis Final", $msg );
+        $this->logCorreo( $tram->Id, $corr1, "Informe de Tesis Final ", $msg );
+        $this->logCorreo( $tram->Id, $corr2, "Informe de Tesis Final", $msg );
+        $this->logCorreo( $tram->Id, $corr3, "Informe de Tesis Final", $msg );
+        $this->logCorreo( $tram->Id, $corr4, "Informe de Tesis Final", $msg );
 
         // finalmente
         echo $msg . "<br><b>hecho !</b>";
@@ -1477,7 +1477,7 @@ class Tesistas extends CI_Controller {
                  . "Sr(rta): <b>$data->Nombres $data->Apellis</b>.<br>"
                  . "Ud. ha concluido satisfactoriamente su inscripción en la  "
                  . "Plataforma PILAR para el trámite electrónico de su "
-                 . "proyecto y trabajo de tesis, en calidad de estudiante "
+                 . "proyecto y Informe de tesis, en calidad de estudiante "
                  . "egresado de la <b>UNAMBA</b>."
                  . "<br><br><b>Datos de su Cuenta:</b><br>"
                  . "  * usuario: $mail<br>"
@@ -1747,7 +1747,7 @@ class Tesistas extends CI_Controller {
 
         $msg = "El tesista ha cargado su bachiller en el trámite:<br>"
              . "Codigo: <b>$tram->Codigo </b><br> "
-             . "Este proceso tiene caracter de declaración jurada bajo la responsabilidad del usuario de esta cuenta. Se habilitará la opción de cargar el trabajo de tesis.<br>"
+             . "Este proceso tiene caracter de declaración jurada bajo la responsabilidad del usuario de esta cuenta. Se habilitará la opción de cargar el Informe de tesis.<br>"
              . "Se procede con el registro y envio de las notificaciones."  ;
 
         if ($tram->IdTesista2==0) {
@@ -1805,7 +1805,7 @@ class Tesistas extends CI_Controller {
             echo "<div class='text-center'>";
             echo "<center><img class='img-responsive' style='height:70px;' src='".base_url('vriadds/pilar/imag/pilar-tes.png')."'/> </center>";
             echo "<h1>Felicitaciones !</h1>";
-            echo "<h4>Su Trabajo de Investigación de Tesis ha sido <b class='text-success'>Aprobado</b></h4> Puede descargar su Acta de aprobación de Proyecto de Tesis. </h4>";
+            echo "<h4>Su Informe de Investigación de Tesis ha sido <b class='text-success'>Aprobado</b></h4> Puede descargar su Acta de aprobación de Proyecto de Tesis. </h4>";
             echo "<hr> <a href='$link' target=_blank class='btn btn-info'> Ver/Descargar Acta </a>";
             echo "</div>";
 
@@ -1950,7 +1950,7 @@ class Tesistas extends CI_Controller {
         
 
 
-        $str = "El jurado revisor ha calificado el trabajo de tesis titulado:";
+        $str = "El jurado revisor ha calificado el Informe de tesis titulado:";
 
         $pdf->Ln( 7 );
         $pdf->SetFont( "Arial", '', 10 );

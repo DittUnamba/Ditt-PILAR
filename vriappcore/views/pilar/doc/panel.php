@@ -3,7 +3,7 @@
 			<div class="col-md-12">
 			<h1 class="titulo">PILAR</h1>
 			<div class="col-md-12 docente-inicio">
-			<p>La Universidad Nacional Micaela Bastidas de Apurímac mediante el Vicerrectorado de Investigación con la Resolución Rectoral N°1012-2016-R-UNA del 11 de Abril del 2016, que aprueba el reglamento de presentación de proyectos de tesis de Pre-Grado  además de la Resulución Rectoral N°3011-2016-R-UNA, que aprueba el reglamento de presentación, dictamen de borradores y defensa de tesis. </p>
+			<p>La Universidad Nacional Micaela Bastidas de Apurímac mediante el Vicerrectorado de Investigación con la Resolución Rectoral N°1012-2016-R-UNA del 11 de Abril del 2016, que aprueba el reglamento de presentación de proyectos de tesis de Pre-Grado  además de la Resulución Rectoral N°3011-2016-R-UNA, que aprueba el reglamento de presentación, dictamen de informes y defensa de tesis. </p>
 			<p> Documentos sustentatorios en los cuales pilar basa su funcionamiento:</p>
 			</div>
 		</div>
@@ -64,7 +64,7 @@
 				 		?>
 				 	</div>
 					<div class="panel-body panel-docente-texto panel-info-2">
-						Trabajos de Investigación
+						Informes de Investigación
 					</div>
 				</div>
 			</div>

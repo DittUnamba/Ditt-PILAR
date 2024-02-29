@@ -1792,19 +1792,19 @@ class Admin extends CI_Controller {
 
 
 		$msg = "<h4>Borrador enviado a Revisión</h4><br>"
-			 . "Su Trabajo de Tesis: <b>$tram->Codigo</b> ha sido enviado a los cuatro miembros de su Jurado. "
+			 . "Su Informe de Tesis: <b>$tram->Codigo</b> ha sido enviado a los cuatro miembros de su Jurado. "
 			 . "El mismo que será revisado en un plazo de 10 dias habiles mediante la <b>Plataforma PILAR</b>."
 			 ;
 
 		$mail = $this->dbPilar->inCorreo( $tram->IdTesista1 );
-		$this->logCorreo( $tram->Id, $mail, "Trabajo de Tesis enviado a Revisión", $msg );
+		$this->logCorreo( $tram->Id, $mail, "Informe de Tesis enviado a Revisión", $msg );
 
 		// envio a jurados
 		//
 		$det = $this->dbPilar->inLastTramDet( $tram->Id );
 		$msg = "<h4>Revisión Electrónica</h4><br>"
 			 . "Por la presente se le comunica que se le ha enviado a su cuenta de Docente en la "
-			 . "<b>Plataforma PILAR</b> el trabajo de tesis con el siguiente detalle:<br><br>   "
+			 . "<b>Plataforma PILAR</b> el Informe de tesis con el siguiente detalle:<br><br>   "
 			 . "Memo Circular: <b>$nroMemo-VRI-UNAMBA</b><br>"
 			 . "Tesista(s) : <b>" . $this->dbPilar->inTesistas($tram->Id) . "</b><br>"
 			 . "Título : <b> $det->Titulo </b><br><br>"
@@ -1816,10 +1816,10 @@ class Admin extends CI_Controller {
 		$corr3 = $this->dbRepo->inCorreo( $tram->IdJurado3 );
 		$corr4 = $this->dbRepo->inCorreo( $tram->IdJurado4 );
 
-		$this->logCorreo( $tram->Id, $corr1, "Revisión de Trabajo de Tesis", $msg );
-		$this->logCorreo( $tram->Id, $corr2, "Revisión de Trabajo de Tesis", $msg );
-		$this->logCorreo( $tram->Id, $corr3, "Revisión de Trabajo de Tesis", $msg );
-		$this->logCorreo( $tram->Id, $corr4, "Revisión de Trabajo de Tesis", $msg );
+		$this->logCorreo( $tram->Id, $corr1, "Revisión de Informe de Tesis", $msg );
+		$this->logCorreo( $tram->Id, $corr2, "Revisión de Informe de Tesis", $msg );
+		$this->logCorreo( $tram->Id, $corr3, "Revisión de Informe de Tesis", $msg );
+		$this->logCorreo( $tram->Id, $corr4, "Revisión de Informe de Tesis", $msg );
 
 		//echo $tram->Codigo . " fue Enviado a su Director";
 		echo "Correos enviados correctamente<br>";

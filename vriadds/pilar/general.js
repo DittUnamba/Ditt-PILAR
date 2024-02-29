@@ -89,6 +89,11 @@ function callSave()
         return false;
     } 
 
+	if (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9])/', pass1.value)) {
+		jVRI("#pmsg").html( "'La contraseña debe tener al menos 8 caracteres y contener al menos una letra y un número.'" );
+		return FALSE;
+	} 
+	
     jVRI("#pmsg").html( "Grabando..." );
     jVRI.ajax({
         url  : "pilar/tesistas/execInNew",

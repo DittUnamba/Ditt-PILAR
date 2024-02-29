@@ -21,13 +21,13 @@
 
         echo "</ul>";
         echo "<div class='alert alert-warning'>";
-        echo "<span class='glyphicon glyphicon-exclamation-sign'></span> <b>Aviso</b> : Antes de subir tu <b>Trabajo de Tesis</b> verifica que en la conformación de Jurado todos estén <b class='text-success'>habilitados</b>. De lo contrario solicita el <b class='text-danger'>cambio</b> para completar el proceso.";
+        echo "<span class='glyphicon glyphicon-exclamation-sign'></span> <b>Aviso</b> : Antes de subir tu <b>Informe de Tesis</b> verifica que en la conformación de Jurado todos estén <b class='text-success'>habilitados</b>. De lo contrario solicita el <b class='text-danger'>cambio</b> para completar el proceso.";
         echo "</div>";
         // exit;
     ?>
 
 	<p>
-       Le recordamos que el trabajo de tesis debe de cumplir con el formato establecido y el asesor de tesis deberá haber revisado previamente asi evitar el rechazo del mismo. De lo contrario podría verser perjudicado en el proceso.
+       Le recordamos que el Informe de tesis debe de cumplir con el formato establecido y el asesor de tesis deberá haber revisado previamente asi evitar el rechazo del mismo. De lo contrario podría verser perjudicado en el proceso.
     </p>
     <hr>
     	<?php 
@@ -37,7 +37,7 @@
 					<div class="col-md-11 btn-select">
 						<button class="btn btn-default indi_group bg-1" onclick="cargaBorr()">
 				            <span class="glyphicon glyphicon-upload" ></span>
-				            Subir Mi Trabajo de tesis
+				            Subir Mi Informe de tesis
 				        </button>
 					</div>
 

@@ -5,7 +5,7 @@
 <div class="contenido">
 	<p>
        Antes de iniciar este procedimiento le recordamos que debe poner en texto de color
-       <b class='text-danger'>rojo</b> con fondo blanco los parrafos o elementos que su jurado le ha indicado corregir, por ello revise bien su <b>Trabajo de Tesis</b> asi evitar
+       <b class='text-danger'>rojo</b> con fondo blanco los parrafos o elementos que su jurado le ha indicado corregir, por ello revise bien su <b>Informe de Tesis</b> asi evitar
        el rechazo del mismo. Por otro lado deberá coordinar
     </p>
     <p>
@@ -84,13 +84,13 @@
 	?> 
 	<!-- area de subida de correcciones -->
     <div class="panel-heading">
-        <h2 class="panel-title"> Correcciones Finales de Trabajo de Tesis </h2>
+        <h2 class="panel-title"> Correcciones Finales de Informe de Tesis </h2>
     </div>
     <div class="panel-body" id="plops">
 
       <div id="plock" style="display: none; z-index: 1000; position: fixed; left: 0; top: 0; width:100%; height:100%; padding: 300px; background: rgba(0,0,0,0.5)">
           <div style="margin: 0 auto; width: 320px; height: 80px; background: white; padding: 15px">
-            <center> <b> Enviando datos y trabajo de tesis, espere ... </b> </center>
+            <center> <b> Enviando datos y Informe de tesis, espere ... </b> </center>
             <div class="progress progress-striped active" style="margin-bottom:0;">
             <div class="progress-bar" style="width: 100%"></div></div>
           </div>
@@ -98,7 +98,7 @@
 
       <!-- form -->
       <h4><span class='label label-danger'> <span class='glyphicon glyphicon-info-sign' ></span> Solo realiza este procedimiento si es el documento FINAL.</span></h4>
-      <p> Una vez registrado el trabajo de tesis no hay manera de corregir el documento, usted deberá estar seguro de que el jurado ha aprobado el trabajo de tesis, de lo contrario será rechazado e iniciará una nuevo trámite en 60 días reglamentarios.</p>
+      <p> Una vez registrado el Informe de tesis no hay manera de corregir el documento, usted deberá estar seguro de que el jurado ha aprobado el Informe de tesis, de lo contrario será rechazado e iniciará una nuevo trámite en 60 días reglamentarios.</p>
       <form class="form-horizontal" id="frmborr" method="POST" onsubmit="grabaCorrBorr(); return false"
             accept-charset="utf-8" enctype="multipart/form-data">
           <fieldset>
