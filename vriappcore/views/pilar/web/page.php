@@ -60,7 +60,7 @@ src="<?=base_url("vriadds/pilar/imag/logos-u-v-p.png");?>">
 <div class="titulo">Presentación</div>
 <p class="description">
 La Universidad Nacional Micaela Bastidas de Apurímac mediante el Vicerrectorado de Investigación y la Plataforma <i>PILAR</i>
-para Docentes, Tesistas y Coordinadores tienen la información disponible para realizar la
+para Docentes, Tesistas y las Unidades de Investigación tienen la información disponible para realizar la
 subida, calificacion, revisión y posterior dictaminación de proyectos de investigación de pregrado
 conducentes a la obtención del título profesional.
 </p>

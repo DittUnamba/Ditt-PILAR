@@ -84,7 +84,7 @@
 						<select id="state" name="state" class="form-control">
 							<option value="100">(Todas)</option>
 							<option value="201">Proyectos</option>
-							<option value="202">Borradores</option>
+							<option value="202">Informes</option>
 							<?php 
 								foreach($estados->result() as $estad){
 									echo "<option value='$estad->Id'>$estad->Nombre</option>";
