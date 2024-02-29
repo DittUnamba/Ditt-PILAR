@@ -40,7 +40,7 @@
                 echo "</tr>";
 
                 echo "<tr>";
-                echo "<td> Informes de Tesis </td>";
+                echo "<td> Informe de Tesis </td>";
                 echo "<td> $curborr </td>";
                 echo "<td> $totborr </td>";
                 echo "</tr>";

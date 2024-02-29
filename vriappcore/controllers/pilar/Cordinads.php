@@ -230,7 +230,7 @@ public function recepEjemplares($id){
 
       $titulo1="Dictamen de Informe de Tesis";
       $mensaje1="<b>$titulo1</b><br><br><p align='justify'>Estimado ".$this->dbRepo->inDocenteEx($row->IdJurado1).", <br><br> Se le 
-      comunica que el Bach. ".$this->dbPilar->inTesistas($id)." ha realizado las correcciones del  titulado "
+      comunica que el Bach. ".$this->dbPilar->inTesistas($id)." ha realizado las correcciones del informe de tesis titulado "
       .$this->dbPilar->inTitulo($id)." y a su vez presentó 4 ejemplares anillados del mismo en la coordinación de 
       investigación de la Escuela Profesional de ".$this->dbRepo->inCarrera($row->IdCarrera).", en cumplimiento del 
       Art. N° 8 del reglamento de presentación de borradores de tesis.<br>
