@@ -32,6 +32,10 @@
 				$archi = "/repositor/docs/$rowi->Archivo";
 				$actap = base_url("pilar/tesistas/actaProy/$rowi->Id");
 				$opt = "<a href='$archi' class='btn btn-xs btn-info no-print' target=_blank> ver PDF </a>";
+				//Evaluar si ya se realizo el cambio de jurados
+				$accesitario = $this->dbPilar->getSnapRow("tesJuCambios","IdTramite='$row->Id' AND IteracionAccesitario>0"); 
+				$tipo = 1;
+
 				switch ($row->Estado) {
 					case 1:
 						$opt="";
@@ -42,22 +46,26 @@
 						$estado="En revisión por el Asesor";
 						break;
 					case 3:
-						$opt .= " | <button onclick='jsMdlSorteo(\"cordinads/execSorteo/$row->Id\",$nro)' class='btn btn-xs btn-warning'> Sorteo </button> ";
+						$opt .= "  <button onclick='jsMdlSorteo(\"cordinads/execSorteo/$row->Id\",$nro)' class='btn btn-xs btn-primary'> Sorteo </button> ";
 						$opt.="<a href='javascript:void(0)' onclick=\"jsLoadModalCord($row->Id,'cordinads/execRechaza/')\" class='btn btn-danger btn-xs'>Rechazar</a>";
 						$estado="Sorteo de Jurados";
 						break;
 					case 4:
-						$opt="<a href='javascript:void(0)' onclick=\"jsLoadModalCord($row->Id,'cordinads/vwProyectosMemos/')\" class='btn btn-info btn-xs'>Memo</a>";
+						$opt=" <a href='javascript:void(0)' onclick=\"jsLoadModalCord($row->Id,'cordinads/vwProyectosMemos/')\" class='btn btn-info btn-xs'>Memo</a>";
+						(!$accesitario)? $opt .= "  <a href='javascript:void(0)'onclick='jsMdlAccesitario($row->Id, $tipo)'class='btn btn-warning btn-xs'>Accesitario</a>": $opt="<a href='".base_url("pilar/Cordinads/memosGen/$row->Id")."' target=_blank class='btn btn-info btn-xs'>Memo accesitario</a>";
 						$estado="Revisón por Jurados";
 						break;
 					case 5:
 						$opt="";
+						(!$accesitario)? $opt .= "  <a href='javascript:void(0)'onclick='jsMdlAccesitario($row->Id, $tipo)'class='btn btn-warning btn-xs'>Accesitario</a>":  $opt="<a href='".base_url("pilar/Cordinads/memosGen/$row->Id")."' target=_blank class='btn btn-info btn-xs'>Memo accesitario</a>";
 						$estado="Dictaminación de Proyecto de investigación";
 						break;
 					case 6:
 						$opt="<a href='".base_url("pilar/tesistas/actaProy/$row->Id")."' target=_blank class='btn btn-success btn-xs'>Acta de Aprobación</a>";
+						(!$accesitario)? $opt .= "  <a href='javascript:void(0)'onclick='jsMdlAccesitario($row->Id, $tipo)'class='btn btn-warning btn-xs'>Accesitario</a>": $opt="<a href='".base_url("pilar/Cordinads/memosGen/$row->Id")."' target=_blank class='btn btn-info btn-xs'>Memo accesitario</a>";
 						$estado="Proyecto de investigación Aprobado";
 						break;
+						
 					default:
 						$opt="";
 						$estado=" Eroor.....! Comunicar!";

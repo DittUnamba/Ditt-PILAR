@@ -25,6 +25,7 @@ class GenSessionNative {
 
     public function userdata( $name )
     {
+ 
         if(!isset($_SESSION))
 	        session_start();
 

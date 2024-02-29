@@ -1,10 +1,6 @@
 Array
 (
-    [evt] => 31
-    [idtram] => 49
-    [j1] => 3
-    [j2] => 14
-    [j3] => 2
-    [j4] => 5
-    [j5] => 1
+    [tipo] => 2
+    [idDocente] => 2
+    [motivo] => tuvo accesidente y no puede participar en el dictamen
 )

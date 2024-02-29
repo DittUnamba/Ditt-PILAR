@@ -408,7 +408,7 @@ class Tesistas extends CI_Controller {
                     1=>$this->dbRepo->inDocenteRow($tram->IdJurado1),
                     2=>$this->dbRepo->inDocenteRow($tram->IdJurado2),
                     3=>$this->dbRepo->inDocenteRow($tram->IdJurado3),
-                    4=>$this->dbRepo->inDocenteRow($tram->IdJurado4),
+                    4=>$this->dbRepo->inDocenteRow($tram->IdJurado4)
                     ),
             ));
         }

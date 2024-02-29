@@ -132,6 +132,16 @@ function lodNoti(ctrl)
     alert("Notificado");
 }
 
+// mensaje de error
+$("#close_error").click(function() {
+    $("#alerta").hide();
+    jVRI("#mdlContCord").load("cordinads/vwProy2018");
+});
+
+// Cierra la alerta después de 5 segundos
+setTimeout(function() {
+    $("#alerta_error").fadeOut("slow");
+}, 5000); 
 
 //-------------
 // E: Mar-2018

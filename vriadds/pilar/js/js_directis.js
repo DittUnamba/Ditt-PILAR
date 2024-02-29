@@ -10,6 +10,65 @@ function jsMdlSorteo(url,num){
     // jVRI("#cntSor").load(url+"/"+num);
 }
 
+
+function jsMdlAccesitario(val,tipo){
+    
+	jVRI("#mdlContCord").html(" ");
+	$("#cordModal").modal("show");
+	jVRI("#mdlContCord").load("cordinads/execAccesitario/"+val+"/"+tipo);
+}
+function updateAccesitario(id){
+    var idDocente = document.getElementById("idDocente").value;
+    var motivo = document.getElementById("motivo").value;
+    if (idDocente === ""|| motivo ==="")
+    {
+        $('#mensaje_error').text("registre toda la información solicitada");
+        // Evita que el formulario se envíe
+    }
+            
+    else{
+        dita = new FormData(formAccesitario);    
+        jVRI.ajax({
+            url  : "cordinads/updateAccesitario/"+id,
+            data :  dita,
+            type: 'GET',
+            dataType: 'json',
+            success: function( response )
+            {
+                var datos = JSON.parse(response);
+
+                $("#mdlAccesitario").html( "<div>" + datos.cod_tramite + "</div><div>" + datos.memo_curricular + "</div><div>" + datos.mensaje_correos + "</div>");
+                if(datos.tipo == 1)
+                $("#panelCord").load("cordinads/vwProy2018");
+                
+                else
+                $("#panelCord").load("cordinads/borradores");
+
+                ("#btn_guardar").css("display", "none");
+            }
+        });
+    }
+    
+}
+
+function verificarCorreciones(id){
+    var idSeleccionado = $('#idDocente').val(); 
+
+    if(idSeleccionado != ""){
+            
+        jVRI.ajax({
+            url  : 'cordinads/verificarCorreciones/' + id + '/' + idSeleccionado,
+            success: function(response) {
+                $('#mensaje').html(response);
+            },
+        });
+    }
+    else
+    {
+        $('#mensaje').html('');
+    }
+}
+
 function popSaveSort(id){
     dita = new FormData(sorT);
    

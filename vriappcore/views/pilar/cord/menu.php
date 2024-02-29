@@ -35,6 +35,7 @@
 				<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwInicio')" class="list-group-item"><span class="glyphicon glyphicon-home"></span> Inicio</a>
 
 				<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwProy2018')" class="list-group-item" disabled><span class="glyphicon glyphicon-home" ></span> Proyectos de Tesis</a>
+				<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwBorradores')" class="list-group-item"><span class="glyphicon glyphicon-bookmark"></span> Trabajos de Tesis</a>
 				<a href="javascript:void(0)"  onclick="lodPanel('panelCord','cordinads/vwReportes')" class="list-group-item"><span class="glyphicon glyphicon-align-justify"></span> Reportes </a>
 				<a href="javascript:void(0)"  onclick="lodPanel('panelCord','cordinads/vwValidaLineas')" class="list-group-item" style='background: #fffb3fe0;'><span class="glyphicon glyphicon-align-justify"></span> Validar Lineas </a>
 				<br>

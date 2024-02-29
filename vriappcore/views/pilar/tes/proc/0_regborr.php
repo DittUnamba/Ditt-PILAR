@@ -12,9 +12,10 @@
         for ($i=1; $i <=4 ; $i++) { 
         	if($doc[$i]){
        			$status=($doc[$i]->Activo >= 5)?"(Docente Habilitado)":"(Necesita Cambio)";
+				$accesitario = ($i== 5)?"(Accesitario)":"";
        			$kind=($doc[$i]->Activo >= 5)?"success":"danger";
        			$count=($doc[$i]->Activo>=5)?$count:$count+1;
-       			echo "<li class='text-$kind'> $status | ".$doc[$i]->DatosPers ."  </li>";
+       			echo "<li class='text-$kind'> $status | ".$doc[$i]->DatosPers .$accesitario."  </li>";
         	}
         }
 
@@ -43,7 +44,7 @@
     			<?php
     		}else{
     			echo "<div class='alert alert-danger'>";
-		        echo "<span class='glyphicon glyphicon-exclamation-sign'></span> <b>Aviso</b> : Debe cambiar algunos jurados antes de continuar, póngase en contacto con la unidad de investigación de su facultad respectiva.";
+		        echo "<span class='glyphicon glyphicon-exclamation-sign'></span> <b>Aviso</b> : Al parecer uno o más jurados no se encuentran habilitados, póngase en contacto con la unidad de investigación para que realice el respectivo trámite. ";
 		        echo "</div>";
 
 

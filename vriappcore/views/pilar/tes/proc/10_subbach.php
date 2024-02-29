@@ -44,7 +44,7 @@
               <div class="form-group success">
                   <label class="col-md-4 control-label">Año de Resolución :</label>
                   <div class="col-md-7">
-                      <input name="anio" type="number" min="1900" max="2024" step="1" value="2023" title="Debe poner un año válido."class="form-control" required></input>
+                      <input name="anio" type="number" min="1900" max="2024" step="1" value="2024" title="Debe poner un año válido."class="form-control" required></input>
                   </div>
               </div>
               <!-- date area -->

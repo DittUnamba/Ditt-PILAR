@@ -99,8 +99,10 @@ public function index()
    }
    // Área de Administración del Sub Director de Investigación
    if($sess->userLevel==3){
-      $useri=$this->dbPilar->getSnapRow("tblSecres","Id=$sess->userId");
-      $escuelas=$this->dbRepo->getSnapView("dicCarreras","Id=$useri->IdCarrera");
+      // $useri=$this->dbPilar->getSnapRow("tblSecres","Id=$sess->userId");
+      // $escuelas=$this->dbRepo->getSnapView("dicCarreras","Id=$useri->IdCarrera");
+      // $this->load->view("pilar/cord/header",array('escuelas' =>$escuelas,'sess'=>$sess ));
+      $escuelas=$this->dbRepo->getSnapView("dicCarreras","IdFacultad=$sess->IdFacultad");
       $this->load->view("pilar/cord/header",array('escuelas' =>$escuelas,'sess'=>$sess ));
    }
 
@@ -572,10 +574,30 @@ public function memosGen( $IdTramite )
    $codigop=$this->dbPilar->getOneField("tesTramites","Codigo","Id=$memo->IdTramite");
    $carrera=$this->dbRepo->inCarrera($memo->IdCarrera);
    $proyecto=$this->dbPilar->getOneField("tesTramsDet","Titulo","IdTramite='$memo->IdTramite' ORDER BY Iteracion DESC");
+   // memos para accesitario
+   $accesitario = $this->dbPilar->getSnapRow("tesJuCambios","IdTramite='$IdTramite' AND IteracionAccesitario>0"); 
    $nmemo=$memo->Ordinal;
    $anio=$memo->Anio;
    $fecha=$memo->Fecha;
-   if($tram->Estado==4 OR $tram->Estado==12 or $tram->Estado==13){
+   
+   if($tram->Estado==4 OR $tram->Estado==12 or $tram->Estado==13 or $accesitario){
+      if($accesitario){
+         $quienes=array($tram->IdJurado1,$tram->IdJurado2,$tram->IdJurado3);
+         $asunto="RECOMPOSICIÓN DE JURADOS";
+         $str = "Por medio del presente comunicarle que se procedió a realizar la recomposición de jurados a solicitud del tesista "
+         . "del Proyecto de Tesis intitulado $proyecto, registrado en Plataforma con el código: $codigop, "
+         . "de la Escuela Profesional de: $carrera, "
+         . "quedando conformado de la siguiente manera:"
+         . "\n\n"
+         . "Presidente: ".$this->dbRepo->inGrado($tram->IdJurado1).$this->dbRepo->inDocente($tram->IdJurado1)
+         . "\n\n"
+         . "Primer Miembro: ".$this->dbRepo->inGrado($tram->IdJurado2).$this->dbRepo->inDocente($tram->IdJurado2)
+         . "\n\n"
+         . "Segundo Miembro: ".$this->dbRepo->inGrado($tram->IdJurado3).$this->dbRepo->inDocente($tram->IdJurado3)
+         . "\n\n"
+         . "Atentamente."
+         ;
+      }
       if($tram->Estado==4){
          $quienes=array($tram->IdJurado1,$tram->IdJurado2,$tram->IdJurado3,$tram->IdJurado5);
          $asunto="REVISIÓN DE PROYECTO DE TESIS";
@@ -595,7 +617,7 @@ public function memosGen( $IdTramite )
       if($tram->Estado==12){
          $quienes=array($tram->IdJurado1,$tram->IdJurado2,$tram->IdJurado3,$tram->IdJurado4,$tram->IdJurado5);
          $asunto="REVISIÓN DE TRABAJO DE TESIS";
-//  Borrador
+      //  Borrador
          $str = "Por medio del presente comunicarle que Ud. ha sido SORTEADO como jurado revisor "
          . "del Proyecto de Tesis Aprobado con el código: $codigop, "
          . "de la Escuela Profesional de: $carrera."
@@ -617,7 +639,7 @@ public function memosGen( $IdTramite )
          $j3m=$this->dbRepo->inDocente($tram->IdJurado3);
          $j4m=$this->dbRepo->inDocente($tram->IdJurado4);
          $asunto="CITACIÓN A REUNIÓN DE DICTAMEN";
-//  Borrador
+      //  Borrador
          $str = "Por medio del presente comunicarle que Ud. ha sido designado como PRESIDENTE del jurado revisor "
          . "del Proyecto de Tesis Aprobado con el còdigo: $codigop, "
          . "de la Escuela Profesional de: $carrera "
@@ -629,7 +651,7 @@ public function memosGen( $IdTramite )
          . "(Art.9 Reglamento de Presentación dictamen de trabajos y defensa de tesis) Resolución Rectoral N°3011-2016-R-UNAMBA\n\n\n"
          . "Atentamente."; 
       }
-// Cargo
+      // Cargo
       $pdf->AddPage();
       $pdf->SetDrawColor( 170, 170, 170 );
       $pdf->SetFont('Arial','B',13);
@@ -651,7 +673,7 @@ public function memosGen( $IdTramite )
       $pdf->Cell( 30, 2, toUTF("/ Vicerectorado de Investigación"), 0, 1, 'L' ); 
       $pdf->Cell( 30, 2, toUTF("/ Plataforma PILAR"), 0, 1, 'L' ); 
       $pdf->Cell( 30, 2, toUTF("/ $carrera"), 0, 1, 'L' ); 
-// Memos;
+      // Memos;
       for ($i=0; $i < count($quienes); $i++) {   
       $grado=$this->dbRepo->inGrado($quienes[$i]);       
          $destinatario=$this->dbRepo->inDocente($quienes[$i]);
@@ -661,7 +683,7 @@ public function memosGen( $IdTramite )
 
          $pdf->SetDrawColor( 170, 170, 170 );
          $pdf->SetFont('Arial','B',13);
-         $textmemo = sprintf( "MEMORANDO CIRCULAR Nro %03d-%04d-PILAR-VRIN-UNAMBA", $nmemo, $anio );        
+         $textmemo = sprintf( "MEMORANDO CIRCULAR Nro %03d-%04d-PILAR-DITT-VRIN-UNAMBA", $nmemo, $anio );        
          $pdf->Cell( 170, 7, toUTF($textmemo), 0, 1, 'L' );
          $pdf->Cell( 170, 1, "___________________________________________________", 0, 1, 'L' ); 
          $pdf->Ln(5);
@@ -1371,7 +1393,7 @@ private function inRechaza( $rowTram , $msg)
       $msg = "<h4>Revisión Electrónica</h4><br>"
           . "Por la presente se le comunica que se le ha enviado a su cuenta de Docente en la "
           . "<b>Plataforma PILAR</b> el trabajo de tesis con el siguiente detalle:<br><br>   "
-          . "Memo Circular: <b>$nroMemo-VRIN-UNAMBA</b><br>"
+          . "Memo Circular: <b>$nroMemo-PILAR-DITT-VRIN-UNAMBA</b><br>"
           . "Tesista(s) : <b>" . $this->dbPilar->inTesistas($tram->Id) . "</b><br>"
           . "Título : <b> $det->Titulo </b><br><br>"
           . "Ud. tiene un plazo de 10 dias hábiles para realizar las revisiones mediante la Plataforma."
@@ -1457,11 +1479,258 @@ if ($result) {
 }
 }
 
-    //---------------------------------------------------------------------------------------
-// public function sortPres($lista){
+//Accesitario como jurado evaluador
+public function execAccesitario($idtram,$tipo){
 
-// }  
+   $this->gensession->IsLoggedAccess( PILAR_CORDIS );
+   $tram = $this->dbPilar->inProyTram($idtram);
+   $accesitario = $this->dbRepo->inDocenteRow($tram->IdJurado5);
+   if($accesitario)
+   {
+      if($accesitario->Activo >= 5){
 
+         $doc = array(
+            1=>$this->dbRepo->inDocenteRow($tram->IdJurado1),
+            2=>$this->dbRepo->inDocenteRow($tram->IdJurado2),
+            3=>$this->dbRepo->inDocenteRow($tram->IdJurado3)
+         );
+         $contador = 0;
+         for ($i=1; $i <=3 ; $i++) { 
+               if($doc[$i]){
+                  if($doc[$i]->Activo < 5) $contador++;
+               }
+         }
+
+         if($contador>1)
+         {
+            $msjError = "Existen más de un miembro del jurado evaluador que no se encuentra habilitado en el sistema, comuníquese con el personal encargado de PILAR DITT ";
+            $this->load->view("pilar/notif/msg_error",
+            array('msjError' =>$msjError));  
+      
+         }
+         else{
+            $this->load->view("pilar/cord/view/accesitario_mdl",
+            array('doc'          => $doc, 
+                  'accesitario'  => $accesitario,
+                  'idTram'       => $idtram,
+                  'tipo'         => $tipo
+               ));
+
+         } 
+         
+      }
+   
+      else
+      {
+      
+         $msjError = $accesitario->DatosNom." docente accesitario no se encuentra habilitado en el sistema, comuníquese con el personal encargado de PILAR DITT";
+         $this->load->view("pilar/notif/msg_error",
+         array('msjError' =>$msjError));
+   
+      }
+      
+   }
+   else
+   {
+   
+      $msjError = "Este Trámite no cuenta con docente accesitario";
+      $this->load->view("pilar/notif/msg_error",
+      array('msjError' =>$msjError));
+
+   }
+  
+}
+
+public function verificarCorreciones($idTram,$idDocente){
+
+   if($idTram && $idDocente)
+   {
+      $correciones = $this->dbPilar->getSnapRow( "tesTramsDet", "IdTramite=$idTram", "ORDER BY id DESC LIMIT 1");
+      $rowTram=$this->dbPilar->getSnapRow("tesTramites","Id=$idTram");
+      $array_jurado = array(
+         1=>$rowTram->IdJurado1,
+         2=>$rowTram->IdJurado2,
+         3=>$rowTram->IdJurado3,
+         4=>$rowTram->IdJurado5,
+      );
+      $posicion = array_search($idDocente, $array_jurado);
+   
+      $array_correciones = array(
+         1=>$correciones->vb1,
+         2=>$correciones->vb2,
+         3=>$correciones->vb3
+      );
+      $iteracion = '';
+
+      switch ($correciones->Iteracion) {
+         case 1:
+             $iteracion = "primera revisión del proyecto de tesis";
+             break;
+         case 2:
+             $iteracion = "segunda revisión del proyecto de tesis";
+             break;
+         case 4:
+             $iteracion = "Primera revisión del informe de tesis";
+             break;
+
+         default:
+             $iteracion = "";
+             break;
+     }
+   
+
+      if($array_correciones[$posicion]==1 && $correciones->Iteracion !=3)
+         echo "Considere que el docente seleccionado ya realizó su ".$iteracion.", recuerde que al realizar el cambio esta revisión se eliminaran.";
+
+   }
+   else {
+      echo "";
+   }
+  
+}
+
+public function updateAccesitario($idTram)
+{
+   $rowTram=$this->dbPilar->getSnapRow("tesTramites","Id=$idTram");
+   $sess=$this->gensession->GetSessionData(PILAR_CORDIS);
+   file_put_contents('ajax_log.txt', print_r($_POST, true));
+  
+   $idDocente = mlSecurePost( "idDocente" );  
+   $motivo = mlSecurePost( "motivo" );
+   $correciones = $this->dbPilar->getSnapRow( "tesTramsDet", "IdTramite=$idTram", "ORDER BY id DESC LIMIT 1");
+
+   $array_jurado = array(
+      1=>$rowTram->IdJurado1,
+      2=>$rowTram->IdJurado2,
+      3=>$rowTram->IdJurado3,
+      4=>$rowTram->IdJurado5,
+   );
+   $posicion = array_search($idDocente, $array_jurado);
+
+   $array_correciones = array(
+      1 => $correciones->vb1,
+      2 => $correciones->vb2,
+      3 => $correciones->vb3
+   );
+   
+   try {
+      $this->db->trans_start();
+      
+      if ($posicion !== false && isset($array_correciones[$posicion])) {
+         $valor = $array_correciones[$posicion];
+         unset($array_correciones[$posicion]);
+         $array_correciones = array_values($array_correciones); 
+         $array_correciones[] = 0;
+
+         $this->dbPilar->Update( "tesTramsDet", array(
+            "vb1" => $array_correciones[0],
+            "vb2" => $array_correciones[1],
+            "vb3" => ($correciones->Iteracion==3)? 1:0,
+            "Fecha" => mlCurrentDate()
+         ), $correciones->Id );
+   
+      }
+   
+      if ($posicion >= 0 && $posicion < count($array_jurado)) {
+         unset($array_jurado[$posicion]);
+         $array_jurado = array_values($array_jurado);
+         unset($array_jurado[3]);
+
+         
+     
+         $this->dbPilar->Update( "tesTramites", array(
+             "IdJurado1" => $array_jurado[0],
+             "IdJurado2" => $array_jurado[1],
+             "IdJurado3" => $array_jurado[2],
+             "IdJurado5" => 0,
+             "FechModif" => mlCurrentDate()
+         ), $rowTram->Id);
+     
+     }
+
+      $rowTram = $this->dbPilar->inProyTram( $rowTram->Id );
+
+      $anio  = ANIO_PILAR;
+      $nroMemo = $this->inGenMemo( $rowTram, 1 );
+      $nroMemo = 1 + $this->dbPilar->getOneField( "tblMemos", "Ordinal", "Anio=$anio ORDER BY Ordinal DESC" );
+      $cod_tramite = "Cod de Tramite: <b>$rowTram->Codigo</b><br>";
+      $memo_curricular = "Memo Circular: <b>$nroMemo</b><br>";
+      $tipo = mlSecurePost( "tipo" );
+
+      $msg = "<h4>Recomposición de jurados</h4><br>"
+      . "Respecto a la recomposición de jurados del proyecto de tesis: <b>$rowTram->Codigo</b> se ha realizado de manera satisfactoria"
+      . ", puede continuar con los siguientes pasos "
+      ;
+
+      $mail = $this->dbPilar->inCorreo( $rowTram->IdTesista1 );
+
+      $this->logCorreo( $rowTram->IdTesista1,0, $mail, "Recomposición de jurados", $msg );
+
+      $msg = "Recomposición de jurados\n"
+      . "Proyecto: $rowTram->Codigo  -- Linea: $rowTram->IdLinea\n"
+      . "- Presidente: ($rowTram->IdJurado1) \n- Primer Miembro: ($rowTram->IdJurado2) \n- Segundo Miembro: ($rowTram->IdJurado3)\n- Asesor: ($rowTram->IdJurado4)"
+      ;
+      
+      $this->logTramites( $sess->userId, $rowTram->Id, "Recomposición de jurados", $msg );
+
+      $det = $this->dbPilar->inLastTramDet( $rowTram->Id );
+      $msg = "<h4>Recomposición de jurados</h4><br>"
+      . "Por la presente se le comunica que se ha realizado la recomposición de jurados "
+      . "<b>Plataforma PILAR</b> el proyecto de tesis con el siguiente detalle:<br><br>   "
+      . "Memo Circular: <b>$nroMemo-PILAR-DITT-VRIN-UNAMBA</b><br>"
+      . "Codigo : <b> $rowTram->Codigo </b><br>"
+      . "Título : <b> $det->Titulo </b><br><br>"
+      . "<br><br>NOTA : La tesis <b>no se envia al correo</b>, se envia a su cuenta en <b>PILAR</b>."
+      ;
+
+      $corr1 = $this->dbRepo->inCorreo( $rowTram->IdJurado1 );
+      $corr2 = $this->dbRepo->inCorreo( $rowTram->IdJurado2 );
+      $corr3 = $this->dbRepo->inCorreo( $rowTram->IdJurado3 );
+      $corr4 = $this->dbRepo->inCorreo( $rowTram->IdJurado4 );
+
+      $this->logCorreo( 0,$rowTram->IdJurado1, $corr1, "Recomposición de jurados", $msg );
+      $this->logCorreo( 0,$rowTram->IdJurado2, $corr2,"Recomposición de jurados", $msg );
+      $this->logCorreo( 0,$rowTram->IdJurado3, $corr3,"Recomposición de jurados", $msg );
+      $this->logCorreo( 0,$rowTram->IdJurado4, $corr4,"Recomposición de jurados", $msg );
+
+      $this->logCordinads('T', '7', "Recomposición de jurados", "$rowTram->IdJurado1/$rowTram->IdJurado2/$rowTram->IdJurado3/$rowTram->IdJurado4");
+      $mensaje_correos = "Correos enviados correctamente<br>";
+        $this->dbPilar->Insert("tesJuCambios", array(
+               'Referens'  => "Coords",        
+               'IdTramite' => $rowTram->Id,    
+               'Tipo'      => $rowTram->Tipo,  
+               'IteracionAccesitario'      => '1',  
+               'IdJurado1' => $rowTram->IdJurado1,
+               'IdJurado2' => $rowTram->IdJurado2,
+               'IdJurado3' => $rowTram->IdJurado3,
+               'IdJurado4' => $rowTram->IdJurado4,
+              // 'IdJurado5' => $rowTram->IdJurado5,
+               'Motivo'    => $motivo,
+               'Fecha'     => mlCurrentDate()
+            ) );
+
+
+      $this->db->trans_complete();
+
+      $datos = array('cod_tramite'     => $cod_tramite,
+                     'memo_curricular' => $memo_curricular,
+                     'mensaje_correos' => $mensaje_correos,
+                     'tipo'            => $tipo
+                  );
+
+      echo json_encode($datos);
+
+
+      if ($this->db->trans_status() === FALSE) {
+  
+         throw new Exception('Error al completar la transacción');
+      } 
+   } catch (\Throwable $th) {
+      // Manejar la excepción
+      echo 'Excepción capturada: ', $th->getMessage(), "\n";
+  }
+}
+// sorteo de jurados
 public function execSorteo( $idtram=0 )
 {
    $this->gensession->IsLoggedAccess( PILAR_CORDIS );
@@ -1482,7 +1751,7 @@ public function execSorteo( $idtram=0 )
    <div class ='modal-body' id='sortis'><h3 class='text-right text-danger' style:'margin-top:0px;'> Intento N°  <i id='cntSor'>$intentos</i></h3> <form name='sorT' id='sorT' method='post'>";
       
       if($intentos>=6){
-         echo "El proyecto ya cuenta con $intentos intentos, No puede ser Sorteado comuniquese con el administrador del PILAR: 083-321965";
+         echo "El proyecto ya cuenta con $intentos intentos, No puede ser Sorteado comuniquese con el administrador del PILAR";
          exit(0);
       }
       echo "<b>Codigo :</b> $tram->Codigo ";
@@ -1859,7 +2128,7 @@ public function inDoSorteo($idTram){
 
    $msg = "Sorteo y Envio a Revisión\n"
    . "Proyecto: $rowTram->Codigo  -- Linea: $rowTram->IdLinea\n"
-   . "- Presidente: ($j1) \n- Primer Miembro: ($j2) \n- Segundo Miembro: ($j3)\n- Accesitario: ($j4) \n- Asesor: ($j5)"
+   . "- Presidente: ($j1) \n- Primer Miembro: ($j2) \n- Segundo Miembro: ($j3)\n- Accesitario: ($j5) \n- Asesor: ($j4)"
    ;
    $this->logTramites( $sess->userId, $rowTram->Id, "Proyecto enviado a Revisión", $msg );
         // correo a tesista
@@ -1870,7 +2139,7 @@ public function inDoSorteo($idTram){
    $msg = "<h4>Revisión Electrónica</h4><br>"
    . "Por la presente se le comunica que se le ha enviado a su cuenta de Docente en la "
    . "<b>Plataforma PILAR</b> el proyecto de tesis con el siguiente detalle:<br><br>   "
-   . "Memo Circular: <b>$nroMemo-VRIN-UNAMBA</b><br>"
+   . "Memo Circular: <b>$nroMemo-PILAR-DITT-VRIN-UNAMBA</b><br>"
    . "Codigo : <b> $rowTram->Codigo </b><br>"
    . "Título : <b> $det->Titulo </b><br><br>"
    . "Ud. tiene un plazo de 10 dias hábiles para realizar las revisiones mediante la Plataforma."
@@ -1898,7 +2167,7 @@ public function inDoSorteo($idTram){
    $this->logCorreo( 0,$rowTram->IdJurado1, $corr1, "Revisión de Proyecto de Tesis", $msg );
    $this->logCorreo( 0,$rowTram->IdJurado2, $corr2,"Revisión de Proyecto de Tesis", $msg );
    $this->logCorreo( 0,$rowTram->IdJurado3, $corr3,"Revisión de Proyecto de Tesis", $msg );
-   $this->logCorreo( 0,$rowTram->IdJurado3, $corr4,"Revisión de Proyecto de Tesis", $msg );
+   $this->logCorreo( 0,$rowTram->IdJurado5, $corr4,"Revisión de Proyecto de Tesis", $msg );
       //$this->logCorreo( $rowTram->Id, $corr4, "Revisión de Proyecto de Tesis", $msg );
    $this->logCordinads('T', '7', "Sorteo de Jurados", "$rowTram->IdJurado1/$rowTram->IdJurado2/$rowTram->IdJurado3/$rowTram->IdJurado4");
    echo "Correos enviados correctamente<br>";

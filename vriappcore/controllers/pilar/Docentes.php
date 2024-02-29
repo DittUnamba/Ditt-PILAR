@@ -606,10 +606,9 @@ class Docentes extends CI_Controller {
 		}
 
         //-------------------------------------------------------------------------------------------
-		$dets = $this->dbPilar->inTramDetIter( $idtram, 4 ); // 4ta
+		$dets = $this->dbPilar->inTramDetIter( $idtram, 4 ); // 4ta 
         //-------------------------------------------------------------------------------------------
         $pos = $this->dbPilar->inPosJurado( $tram, $sess->userId );
-
         // $chk = ($pos==1)? $dets->vb1 : (($pos==2)? $dets->vb2 : (($pos==3)? $dets->vb3: ($pos==4)? $dets->vb4: 0  ));
         //-------------------------------------------------------------------------------------------
         // $chk = ($pos==1)? $dets->vb1 : (($pos==2)? $dets->vb2 : (($pos==3)? $dets->vb3:0));
@@ -620,6 +619,7 @@ class Docentes extends CI_Controller {
         $chk4 = ($pos==4)?$dets->vb4 :0;
 		///$dets = $this->dbPilar->inLastTramDet( $idtram );
         // echo "  $chk1 - $chk2-$chk3 - $chk4   ";
+       
 		if( ! $dets ) {
 			echo "Sin Detalle Tram (4)";
 			return;
