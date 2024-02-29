@@ -21,7 +21,7 @@
 			<!--  -->
 			<br>
 			<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwProyectos')" class="list-group-item"><span class="glyphicon glyphicon-bookmark"></span> Proyectos de Tesis</a>
-			<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwBorradores')" class="list-group-item"><span class="glyphicon glyphicon-bookmark"></span> Trabajos de Tesis</a>
+			<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwBorradores')" class="list-group-item"><span class="glyphicon glyphicon-bookmark"></span> Informes de Tesis</a>
 			<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwSustentac')"class="list-group-item"><span class="glyphicon glyphicon glyphicon-calendar"></span> Sustentacion Presencial</a>
             <a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwSustentacVir')"class="list-group-item" style='background: #fffb3fe0'><span class="glyphicon glyphicon glyphicon-calendar"></span> Sustentacion Virtual</a>
 			<br>
@@ -35,7 +35,7 @@
 				<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwInicio')" class="list-group-item"><span class="glyphicon glyphicon-home"></span> Inicio</a>
 
 				<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwProy2018')" class="list-group-item" disabled><span class="glyphicon glyphicon-home" ></span> Proyectos de Tesis</a>
-				<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwBorradores')" class="list-group-item"><span class="glyphicon glyphicon-bookmark"></span> Trabajos de Tesis</a>
+				<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwBorradores')" class="list-group-item"><span class="glyphicon glyphicon-bookmark"></span> Informes de Tesis</a>
 				<a href="javascript:void(0)"  onclick="lodPanel('panelCord','cordinads/vwReportes')" class="list-group-item"><span class="glyphicon glyphicon-align-justify"></span> Reportes </a>
 				<a href="javascript:void(0)"  onclick="lodPanel('panelCord','cordinads/vwValidaLineas')" class="list-group-item" style='background: #fffb3fe0;'><span class="glyphicon glyphicon-align-justify"></span> Validar Lineas </a>
 				<br>

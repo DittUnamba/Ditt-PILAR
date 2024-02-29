@@ -43,7 +43,7 @@
           <li><a href="#team"> Ponentes </a></li>
           <li><a href="#clients"> Cronograma </a></li>
           <li><a href="/siraa/web/inscrips"> Inscripciones </a></li>
-          <li><a href="/siraa/web/trabajos"> Trabajos de Tesis </a></li>
+          <li><a href="/siraa/web/trabajos"> Informes de Tesis </a></li>
           <!--
           <li class="drop-down"><a href=""> Idioma </a>
             <ul>
@@ -77,7 +77,7 @@
         <h4 style="color:white; "> del 05 al 07 de noviembre 2019<br>
                                    <small> Puno - Ciudad Universitaria </small> </h4>
         <div>
-          <a href="/siraa/web/trabajos" class="btn-get-started"> Trabajos de Tesis </a>
+          <a href="/siraa/web/trabajos" class="btn-get-started"> Informes de Tesis </a>
           <a href="/siraa/web/inscrips" class="btn-services"> Inscripciones </a>
         </div>
       </div>

@@ -6,9 +6,9 @@
 	}
 	$Opciones="";
 ?>
-<h3>Trabajos de Tesis :: <small><?php  echo $Carrera; ?></small></h3>
+<h3>Informes de Tesis :: <small><?php  echo $Carrera; ?></small></h3>
 <div class="col-md-12">
-	<h4>Listado de Trabajos de Tesis</h4>
+	<h4>Listado de Informes de Tesis</h4>
 	<table class="table table-bordered">
 		<thead>
 			<tr>

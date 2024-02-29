@@ -8,7 +8,7 @@
     <div class="col-md-1" style="background: #E0F0E0"></div>
 
     <div class="col-md-8">
-        <h4> Estado de postulaciones: trabajos de Tesis </h4>
+        <h4> Estado de postulaciones: informes de Tesis </h4>
         <form action="/siraa/web/grabPost" method="post" enctype="multipart/form-data">
 
 

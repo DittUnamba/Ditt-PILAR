@@ -293,7 +293,7 @@
                                                    <br><br>
                                                    <strong>¿Como se logra la calificación?</strong>
                                                    <br><br>
-                                                   Debe completar los formularios DINA con sus datos personales y sobre todo con publicaciones indexadas y trabajos de tesis
+                                                   Debe completar los formularios DINA con sus datos personales y sobre todo con publicaciones indexadas y Informes de tesis
                                                    <br>
                                                    Solicitar que CONCYTEC realice la evaluación y en un plazo de 2 meses le llegan las correcciones y/o las disculpas al no calificar.
                                                    <br><br>

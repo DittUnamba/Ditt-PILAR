@@ -7,7 +7,7 @@
     <!-- <div class="col-md-1" style="background: #E0F0E0"></div> -->
 
     <div class="col-md-9">
-        <h4> Reporte: trabajos de Tesis </h4>
+        <h4> Reporte: Informes de Tesis </h4>
 
         <table class="table table-striped table-bordered" style="font-size: 13px">
             <tr>
