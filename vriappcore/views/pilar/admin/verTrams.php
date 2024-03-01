@@ -86,9 +86,9 @@
         4 => "en Revisión",
         5 => "en Dictámen",     // 05
         6 => "P. Aprobado",     // 06
-        10 => "tram borr",      // 10
-        11 => "borr nuevo",     // 11
-        12 => "Revis borr",
+        10 => "tram Inform",      // 10
+        11 => "Inform nuevo",     // 11
+        12 => "Revis Inform",
         13 => "Gen Memos",
         14 => "Susten"
     );
@@ -206,7 +206,7 @@
         if( $row->Tipo == 2 ) {
 
             $btnclr = $proceclr[ $row->Estado ];
-            $estado = "<button class='btn btn-xs $btnclr'> Borr (E: $row->Estado) </button>";
+            $estado = "<button class='btn btn-xs $btnclr'> Inform (E: $row->Estado) </button>";
 
 			if( $row->Estado==10 ) {
 				$fecha = mlFechaNorm( $row->FechActBorr );
