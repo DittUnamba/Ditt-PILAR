@@ -99,7 +99,7 @@
                         if( $row->Estado >= 6 && $row->Estado <= 10 )
                             $estad = "En ejecución";
                         elseif( $row->Estado >= 11 && $row->Estado <= 13 )
-                            $estad = "Revisión Borrador";
+                            $estad = "Revisión Informe";
                         elseif( $row->Estado >= 14 )
                             $estad = "Sustentado";
                         else

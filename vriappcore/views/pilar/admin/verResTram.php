@@ -75,7 +75,7 @@
                   <th> Estado </th>
                   <th> Linea </th>
                   <th> Fecha Ini Proy </th>
-                  <th> Fecha Ini Borr </th>
+                  <th> Fecha Ini Inform </th>
                   <th> Ultima Fecha </th>
                   <th> Dias </th>
                   <th> Ejecución </th>
