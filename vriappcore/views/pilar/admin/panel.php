@@ -108,18 +108,21 @@
           </ul>
         </div>
         <?php } ?>
-        <div class="admin-title1 col-wine">Reportes Admin </div>
-		<div class="list-group">
-          <ul class="nav nav-pills bderecha">
-            <a onclick="lodPanel('admin/panelGeren')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-tasks"></span> Reportes Administración</a>
-            <a onclick="lodPanel('admin/panelLinea')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-book"></span> Lineas de Investigación</a>
-            <a onclick="lodPanel('admin/panelRepos')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-align-justify"></span> Reportes P.I. (Filtros) </a>
-            <a onclick="lodPanel('admin/panelTrafi')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-align-justify"></span> Visitas </a>
-            <a href="http://vriunap.pe/fedu/report/functTodos" class="list-group-item"><span class="glyphicon glyphicon-align-justify"></span> Reportes FEDU </a>
-          </ul>
-        </div>
-        <!-- END MENU -->
-      </div>
+
+        <!-- Activar los Reportes -->
+        <!--<div class="admin-title1 col-wine">Reportes Admin </div>
+          <div class="list-group">
+                <ul class="nav nav-pills bderecha">
+                  <a onclick="lodPanel('admin/panelGeren')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-tasks"></span> Reportes Administración</a>
+                  <a onclick="lodPanel('admin/panelLinea')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-book"></span> Lineas de Investigación</a>
+                  <a onclick="lodPanel('admin/panelRepos')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-align-justify"></span> Reportes P.I. (Filtros) </a>
+                  <a onclick="lodPanel('admin/panelTrafi')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-align-justify"></span> Visitas </a>
+                  <a href="http://vriunap.pe/fedu/report/functTodos" class="list-group-item"><span class="glyphicon glyphicon-align-justify"></span> Reportes FEDU </a>
+                </ul>
+          </div>-->
+         <!-- END MENU -->
+        <!--</div> -->
+
 	</div>
 
 	<!-- /Menu de Administrador  -->
