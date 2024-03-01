@@ -103,8 +103,8 @@
           <ul class="nav nav-pills bderecha">
             <a onclick="lodPanel('admin/panelLista')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-sunglasses"></span> Repositorio Docentes </a>
             <a onclick="lodPanel('admin/panelLogsD')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-book"></span> Accesos Docentes </a>
-            <a onclick="lodPanel('admin/panelConst')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-book"></span> Constancias </a>
-            <a onclick="lodPanel('admin/panelPilar')" href="javascript:void(0)" class="list-group-item disabled"><span class="glyphicon glyphicon-book"></span> Docentes en PILAR </a>
+           <!--  <a onclick="lodPanel('admin/panelConst')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-book"></span> Constancias </a> -->
+           <!--  <a onclick="lodPanel('admin/panelPilar')" href="javascript:void(0)" class="list-group-item disabled"><span class="glyphicon glyphicon-book"></span> Docentes en PILAR </a> -->
           </ul>
         </div>
         <?php } ?>
