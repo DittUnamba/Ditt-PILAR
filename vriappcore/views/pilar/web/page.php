@@ -78,7 +78,7 @@
                 <br>
                 <div class="row">
                     <div class="col-xs-12 col-md-12 btn-acces-pilar">
-                        <a class="btn btn-preg bg-teal"><span class="glyphicon glyphicon-cog"></span> <br />Consultas en Linea ( En Construcción ) </a>
+                       <a class="btn btn-preg bg-teal"> <!-- <span class="glyphicon glyphicon-cog"></span> <br /> Consultas en Linea ( En Construcción ) --></a> 
                     </div>
                 </div>
             </div>
