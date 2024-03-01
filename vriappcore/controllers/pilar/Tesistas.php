@@ -59,35 +59,22 @@ class Tesistas extends CI_Controller {
 
         // verificar existencia de correo
         if( ! $this->dbPilar->getSnapRow( "vxDatTesistas", "Correo='$mail'" ) ) {
-            echo '[{"error":true, "msg":"Este Correo no está registrado '.$mail.' "}]';
+            echo '[{"error":true, "msg":"El correo electrónico proporcionado no está registrado en nuestra plataforma. Por favor, regístrate primero. '.$mail.' "}]';
             return;
         }
-
         // ahora si comprobar cuenta
         $row = $this->dbPilar->loginByMail( "vxDatTesistas", $mail, sqlPassword($pass) );
         if( ! $row ) {
             $IdTesista = $this->dbPilar->getOneField( "vxDatTesistas", "Id", "Correo='$mail'"  );
             $this->logLogin( $IdTesista, "Clave incorrecta" );
-            echo '[{"error":true, "msg":"Su clave es incorrecta"}]';
+            echo '[{"error":true, "msg":"La contraseña proporcionada es incorrecta. Por favor, inténtalo de nuevo."}]';
             return;
         }
 
-        //----------------------------------------------------------------
-        // como todo esta correcto creamos la sesion usuario general
-        //----------------------------------------------------------------
-        /*
-            'IdService' => 0x10
-            'servName'  => 'utf8'
-            'userLevel' => 0
-            'userType'  => 0
-            'userId'    => $userId,
-            'userCod'   => $userCod
-            'userDesc'  => $userDesc
-            'userName'  => $userName
-            'userMail'  => $userMail
-            'userDNI'   => $userDNI
-            'islogged'  => true
-        */
+        if($row->Activo != 2){
+            echo '[{"error":true, "msg":"Tu cuenta aún no ha sido confirmada. Por favor, verifica tu correo electrónico y sigue las instrucciones de confirmación."}]';
+            return;
+        }
 
         $this->gensession->SetUserLogin(
             'tesistas',
@@ -101,7 +88,7 @@ class Tesistas extends CI_Controller {
 
         $this->logLogin( $row->Id, "Ingreso" );
 
-        echo '[{"error":false, "msg":"OK, Estamos redireccionando..."}]';
+        echo '[{"error":false, "msg":"¡Inicio de sesión exitoso! Estamos redireccionando a tu página de inicio."}]';
     }
 
     // Salir de Tesistas
@@ -156,7 +143,7 @@ class Tesistas extends CI_Controller {
     private function logCorreo( $idUser, $correo, $titulo, $mensaje )
     {
         // enviamos mail
-        $this->genmailer->mailPilar( $correo, $titulo, $mensaje );
+        $this->genmailer->mailPilar( $correo, $titulo, $mensaje);
 
 		// procedemos a grabarlo
         $this->dbPilar->Insert(
@@ -1440,7 +1427,13 @@ class Tesistas extends CI_Controller {
 
         $pass = mlSecurePost("pass1");
         $mail = mlSecurePost("mail");
-        
+
+        $token0 = bin2hex(random_bytes(32)); // Generar un token seguro
+        $token1 = random_bytes(16); 
+        $token_hex = bin2hex($token1); 
+        $token = $token0 . "_" . $token_hex; 
+        $hashed_token = hash('sha256', $token);
+
         if( $this->dbPilar->getSnaprow( "tblTesistas", "Correo ='$mail'" ) ) {
             echo "El correo ya ha sido registrado previamente";
             return;
@@ -1452,7 +1445,7 @@ class Tesistas extends CI_Controller {
 
             // mb_strtoupper
             $myId = $this->dbPilar->Insert( 'tblTesistas', array(
-                'Activo'     => 2, // desde ya
+                'Activo'     => 1, // desde ya
                 'DNI'        => $data->DNI,
                 'Codigo'     => $data->Codigo,
                 'IdFacultad' => $data->IdFacu,
@@ -1465,26 +1458,25 @@ class Tesistas extends CI_Controller {
                 'Correo'     => mlSecurePost("mail"),
                 'Nombres'    => $data->Nombres,
                 'Apellidos'  => $data->Apellis,
-                'Clave'      => sqlPassword($pass)
+                'Clave'      => sqlPassword($pass),
+                'Token'      => $hashed_token
             ));
             
+            $enlace_confirmacion = base_url('pilar/tesistas/confirmar/' . $token);
             
-            $msg = "<h3>Bienvenido</h3>"
-                 . "Sr(rta): <b>$data->Nombres $data->Apellis</b>.<br>"
-                 . "Ud. ha concluido satisfactoriamente su inscripción en la  "
-                 . "Plataforma PILAR para el trámite electrónico de su "
-                 . "proyecto y Informe de tesis, en calidad de estudiante "
-                 . "egresado de la <b>UNAMBA</b>."
-                 . "<br><br><b>Datos de su Cuenta:</b><br>"
-                 . "  * usuario: $mail<br>"
-                 . "  * contraseña: $pass<br>"
-                 . "<br><br>Gracias."
-                 ;
+            $msg = "<div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px '>
+                        <p>Estimado(a) <strong>$data->Nombres $data->Apellis</strong>,</p>
+                        <p>Gracias por registrarse en la Plataforma PILAR para el trámite electrónico de su proyecto e informe de tesis, en calidad de estudiante o egresado de la <strong>UNAMBA</strong>.</p>
+                        <p>Por favor, haga clic en el siguiente enlace para validar su correo:</p>
+                        <div style='text-align: center;'>
+                            <a href='$enlace_confirmacion' style='display: inline-block; padding: 5px 15px; background-color: #7cb11a; color: #fff; text-decoration: none; border-radius: 5px;'>Validar Correo</a>
+                        </div>
+                    </div>";
 
             // grabar en LOG de correos y enviamos mail
-            $this->logCorreo( $myId, $mail, "Inscripción", $msg );
+            $this->logCorreo( $myId, $mail, "Inscripción", $msg);
 
-            echo "Registro completo, revise su <b>e-mail</b>.";
+            echo "Revise su correo para culminar el registro.";
 
 
         } else {
@@ -1494,6 +1486,40 @@ class Tesistas extends CI_Controller {
 
         //print_r( $data );
         mlSetGlobalVar( "proRec", null );
+    }
+
+    public function confirmar($token)
+    {
+  
+        $hashed_token = hash('sha256', $token);
+        $tesista = $this->dbPilar->getSnaprow( "tblTesistas", "token='$hashed_token'" );
+        $mensaje1 = '';
+        if($tesista)
+        {
+            if($tesista->Activo != 2)
+            {
+                $this->dbPilar->Update('tblTesistas',array('Activo'=>2),$tesista->Id);
+                $mensaje1 = "";
+                $mensaje2 ="¡Su correo electrónico ha sido confirmado con éxito! 
+                Ahora puede iniciar sesión en su cuenta y comenzar a utilizar nuestra plataforma:
+                <a href='https://pilar.unamba.edu.pe/pilar'> PILAR</a>";
+            }
+            else{
+                $mensaje2 ="Su correo electrónico ya ha sido confirmado anteriormente. 
+                Si tiene algún problema para acceder a su cuenta, no dude en ponerse en contacto con nuestro equipo de soporte.";
+            }     
+            
+        }
+        else{
+
+            $mensaje2  = "Lo sentimos, el enlace de confirmación que ha utilizado es inválido o ha expirado. Por favor, 
+            asegúrese de utilizar el enlace más reciente que le hemos proporcionado o solicite un nuevo enlace de confirmación.";
+        }
+
+        $this->load->view("pilar/tes/header", array('sess'=>null) );
+
+        $this->load->view("pilar/tes/panelConfirm", array('msj' => $mensaje1,
+                                                          'msj1' => $mensaje2)); 
     }
 
 

@@ -26,6 +26,14 @@
 </head>
 <body>
 	<!-- Tesista NavBar  -->
+    <?php
+        $logout = '';
+        if ($sess) {
+            $name = explode(",", $sess->userName)[0];
+            $vals = mb_strtoupper("ora");
+            $logout = '<li><a href="' . base_url("pilar/tesistas/logout") . '"><span class="glyphicon glyphicon-log-out"></span> Cerrar Sesión <b>(' . $name . ')</b> </a></li>';
+        }
+    ?>
 	<div class="navbar navbar-default navbar-fixed-top">
 	    	<div class="container">
 	        <div class="navbar-header">
@@ -41,20 +49,10 @@
 		            </div>
 	        	</a>
 	        </div>
-                <?php
-                //echo "<br><br><br>";
-                //print_r( $sess );
-                $name = explode( ",", $sess->userName )[0];
-                $vals = mb_strtoupper( "ora" );
 
-                ?>
 	        <div id="navbar" class="collapse navbar-collapse navbar-responsive-collapse">
 	            <ul class="nav navbar-nav navbar-right">
-
-	                <!-- <li><a class="nav-link" href="#">Proyecto de Tesis <i class="glyphicon glyphicon-envelope"></i></a></li>
-	                <li><a href="#" onclick='alert("Recopilando Formatos de Artículos ")' class="nav-link">Trabajo para Bachiller<i class="glyphicon glyphicon-book"></i></a></li>
-                    -->
-                    <li><a href="<?= base_url("pilar/tesistas/logout");?>"><span class="glyphicon glyphicon-log-out"></span> Cerrar Sesión <b>(<?= $name ?>)</b> </a></li>
+                    <?php echo $logout; ?>
 	            </ul>
 			</div>
 			</div>

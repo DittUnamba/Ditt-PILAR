@@ -96,7 +96,7 @@ class GenMailer extends CI_Email
 
              . "<hr> <p> $msg </p> <br><hr style='border:1px dotted #C0C0C0'> "
              . "<p style='font-size:10px;font-weight:bold'> Universidad Nacional Micaela Bastidas de Apurímac <br>"
-             . "Vicerrectorado de Investigación<br>Unidad de Investigación<br> </p> </div></div>"
+             . "Vicerrectorado de Investigación</p> </div></div>"
              . "</center> </body>";
 
         return $str;
@@ -142,15 +142,11 @@ class GenMailer extends CI_Email
             echo $this->email->print_debugger();
     }
 
-    public function mailPilar( $mailx, $title, $msg )
+    public function mailPilar( $mailx, $title, $msg, $confirm = null)
     {
         $this->initialize( $this->config );
-
-        //$this->from('pilar@vriunap.pe', 'Plataforma PILAR - UNAP');
         $this->from('transferenciatecnologica@unamba.edu.pe', 'PILAR UNAMBA');
         $this->to( $mailx );
-        //$this->cc( 'vriunap@yahoo.com' );
-
         $this->subject( $title );
         $this->message( $this->frmMsgPilar($msg) );
 
