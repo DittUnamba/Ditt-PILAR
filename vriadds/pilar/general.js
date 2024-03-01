@@ -61,6 +61,7 @@ function generaLogin( tipo )
 
 function callOTI()
 {
+	console.log("calloti");
     $("#pmsg").show();
     jVRI("#pmsg").html( "Enviando a OTI..." );
 
@@ -81,23 +82,33 @@ function callOTI()
 
 function callSave()
 {
-    // contrastacion
+
     $("#pmsg").show();
+	data = new FormData(frmoti);   
+	var celu = data.get("celu");
+	var mail= data.get("mail");
+	
 
     if( pass1.value != pass2.value ){
         jVRI("#pmsg").html( "Las claves no coinciden" );
         return false;
     } 
 
-	if (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9])/', pass1.value)) {
-		jVRI("#pmsg").html( "'La contraseña debe tener al menos 8 caracteres y contener al menos una letra y un número.'" );
-		return FALSE;
+	if (!(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/.test(pass1.value))) {
+		// La contraseña cumple con los requisitos
+		$("#pmsg").html("La contraseña debe tener al menos 8 caracteres y contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial.");
+		return false; 
+	} 
+	if (!(/^9\d{7}\d?$/.test(celu))) {
+		console.log(celu);
+		$("#pmsg").html("Ingrese un número de celular válido en Perú");
+		return false; 
 	} 
 	
     jVRI("#pmsg").html( "Grabando..." );
     jVRI.ajax({
         url  : "pilar/tesistas/execInNew",
-        data : new FormData(frmoti),
+        data : data,
         success: function( arg )
         {
             jVRI("#pmsg").html( "" );

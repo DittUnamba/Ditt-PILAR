@@ -1429,6 +1429,7 @@ class Tesistas extends CI_Controller {
     {
         // validacion de datos interna
         $data = mlGetGlobalVar( "proRec" );
+        
         if( !$data ){
             echo "Sin acceso autorizado.";
             return;
@@ -1439,19 +1440,15 @@ class Tesistas extends CI_Controller {
 
         $pass = mlSecurePost("pass1");
         $mail = mlSecurePost("mail");
-
+        
         if( $this->dbPilar->getSnaprow( "tblTesistas", "Correo ='$mail'" ) ) {
             echo "El correo ya ha sido registrado previamente";
             return;
         }
 
-
-        //
         // Super Importante : registrar evitando duplicados
         //
         if( ! $this->dbPilar->getSnaprow( "tblTesistas", "Codigo='$data->Codigo'" ) ) {
-
-
 
             // mb_strtoupper
             $myId = $this->dbPilar->Insert( 'tblTesistas', array(
@@ -1470,9 +1467,8 @@ class Tesistas extends CI_Controller {
                 'Apellidos'  => $data->Apellis,
                 'Clave'      => sqlPassword($pass)
             ));
-
-
-
+            
+            
             $msg = "<h3>Bienvenido</h3>"
                  . "Sr(rta): <b>$data->Nombres $data->Apellis</b>.<br>"
                  . "Ud. ha concluido satisfactoriamente su inscripción en la  "
@@ -1489,6 +1485,7 @@ class Tesistas extends CI_Controller {
             $this->logCorreo( $myId, $mail, "Inscripción", $msg );
 
             echo "Registro completo, revise su <b>e-mail</b>.";
+
 
         } else {
 
