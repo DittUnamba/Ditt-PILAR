@@ -42,7 +42,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a id="1tes" onclick="openNav(this.id)" href="#">Tesista</a></li>
                     <li><a id="2doc" onclick="openNav(this.id)" href="#">Docente</a></li>
-                    <li><a id="3coord" onclick="openNav(this.id)"  href="#">Unidad de Invest.</a></li>
+                    <li><a id="3coord" onclick="openNav(this.id)"  href="#">Unidad de Investigación</a></li>
                     <li><a href="<?= base_url("pilar/sustentas") ?>">Sustentaciones</a></li>
                 </ul>
             </div>
@@ -106,7 +106,6 @@
                     <ul class="nav nav-pills bderecha">
                         <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/reglamentoPilar2018.pdf"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-book"></span> Reglamento de investigación</a>
                         <hr>
-                        <a href="#" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para tesista</a>
                         <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/manual_tesistav31.pdf"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Tesistas </a>
                         <a href="#" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para docentes</a>
                         <hr>
@@ -123,7 +122,7 @@
             <div class="col-md-12 bg-vino footer">
                 Universidad Nacional Micaela Bastidas de Apurímac<br>
                 Vicerrectorado de Investigación<br>
-                Dirección General de Investigación<br>
+                Dirección de Innovación y Transferencia Tecnológica<br>
                 &copy; Plataforma de Investigación y Desarrollo
             </div>
         </div>

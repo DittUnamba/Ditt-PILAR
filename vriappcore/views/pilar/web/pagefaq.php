@@ -82,7 +82,7 @@ foreach ($faqs->result() as $columna)
 <div class="col-md-12 bg-vino footer">
 Universidad Nacional Micaela Bastidas de Apurímac<br>
 Vicerrectorado de Investigación<br>
-Dirección General de Investigación<br>
+Dirección de Innovación y Transferencia Tecnológica<br>
 &copy; Plataforma de Investigación y Desarrollo</a>
 </div>
 </div>

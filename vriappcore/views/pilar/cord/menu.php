@@ -26,7 +26,7 @@
            <!-- <a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwSustentacVir')"class="list-group-item" style='background: #fffb3fe0'><span class="glyphicon glyphicon glyphicon-calendar"></span> Sustentacion Virtual</a> -->
 			<br>
 
-			<a href="javascript:void(0)" onclick="" class="list-group-item"><span class="glyphicon glyphicon glyphicon-calendar"></span> Cambio de Jurado</a>
+			<!-- <a href="javascript:void(0)" onclick="" class="list-group-item"><span class="glyphicon glyphicon glyphicon-calendar"></span> Cambio de Jurado</a> -->
 			<a href="javascript:void(0)"  onclick="lodPanel('panelCord','cordinads/vwReportes')" class="list-group-item"><span class="glyphicon glyphicon-align-justify"></span> Reportes </a>
 			<br>
 			<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwLogCordinador')" class="list-group-item bg-info"><span class="glyphicon glyphicon-book"></span> Historial de Actividades</a>

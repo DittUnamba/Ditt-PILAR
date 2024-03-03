@@ -144,7 +144,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title" style="font-size: 1.4rem">
-                                            Dirección General de Investigación </h5>
+                                        Dirección de Innovación y Transferencia Tecnológica</h5>
 
                                         <p class="card-text" style="font-size: 0.9rem" align="justify">
                                             La DGI entre sus funciones figura la de apoyar a los docentes y estudiantes en la formulación de proyectos que van a ser desarrollados al interior de la PUCP; proyectos de I+D, así como proyectos que son subvencionados íntegramente por la universidad en sus diversas modalidades de fondos concursables.
