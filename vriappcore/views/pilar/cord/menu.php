@@ -11,9 +11,9 @@
 			<?php if($sess->userLevel==4 | $sess->userLevel==1 ){ ?>
 			<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwInicio')" class="list-group-item"><span class="glyphicon glyphicon-home"></span> Inicio</a>
 			<br>
-			<a disabled href="javascript:void(0)"  onclick="lodPanel('panelCord','cordinads/vwbusq')" class="list-group-item"><span class="glyphicon glyphicon-search " ></span> Busquedas <span class="label label-info">En construcción</span> </a>
+			<!-- <a disabled href="javascript:void(0)"  onclick="lodPanel('panelCord','cordinads/vwbusq')" class="list-group-item"><span class="glyphicon glyphicon-search " ></span> Busquedas <span class="label label-info">En construcción</span> </a> -->
 
-            <a disabled href="javascript:void(0)"  onclick="lodPanel('panelCord','cordinads/vwFormatos')" class="list-group-item" style='background: #fffb3fe0;'><span class="glyphicon glyphicon-search " ></span> Formatos de la Escuela <span class="label label-success"> Cargar</span> </a>
+            <!-- <a disabled href="javascript:void(0)"  onclick="lodPanel('panelCord','cordinads/vwFormatos')" class="list-group-item" style='background: #fffb3fe0;'><span class="glyphicon glyphicon-search " ></span> Formatos de la Escuela <span class="label label-success"> Cargar</span> </a> -->
 			<br>
 			<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwDocentes')" class="list-group-item"><i class="glyphicon glyphicon-th-list"></i> Docentes </a>
 			<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/lineasReg')" class="list-group-item"><span class="glyphicon glyphicon-book"></span> Lineas de Investigación</a>
@@ -23,7 +23,7 @@
 			<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwProyectos')" class="list-group-item"><span class="glyphicon glyphicon-bookmark"></span> Proyectos de Tesis</a>
 			<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwBorradores')" class="list-group-item"><span class="glyphicon glyphicon-bookmark"></span> Informes de Tesis</a>
 			<a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwSustentac')"class="list-group-item"><span class="glyphicon glyphicon glyphicon-calendar"></span> Sustentacion Presencial</a>
-            <a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwSustentacVir')"class="list-group-item" style='background: #fffb3fe0'><span class="glyphicon glyphicon glyphicon-calendar"></span> Sustentacion Virtual</a>
+           <!-- <a href="javascript:void(0)" onclick="lodPanel('panelCord','cordinads/vwSustentacVir')"class="list-group-item" style='background: #fffb3fe0'><span class="glyphicon glyphicon glyphicon-calendar"></span> Sustentacion Virtual</a> -->
 			<br>
 
 			<a href="javascript:void(0)" onclick="" class="list-group-item"><span class="glyphicon glyphicon glyphicon-calendar"></span> Cambio de Jurado</a>

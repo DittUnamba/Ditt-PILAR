@@ -91,9 +91,9 @@
           <ul class="nav nav-pills bderecha">
             <a onclick="lodPanel('admin/panelBusqa')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-search"></span> <b>Búsquedas</b> </a>
             <a onclick="lodPanel('admin/panelOnBor')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-search"></span> Activar Informe </a>
-            <!-- <a href="#" class="list-group-item disabled" ><span class="glyphicon glyphicon-sunglasses"></span> Datos Tesista</a> -->
+            <a href="#" class="list-group-item disabled" ><span class="glyphicon glyphicon-sunglasses"></span> Datos Tesista</a> 
 
-            <!-- <a href="#" class="list-group-item disabled" ><span class="glyphicon glyphicon-book"></span> Reporte Tesista</a> -->
+            <a href="#" class="list-group-item disabled" ><span class="glyphicon glyphicon-book"></span> Reporte Tesista</a> 
           </ul>
         </div>
         <!-- AREA MENU DOCENTES -->
@@ -103,14 +103,14 @@
           <ul class="nav nav-pills bderecha">
             <a onclick="lodPanel('admin/panelLista')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-sunglasses"></span> Repositorio Docentes </a>
             <a onclick="lodPanel('admin/panelLogsD')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-book"></span> Accesos Docentes </a>
-           <!--  <a onclick="lodPanel('admin/panelConst')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-book"></span> Constancias </a> -->
-           <!--  <a onclick="lodPanel('admin/panelPilar')" href="javascript:void(0)" class="list-group-item disabled"><span class="glyphicon glyphicon-book"></span> Docentes en PILAR </a> -->
+             <a onclick="lodPanel('admin/panelConst')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-book"></span> Constancias </a> 
+             <a onclick="lodPanel('admin/panelPilar')" href="javascript:void(0)" class="list-group-item disabled"><span class="glyphicon glyphicon-book"></span> Docentes en PILAR </a> 
           </ul>
         </div>
         <?php } ?>
 
         <!-- Activar los Reportes -->
-        <!--<div class="admin-title1 col-wine">Reportes Admin </div>
+        <div class="admin-title1 col-wine">Reportes Admin </div>
           <div class="list-group">
                 <ul class="nav nav-pills bderecha">
                   <a onclick="lodPanel('admin/panelGeren')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-tasks"></span> Reportes Administración</a>
@@ -119,7 +119,7 @@
                   <a onclick="lodPanel('admin/panelTrafi')" href="javascript:void(0)" class="list-group-item"><span class="glyphicon glyphicon-align-justify"></span> Visitas </a>
                   <a href="http://vriunap.pe/fedu/report/functTodos" class="list-group-item"><span class="glyphicon glyphicon-align-justify"></span> Reportes FEDU </a>
                 </ul>
-          </div>-->
+          </div>
          <!-- END MENU -->
         <!--</div> -->
 
