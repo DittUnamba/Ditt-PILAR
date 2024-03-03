@@ -70,18 +70,21 @@
                 plataforma permite a Docentes, Tesistas y Unidades de Investigación cargar, calificar, 
                 revisar y dictaminar proyectos de investigación e informes de investigación de pregrado,
                 lo que contribuye al proceso de obtención del título profesional.
+                </p>
                 <br>
-                <br>
-                PILAR como plataforma ofrece algunas facilidades que permiten:
-                <br>
+                <p>PILAR como plataforma ofrece algunas facilidades que permiten:</p>
                 <ul>
                     <li>Mayor objetividad en la relación docente - tesista dentro del proceso.</li>
                     <li>Acceso a información ofrecida dentro de la cuenta de usuario.</li>
                     <li>Registro de la actividad y línea de tiempo del proceso.</li>
                     <li>Interfaz amigable e intuitiva.</li>
                 </ul>
-                Antes de iniciar el proceso del proyecto de tesis es necesario contar con una cuenta de correo electrónico (e-mail) y número de teléfono válidos y activos, haber leído el presente manual y el reglamento, además de conocimientos básicos de software de ofimática para el tratamiento y procesamiento del texto, imágenes, tablas en el proyecto y informe de tesis.
-                </p>
+                <p>Antes de iniciar el proceso del proyecto de tesis es necesario 
+                    contar con una cuenta de correo electrónico y número de teléfono válidos y activos, haber leído el presente 
+                    manual y el reglamento, además de conocimientos básicos de software 
+                    de ofimática para el tratamiento y procesamiento del texto, imágenes, tablas en el proyecto y informe de tesis.</p>
+                
+                
                 <!-- <div class="row">
                     <div class="col-xs-12 col-md-4 btn-acces-pilar">
                         <a id="1tes" onclick="openNav(this.id)" class="btn btn-default btn-user bg-teal"><span class="glyphicon glyphicon-ok-circle"></span> <br />Tesista</a>
