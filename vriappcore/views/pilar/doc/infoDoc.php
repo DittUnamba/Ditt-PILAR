@@ -15,7 +15,7 @@
 			<li class="active"><a data-toggle="tab" href="#tab0"> Datos de Investigador </a></li>
             <li><a data-toggle="tab" href="#tab1"> Datos Personales </a></li>
 			<li><a data-toggle="tab" href="#tab2"> Lineas de Investigación </a></li>
-			<li><a data-toggle="tab" href="#tab3"> Grados Obtenidos </a></li>
+			<!-- <li><a data-toggle="tab" href="#tab3"> Grados Obtenidos </a></li> -->
 		</ul>
 
 
@@ -160,11 +160,11 @@
 				<h4 class="titulo">Lineas de Investigación</h4>
 				<fieldset>
 					<div class="table-responsive">
-						<table class="table">
+						<table class="table" id="tblLinea">
 							<tr>
 								<th class="col-md-1"> Nro </th>
-								<th class="col-md-1"> Tipo </th>
 								<th class="col-md-8"> Linea </th>
+								<th class="col-md-8"> Estado </th>
 								<th class="col-md-2"> Opciones </th>
 							</tr>
 							 
@@ -172,26 +172,42 @@
 							 		$sess = $this->gensession->GetData();
 							 		$i=0;
 							 		foreach($linDoc->result() as $row){
+
 										$nameLine=$this->dbRepo->inLineaInv($row->IdLinea);
-										echo "<tr>
-												<td>$i <small>($row->IdLinea)</small> </td>
-												<td>".$row->Tipo."</td>
+										if($row->Estado ==1)
+										{
+											$estado = 'En verificación';
+											$borrar = "<button class='btn btn-danger btn-xs' onclick='deleteLin($row->Id)'>Eliminar</button>";
+										}	
+										elseif($row->Estado ==2)
+										{
+											$estado = 'Verificado';
+											$borrar = '';
+										}	
+
+										else
+										{
+											$estado = 'Rechazado';
+											$borrar = '';
+										}
+										echo "<tr id='$row->Id'>
+												<td>$i</td>
 												<td>".$nameLine."</td>
-												<td> $opciones </td>
+												<td>".$estado."</td>
+												<td>".$borrar." </td>
 											  </tr>";
 										$i++;
 									}
 							 	 ?>
 							 
 						</table>
-						<table class="table" id="tlin">
-						</table>
+						<div class="col-md-7" id="mensaje_error" style="color:red"></div>
 					</div> <!-- fin div lineas table -->
 					<div>
 					<hr>
 						<!-- Select input-->
 						<div class="form-group">
-							<label class="col-md-3 control-label">Linea por Escuela Profesional </label>
+							<label class="col-md-3 control-label">Lineas de investigación UNAMBA </label>
 							<div class="col-md-7">
 								<select id="clin" name="clin" class="form-control" onchange="" required>
 									<option value="" disabled selected> seleccione </option>
@@ -209,8 +225,8 @@
 							</div>
 						</div>
 						<p> <br><br><br>
-							<b>Nota:</b> Hasta un máximo de 3 Lineas,  Esas Lineas de investigación son areas de <b>Especialización</b>
-							no son areas de interés. Por tanto: deberán ser sustentadas con una Especialización, Maestria o Doctorado mediante un
+							<b>Nota:</b> Hasta un máximo de 5 Lineas,  Esas Lineas de investigación son areas de <b>Especialización</b>
+							. Por tanto: deberán ser sustentadas con una Especialización, Maestria o Doctorado mediante un
 							documento escaneado del Diploma de Grado o Especialización, que sera verificado en el SUNEDU, de no
 							estar registrado el Docente sera eliminado de la linea.
 						</p>

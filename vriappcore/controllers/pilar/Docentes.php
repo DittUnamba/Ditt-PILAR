@@ -236,7 +236,7 @@ class Docentes extends CI_Controller {
 
         $perDoc = $this->dbRepo->getSnapRow("vwDocentes","Id=$sess->userId");
 		//$lineas = $this->dbPilar->getTable("vxLineas","IdCarrera=$carre");
-        $lineas = $this->dbPilar->getTable("vxLineas");
+        $lineas = $this->dbPilar->getTable("vxLineas","IdFacultad=$perDoc->IdFacultad");
         $linDoc = $this->dbPilar->getTable("docLineas","IdDocente=$sess->userId");
         $graDoc = $this->dbPilar->getTable("docEstudios","IdDocente=$sess->userId");
         $idxDoc = $this->dbRepo->getSnapRow("dicDocIndex","IdDocente=$sess->userId");
@@ -743,13 +743,65 @@ class Docentes extends CI_Controller {
                     'Estado' => 1,
 					//'Fecha' => mlCurrentDate()
 				) );
+            $tlin = $this->dbPilar->getTable("docLineas","IdDocente=$sess->userId" );
+
+            $docLin= $this->dbPilar->getSnapRow( "docLineas","IdDocente=$sess->userId AND IdLinea=$nlin", "ORDER BY id DESC LIMIT 1");
+            $nameLine= $this->dbRepo->inLineaInv($docLin->IdLinea);
+            if($docLin->Estado =1)
+            {
+                $estado = 'En verificación';
+            }	
+            elseif($docLin->Estado =2)
+            {
+                $estado = 'Verificado';
+            }	
+
+            else
+            {
+                $estado = 'Rechazado';
+            }
+
+            $fila = "<tr id='$docLin->Id'>
+                        <td id=''>".$tlin->num_rows()."</td>
+                        <td>".$nameLine."</td>
+                        <td>".$estado."</td>
+                        <td><button class='btn btn-danger btn-xs' onclick='deleteLin($docLin->Id)'>Eliminar</button> </td>
+                    </tr>";
+            $msj = 'true';
 		}
+        else
+        {
+            $msj = 'usted ya tiene registrada la linea de investigación que desea agregar';
+        }
+
+        
+          $datos = array('msj_error' => $msj,
+                         'fila'      => $fila
+                            );
+                            
+
+      echo json_encode($datos);
 	}
 
-	public function borrLinea()
-	{
-		;
-	}
+    public function deleteLin($idDocLin)
+    {
+        $delete =$this->dbPilar->DeleteEx( "docLineas","Id=".$idDocLin);
+        $docLin=$this->dbPilar->getSnapRow("docLineas","Id=".$idDocLin);
+       
+        if(!$docLin) {
+            $msj='true';
+
+        }
+        else{
+            $msj='false';
+
+        }
+
+        $datos = array('msj'    => $msj,
+                       'idLin'  => $idDocLin
+                       );
+        echo json_encode($datos);
+    }
 
 	public function cargaLineas()
 	{
@@ -1371,7 +1423,7 @@ class Docentes extends CI_Controller {
             "Fecha"  => mlCurrentDate()
         ) );
 
-        echo "Id de Registro: $id";
+        echo "Datos registrados correctamente";
     }
 
 

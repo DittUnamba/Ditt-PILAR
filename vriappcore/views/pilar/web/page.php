@@ -40,10 +40,9 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="https://vrin.unamba.edu.pe/">Inicio</a></li>
-                    <li><a href="<?= base_url("pilar/docentes") ?>">Docentes</a></li>
-                    <li><a href="<?= base_url("pilar/tesistas") ?>">Tesistas</a></li>
-                    <li><a href="<?= base_url("pilar/cordinads") ?>">Unidad de Investigación</a></li>
+                    <li><a id="1tes" onclick="openNav(this.id)" href="#">Tesista</a></li>
+                    <li><a id="2doc" onclick="openNav(this.id)" href="#">Docente</a></li>
+                    <li><a id="3coord" onclick="openNav(this.id)"  href="#">Unidad de Invest.</a></li>
                     <li><a href="<?= base_url("pilar/sustentas") ?>">Sustentaciones</a></li>
                 </ul>
             </div>
@@ -59,12 +58,31 @@
             <div class="col-md-9 bg-white margin">
                 <div class="titulo">Presentación</div>
                 <p class="description">
-                    La Universidad Nacional Micaela Bastidas de Apurímac mediante el Vicerrectorado de Investigación y la Plataforma <i>PILAR</i>
-                    para Docentes, Tesistas y las Unidades de Investigación tienen la información disponible para realizar la
-                    subida, calificacion, revisión y posterior dictaminación de proyectos de investigación de pregrado
-                    conducentes a la obtención del título profesional.
+                La Universidad Nacional Micaela Bastidas de Apurímac, 
+                a través de la <b>RESOLUCIÓN N° 140-2023-CU-UNAMBA</b> , establece el 
+                "Convenio Específico de Investigación Académica de Cooperación
+                Interinstitucional entre la Universidad Nacional del Altiplano 
+                de Puno y la Universidad Nacional Micaela Bastidas de Apurímac",
+                como se detalla en la <b>Carta N° 143-2023-OCRI-UNAMBA</b>  de la Oficina 
+                de Cooperación y Relaciones Internacionales. Este convenio facilita 
+                el acceso a la Plataforma PILAR, adaptada por el Vicerrectorado de Investigación
+                de la UNAMBA para satisfacer las necesidades específicas de la institución. Esta 
+                plataforma permite a Docentes, Tesistas y Unidades de Investigación cargar, calificar, 
+                revisar y dictaminar proyectos de investigación e informes de investigación de pregrado,
+                lo que contribuye al proceso de obtención del título profesional.
+                <br>
+                <br>
+                PILAR como plataforma ofrece algunas facilidades que permiten:
+                <br>
+                <ul>
+                    <li>Mayor objetividad en la relación docente - tesista dentro del proceso.</li>
+                    <li>Acceso a información ofrecida dentro de la cuenta de usuario.</li>
+                    <li>Registro de la actividad y línea de tiempo del proceso.</li>
+                    <li>Interfaz amigable e intuitiva.</li>
+                </ul>
+                Antes de iniciar el proceso del proyecto de tesis es necesario contar con una cuenta de correo electrónico (e-mail) y número de teléfono válidos y activos, haber leído el presente manual y el reglamento, además de conocimientos básicos de software de ofimática para el tratamiento y procesamiento del texto, imágenes, tablas en el proyecto y informe de tesis.
                 </p>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-xs-12 col-md-4 btn-acces-pilar">
                         <a id="1tes" onclick="openNav(this.id)" class="btn btn-default btn-user bg-teal"><span class="glyphicon glyphicon-ok-circle"></span> <br />Tesista</a>
                     </div>
@@ -74,35 +92,34 @@
                     <div class="col-xs-12 col-md-4 btn-acces-pilar">
                         <a id="3coord" onclick="openNav(this.id)" class="btn btn-default btn-user bg-red-ligth" role="button"><span class="glyphicon glyphicon-question-sign"></span> <br />Unidad de Invest.</a>
                     </div>
-                </div>
-                <br>
+                </div> -->
+                <!-- <br>
                 <div class="row">
                     <div class="col-xs-12 col-md-12 btn-acces-pilar">
-                       <a class="btn btn-preg bg-teal"> <!-- <span class="glyphicon glyphicon-cog"></span> <br /> Consultas en Linea ( En Construcción ) --></a> 
+                       <a class="btn btn-preg bg-teal"> <span class="glyphicon glyphicon-cog"></span> <br /> Consultas en Linea ( En Construcción )</a> 
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="col-md-3 bg-white margin-bd">
                 <div class="titulo">Reglamentos y Manuales</div>
                 <div class="list-group">
                     <ul class="nav nav-pills bderecha">
-                        <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/reglamentoPilar2018.pdf"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-book"></span> Reglamento Proyectos de Tesis <span class="label label-warning"> 2018 </span></a>
-                        <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/resReglaBorrador.pdf"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-book"></span> Reglamento de Informe de Tesis</a>
-                        <a target="_blank" href="<?php echo base_url("web/etica"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-book"></span> Procedimientos Ética en Investigación <span class="label label-warning"> Nuevo </span></a>
+                        <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/reglamentoPilar2018.pdf"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-book"></span> Reglamento de investigación</a>
+                        <hr>
+                        <a href="#" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para tesista</a>
+                        <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/manual_tesistav31.pdf"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Tesistas </a>
+                        <a href="#" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para docentes</a>
                         <hr>
                         <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/Formato-Proy-Tesis-2016.docx"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-bookmark"></span> Formato de Proyecto de Tesis</a>
                         <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/Formato-Borrador-Tesis-2017.docx"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-bookmark"></span> Formato de Informe de Tesis</a>
-                        <hr>
-                        <a href="#" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Docentes</a>
-                        <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/manual_tesistav31.pdf"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Tesistas </a>
-                        <a href="#" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Unidades de Invest.</a>
-                        <a target="_blank" href="<?php echo base_url("/pilar/web/preguntas"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Preguntas frecuentes</a>
+                        
+                        <!-- <a target="_blank" href="<?php echo base_url("/pilar/web/preguntas"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Preguntas frecuentes</a> -->
                     </ul>
                 </div>
             </div>
-            <div class="col-md-12 bg-white">
+            <!-- <div class="col-md-12 bg-white">
                 <div class="titulo">Herramientas del Investigador</div>
-            </div>
+            </div> -->
             <div class="col-md-12 bg-vino footer">
                 Universidad Nacional Micaela Bastidas de Apurímac<br>
                 Vicerrectorado de Investigación<br>

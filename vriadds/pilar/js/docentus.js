@@ -21,10 +21,40 @@ function feedDiv(lin)
 	jVRI("#tlin").html( "..." );
 	jVRI.ajax({
 		url : "docentes/saveLin/"+lin,
-		success : function ( arg ) {
-			jVRI("#tlin").load("docentes/cargaLineas");
+        dataType: 'json',
+		success : function (response) {
+            
+			var datos = JSON.parse(response);
+            if (datos.msj_error == 'true') {
+                
+                // Si no hay errores, agregar la fila a la tabla
+                var $tableBody = $('#tblLinea tbody');
+                $tableBody.append(datos.fila);
+            }
+            else
+            {
+                $('#mensaje_error').text(datos.msj_error);
+            }
 		}
 	});
+}
+function deleteLin(idLin){
+    jVRI.ajax({
+		url : "docentes/deleteLin/"+idLin,
+        dataType: 'json',
+		success : function (response) {
+            var datos = JSON.parse(response);
+            console.log('#'+datos.idLin,datos.msj);
+            if (datos.msj == 'true') {
+                $('#'+datos.idLin).remove();
+            }
+            else{
+                $('#mensaje_error').text('ocurrio un error en el servidor, vuela a intentarlo');
+            }
+
+		}
+	});
+
 }
 
 function loadCorrs( ulink, idt )

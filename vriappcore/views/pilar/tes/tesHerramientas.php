@@ -2,7 +2,7 @@
     <h4 id="timeline">HERRAMIENTAS DEL INVESTIGADOR</h4>
 </div>
 <div class="herramamientas">
-	<h3 class="title">Citas Bibliográfias</h3>
+	<!-- <h3 class="title">Citas Bibliográfias</h3>
 	<p>Aqui algunas herramientas para realizar las citas bibliográficas en tu Informe de tesis.</p>
 	<div class="col-md-12 tex-center">
 		<div class="col-md-3 ">
@@ -14,16 +14,34 @@
 		<div class="col-md-3 ">
 			<a href="http://endnote.com/" target="_blank"><img class="img-responsive"  src="<?php echo base_url("vriadds/pilar/imag/herram/endnote.jpg");?>"></a>
 		</div>
-	</div>
+	</div> -->
 	<h3 class="title"> Recursos e Información</h3>
 	<p>Usted podrá acceder a las siguientes base de datos para documentar su proyecto.</p>
 	<div class="col-md-12">
 		<div class="col-md-3">
-			<a href="http://repositorio.unap.edu.pe/" target="_blank"><img class="img-responsive" style="background-color: #0c4b8a;" src="<?php echo base_url("vriadds/pilar/imag/herram/repo_unap.png");?>"></a>
+			<a href="https://repositorio.unamba.edu.pe/" target="_blank"><img class="img-responsive" style="background-color: #0c4b8a;" src="<?php echo base_url("vriadds/pilar/imag/herram/repo_unamba.jpeg");?>"></a>
 		</div>
 		<div class="col-md-9">
-			<h4 class="title">Repositorio UNAP</h4>
-			<p class="text-justify">El repositorio Insitucional, nos ofrece las tesis de la Universidad Nacional Micaela Bastidas de Apurímac,  realizadas por las 35 escuelas profesionales además de la Escuela de Post Grado.
+			<h4 class="title">Repositorio UNAMBA</h4>
+			<p class="text-justify">El repositorio Insitucional, nos ofrece las tesis de la Universidad Nacional Micaela Bastidas de Apurímac.
+			</p>
+		</div>		
+		<div class="col-md-3">
+			<a href="https://alicia.concytec.gob.pe/" target="_blank"><img class="img-responsive" src="<?php echo base_url("vriadds/pilar/imag/herram/logo_alicia.png");?>"></a>
+		</div>
+		<div class="col-md-9">
+			<h4 class="title">Alicia</h4>
+			<p class="text-justify">
+			El Repositorio Nacional Digital ALICIA ofrece una gran variedad de trabajos de investigación, libros y artículos científicos multidisciplinarios a texto completo dirigidos a investigadores y estudiantes.
+			</p>
+		</div>
+		<div class="col-md-3">
+			<a href="https://scielo.org/" target="_blank"><img class="img-responsive" style="max-width: 60%;" src="<?php echo base_url("vriadds/pilar/imag/herram/logo_sielo.png");?>"></a>
+		</div>
+		<div class="col-md-9">
+			<h4 class="title">SciELO</h4>
+			<p class="text-justify">
+			Scientific Electronic Library Online Base de datos de acceso libre a revistas con texto completo que cubren disciplinas tales como: Arquitectura, Ciencias Biológicas, Ciencias de la Salud, Ciencias de la Tierra, Ciencias Jurídicas, Ciencias Sociales, Humanidades, Ingeniería, Matemática, Oceanógrafa y Química.
 			</p>
 		</div>
 		<div class="col-md-3">
@@ -54,19 +72,19 @@
 		<div class="col-md-3">
 			<a href="https://us.sagepub.com/en-us/nam/sage-premier" target="_blank"><img class="img-responsive" src="<?php echo base_url("vriadds/pilar/imag/herram/banner_sage.JPG");?>"></a> 
 		</div>
-		<div class="col-md-9">
+		<!-- <div class="col-md-9">
 			<h4 class="title">SAGE PREMIER 2017</h4>
 			<p class="text-justify">Es una colección multidisciplinaria con más de 820 revistas académicas revisadas por pares. Brinda acceso en línea a más de 700 mil artículos a texto completo. El 65% del contenido está clasificado en el 2014 Journal Citation Reports
 			</p>
 		</div>
 		<div class="col-md-3">
 			<a href='http://ioppublishing.org/' target="_blank"><img class="img-responsive" src="<?php echo base_url("vriadds/pilar/imag/herram/iop-logo.jpg");?>"></a>
-		</div>
-		<div class="col-md-9">
+		</div> -->
+		<!-- <div class="col-md-9">
 			<h4 class="title">IOPscience</h4>
 			<p class="text-justify">IOPscience es un servicio en línea para el contenido de revistas publicado por IOP Publishing que es una subsidiaria del Institute of Physics de Reino Unido. ofrece una gama de journals, libros electrónicos, revistas, actas de conferencias y sitios web para la comunidad científica..
 			</p>
-		</div>
+		</div> -->
 
 	</div>
 </div>

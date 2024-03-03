@@ -3,8 +3,20 @@
 			<div class="col-md-12">
 			<h1 class="titulo">PILAR</h1>
 			<div class="col-md-12 docente-inicio">
-			<p>La Universidad Nacional Micaela Bastidas de Apurímac mediante el Vicerrectorado de Investigación con la Resolución Rectoral N°1012-2016-R-UNA del 11 de Abril del 2016, que aprueba el reglamento de presentación de proyectos de tesis de Pre-Grado  además de la Resulución Rectoral N°3011-2016-R-UNA, que aprueba el reglamento de presentación, dictamen de informes y defensa de tesis. </p>
-			<p> Documentos sustentatorios en los cuales pilar basa su funcionamiento:</p>
+			<p> La Universidad Nacional Micaela Bastidas de Apurímac, 
+                a través de la <b>RESOLUCIÓN N° 140-2023-CU-UNAMBA</b> , establece el 
+                "Convenio Específico de Investigación Académica de Cooperación
+                Interinstitucional entre la Universidad Nacional del Altiplano 
+                de Puno y la Universidad Nacional Micaela Bastidas de Apurímac",
+                como se detalla en la <b>Carta N° 143-2023-OCRI-UNAMBA</b>  de la Oficina 
+                de Cooperación y Relaciones Internacionales. Este convenio facilita 
+                el acceso a la Plataforma PILAR, adaptada por el Vicerrectorado de Investigación
+                de la UNAMBA para satisfacer las necesidades específicas de la institución. Esta 
+                plataforma permite a Docentes, Tesistas y Unidades de Investigación cargar, calificar, 
+                revisar y dictaminar proyectos de investigación e informes de investigación de pregrado,
+                lo que contribuye al proceso de obtención del título profesional.
+                <br></p>
+
 			</div>
 		</div>
 		<div class="col-md-12">

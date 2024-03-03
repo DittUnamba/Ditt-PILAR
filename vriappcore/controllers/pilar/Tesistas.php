@@ -1422,7 +1422,6 @@ class Tesistas extends CI_Controller {
             return;
         }
 
-        // procedemos:  array : { } : json
         $data = json_decode( json_encode ($data) );
 
         $pass = mlSecurePost("pass1");
