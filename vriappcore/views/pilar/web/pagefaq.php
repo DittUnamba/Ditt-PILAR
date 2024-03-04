@@ -73,7 +73,7 @@ foreach ($faqs->result() as $columna)
 <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/Formato-Borrador-Tesis-2017.docx");?>" class="list-group-item blink"><span class="glyphicon glyphicon-bookmark"></span> Formato Trabajos de Invest<span class="label label-warning"> Nuevo </span> </a>
 <hr>
 <a href="#" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Docentes</a>
-<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/manual_tesistav3.pdf");?>" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Tesistas <span class="label label-warning"> Nuevo </span></a>
+<a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/manual_tesistav1.pdf");?>" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Tesistas <span class="label label-warning"> Nuevo </span></a>
 <a href="#" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Unidades de Invest.</a>
 <a target="_blank" href="<?php echo base_url("/pilar/web/preguntas");?>" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Preguntas frecuentes <span class="label label-warning"> Nuevo </span></a>
 </ul>
