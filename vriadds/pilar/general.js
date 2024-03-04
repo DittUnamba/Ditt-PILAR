@@ -13,6 +13,9 @@
 function callLoginCor() {  generaLogin( "cor" );  }
 function callLoginDoc() {  generaLogin( "doc" );  }
 function callLoginTes() {  generaLogin( "tes" );  }
+function callLoginCorSusten() {  generaLogin( "corSusten" );  }
+function callLoginDocSusten() {  generaLogin( "docSusten" );  }
+function callLoginTesSusten() {  generaLogin( "tesSusten" );  }
 
 
 function loadAviso( id )
@@ -23,23 +26,48 @@ function loadAviso( id )
 
 function generaLogin( tipo )
 {
-    var m_pnl  = "#cmsg";
-    var m_url  = "pilar/cordinads/login";
-    var m_href = "pilar/cordinads";
-    var m_data = new FormData(logcor);
+	var m_pnl, m_url, m_href, m_data;
 
-    if( tipo == "tes" ) {
-        m_pnl  = "#pmsg";
-        m_url  = "pilar/tesistas/login";
-        m_href = "pilar/tesistas";
-        m_data = new FormData(logtes);
-    }
-
-    if( tipo == "doc" ) {
-        m_pnl  = "#qmsg";
-        m_url  = "pilar/docentes/login";
-        m_href = "pilar/docentes";
-        m_data = new FormData(logdoc);
+    switch (tipo) {
+        case "tes":
+            m_pnl = "#pmsg";
+            m_url = "pilar/tesistas/login";
+            m_href = "pilar/tesistas";
+            m_data = new FormData(logtes);
+            break;
+        case "doc":
+            m_pnl = "#qmsg";
+            m_url = "pilar/docentes/login";
+            m_href = "pilar/docentes";
+            m_data = new FormData(logdoc);
+            break;
+        case "cor":
+            m_pnl = "#cmsg";
+            m_url = "pilar/cordinads/login";
+            m_href = "pilar/cordinads";
+            m_data = new FormData(logcor);
+            break;
+        case "tesSusten":
+            m_pnl = "#pmsg";
+            m_url = "tesistas/login";
+            m_href = "tesistas";
+            m_data = new FormData(logtes);
+            break;
+		case "docSusten":
+			m_pnl = "#qmsg";
+			m_url = "docentes/login";
+            m_href = "docentes";
+            m_data = new FormData(logdoc);
+			break;
+		case "corSusten":
+			m_pnl = "#cmsg";
+			m_url = "cordinads/login";
+            m_href = "cordinads";
+            m_data = new FormData(logcor);
+			break;
+        default:
+            // Manejar caso por defecto si es necesario
+            break;
     }
 
     $( m_pnl ).show();
