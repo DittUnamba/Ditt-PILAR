@@ -109,14 +109,9 @@
                     <ul class="nav nav-pills bderecha">
                         <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/reglamentoPilar2018.pdf"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-book"></span> Reglamento de investigación</a>
                         <hr>
-<<<<<<< HEAD
-                        <a href="#" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para tesista</a>
                         <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/manual_tesistav1.pdf"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Tesistas </a>
                         <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/manual_docentev1.pdf"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para docentes</a>
-=======
-                        <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/manual_tesistav31.pdf"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para Tesistas </a>
-                        <a href="#" class="list-group-item blink"><span class="glyphicon glyphicon-th-list"></span> Manual para docentes</a>
->>>>>>> 1b5b913b9ba0362f57e812e8797ca0e80963da3c
+
                         <hr>
                         <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/Formato-Proy-Tesis-2016.docx"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-bookmark"></span> Formato de Proyecto de Tesis</a>
                         <a target="_blank" href="<?php echo base_url("vriadds/pilar/doc/Formato-Borrador-Tesis-2017.docx"); ?>" class="list-group-item blink"><span class="glyphicon glyphicon-bookmark"></span> Formato de Informe de Tesis</a>
